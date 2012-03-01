@@ -299,7 +299,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 ACLOCAL_AMFLAGS = -I m4
-SUBDIRS = libsoup tests docs
+SUBDIRS = libsoup docs
 EXTRA_DIST = \
 	libsoup-2.4.pc.in	\
 	libsoup-gnome-2.4.pc.in	\
