@@ -97,6 +97,7 @@ libsoupinclude_HEADERS =	\
 lib_LTLIBRARIES = libsoup-2.4.la
 
 libsoup_2_4_la_LDFLAGS =	\
+	-export-symbols-regex '^(soup|_soup|soup_|_SOUP_METHOD_|SOUP_METHOD_).*' \
 	-version-info $(SOUP_CURRENT):$(SOUP_REVISION):$(SOUP_AGE) -no-undefined
 
 libsoup_2_4_la_LIBADD =			\
