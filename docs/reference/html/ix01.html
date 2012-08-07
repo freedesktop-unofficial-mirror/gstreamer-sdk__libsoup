@@ -21,7 +21,7 @@
 </tr></table>
 <div class="index">
 <div class="titlepage"><div><div><h2 class="title">
-<a name="id548492"></a>Index</h2></div></div></div>
+<a name="id562979"></a>Index</h2></div></div></div>
 <div class="index"><div class="indexdiv">
 <h3>S</h3>
 <dl>
@@ -167,6 +167,8 @@
 </dt>
 <dt>SoupMessage::got-informational, <a class="indexterm" href="SoupMessage.html#SoupMessage-got-informational">The "got-informational" signal</a>
 </dt>
+<dt>SoupMessage::network-event, <a class="indexterm" href="SoupMessage.html#SoupMessage-network-event">The "network-event" signal</a>
+</dt>
 <dt>SoupMessage::restarted, <a class="indexterm" href="SoupMessage.html#SoupMessage-restarted">The "restarted" signal</a>
 </dt>
 <dt>SoupMessage::wrote-body, <a class="indexterm" href="SoupMessage.html#SoupMessage-wrote-body">The "wrote-body" signal</a>
@@ -271,6 +273,8 @@
 </dt>
 <dt>SoupServer:ssl-key-file, <a class="indexterm" href="SoupServer.html#SoupServer--ssl-key-file">The "ssl-key-file" property</a>
 </dt>
+<dt>SoupServer:tls-certificate, <a class="indexterm" href="SoupServer.html#SoupServer--tls-certificate">The "tls-certificate" property</a>
+</dt>
 <dt>SoupServerCallback, <a class="indexterm" href="SoupServer.html#SoupServerCallback">SoupServerCallback ()</a>
 </dt>
 <dt>SoupSession, <a class="indexterm" href="SoupSession.html#SoupSession-struct">SoupSession</a>
@@ -297,6 +301,10 @@
 </dt>
 <dt>SoupSession:async-context, <a class="indexterm" href="SoupSession.html#SoupSession--async-context">The "async-context" property</a>
 </dt>
+<dt>SoupSession:http-aliases, <a class="indexterm" href="SoupSession.html#SoupSession--http-aliases">The "http-aliases" property</a>
+</dt>
+<dt>SoupSession:https-aliases, <a class="indexterm" href="SoupSession.html#SoupSession--https-aliases">The "https-aliases" property</a>
+</dt>
 <dt>SoupSession:idle-timeout, <a class="indexterm" href="SoupSession.html#SoupSession--idle-timeout">The "idle-timeout" property</a>
 </dt>
 <dt>SoupSession:max-conns, <a class="indexterm" href="SoupSession.html#SoupSession--max-conns">The "max-conns" property</a>
@@ -311,9 +319,15 @@
 </dt>
 <dt>SoupSession:ssl-strict, <a class="indexterm" href="SoupSession.html#SoupSession--ssl-strict">The "ssl-strict" property</a>
 </dt>
+<dt>SoupSession:ssl-use-system-ca-file, <a class="indexterm" href="SoupSession.html#SoupSession--ssl-use-system-ca-file">The "ssl-use-system-ca-file" property</a>
+</dt>
 <dt>SoupSession:timeout, <a class="indexterm" href="SoupSession.html#SoupSession--timeout">The "timeout" property</a>
 </dt>
+<dt>SoupSession:tls-database, <a class="indexterm" href="SoupSession.html#SoupSession--tls-database">The "tls-database" property</a>
+</dt>
 <dt>SoupSession:use-ntlm, <a class="indexterm" href="SoupSession.html#SoupSession--use-ntlm">The "use-ntlm" property</a>
+</dt>
+<dt>SoupSession:use-thread-context, <a class="indexterm" href="SoupSession.html#SoupSession--use-thread-context">The "use-thread-context" property</a>
 </dt>
 <dt>SoupSession:user-agent, <a class="indexterm" href="SoupSession.html#SoupSession--user-agent">The "user-agent" property</a>
 </dt>
@@ -330,6 +344,8 @@
 <dt>SoupSocket, <a class="indexterm" href="SoupSocket.html#SoupSocket-struct">SoupSocket</a>
 </dt>
 <dt>SoupSocket::disconnected, <a class="indexterm" href="SoupSocket.html#SoupSocket-disconnected">The "disconnected" signal</a>
+</dt>
+<dt>SoupSocket::event, <a class="indexterm" href="SoupSocket.html#SoupSocket-event">The "event" signal</a>
 </dt>
 <dt>SoupSocket::new-connection, <a class="indexterm" href="SoupSocket.html#SoupSocket-new-connection">The "new-connection" signal</a>
 </dt>
@@ -363,11 +379,11 @@
 </dt>
 <dt>SoupSocket:trusted-certificate, <a class="indexterm" href="SoupSocket.html#SoupSocket--trusted-certificate">The "trusted-certificate" property</a>
 </dt>
+<dt>SoupSocket:use-thread-context, <a class="indexterm" href="SoupSocket.html#SoupSocket--use-thread-context">The "use-thread-context" property</a>
+</dt>
 <dt>SoupSocketCallback, <a class="indexterm" href="SoupSocket.html#SoupSocketCallback">SoupSocketCallback ()</a>
 </dt>
 <dt>SoupSocketIOStatus, <a class="indexterm" href="SoupSocket.html#SoupSocketIOStatus">enum SoupSocketIOStatus</a>
-</dt>
-<dt>SoupSSLError, <a class="indexterm" href="SoupSocket.html#SoupSSLError">enum SoupSSLError</a>
 </dt>
 <dt>SoupURI, <a class="indexterm" href="SoupURI.html#SoupURI-struct">SoupURI</a>
 </dt>
@@ -883,6 +899,8 @@
 </dt>
 <dt>soup_message_set_http_version, <a class="indexterm" href="SoupMessage.html#soup-message-set-http-version">soup_message_set_http_version ()</a>
 </dt>
+<dt>soup_message_set_redirect, <a class="indexterm" href="SoupMessage.html#soup-message-set-redirect">soup_message_set_redirect ()</a>
+</dt>
 <dt>soup_message_set_request, <a class="indexterm" href="SoupMessage.html#soup-message-set-request">soup_message_set_request ()</a>
 </dt>
 <dt>soup_message_set_response, <a class="indexterm" href="SoupMessage.html#soup-message-set-response">soup_message_set_response ()</a>
@@ -1025,6 +1043,8 @@
 </dt>
 <dt>SOUP_SERVER_SSL_KEY_FILE, <a class="indexterm" href="SoupServer.html#SOUP-SERVER-SSL-KEY-FILE:CAPS">SOUP_SERVER_SSL_KEY_FILE</a>
 </dt>
+<dt>SOUP_SERVER_TLS_CERTIFICATE, <a class="indexterm" href="SoupServer.html#SOUP-SERVER-TLS-CERTIFICATE:CAPS">SOUP_SERVER_TLS_CERTIFICATE</a>
+</dt>
 <dt>soup_server_unpause_message, <a class="indexterm" href="SoupServer.html#soup-server-unpause-message">soup_server_unpause_message ()</a>
 </dt>
 <dt>soup_session_abort, <a class="indexterm" href="SoupSession.html#soup-session-abort">soup_session_abort ()</a>
@@ -1057,6 +1077,10 @@
 </dt>
 <dt>soup_session_get_feature_for_message, <a class="indexterm" href="SoupSession.html#soup-session-get-feature-for-message">soup_session_get_feature_for_message ()</a>
 </dt>
+<dt>SOUP_SESSION_HTTPS_ALIASES, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-HTTPS-ALIASES:CAPS">SOUP_SESSION_HTTPS_ALIASES</a>
+</dt>
+<dt>SOUP_SESSION_HTTP_ALIASES, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-HTTP-ALIASES:CAPS">SOUP_SESSION_HTTP_ALIASES</a>
+</dt>
 <dt>SOUP_SESSION_IDLE_TIMEOUT, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-IDLE-TIMEOUT:CAPS">SOUP_SESSION_IDLE_TIMEOUT</a>
 </dt>
 <dt>SOUP_SESSION_MAX_CONNS, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-MAX-CONNS:CAPS">SOUP_SESSION_MAX_CONNS</a>
@@ -1065,11 +1089,15 @@
 </dt>
 <dt>soup_session_pause_message, <a class="indexterm" href="SoupSession.html#soup-session-pause-message">soup_session_pause_message ()</a>
 </dt>
+<dt>soup_session_prefetch_dns, <a class="indexterm" href="SoupSession.html#soup-session-prefetch-dns">soup_session_prefetch_dns ()</a>
+</dt>
 <dt>soup_session_prepare_for_uri, <a class="indexterm" href="SoupSession.html#soup-session-prepare-for-uri">soup_session_prepare_for_uri ()</a>
 </dt>
 <dt>SOUP_SESSION_PROXY_URI, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-PROXY-URI:CAPS">SOUP_SESSION_PROXY_URI</a>
 </dt>
 <dt>soup_session_queue_message, <a class="indexterm" href="SoupSession.html#soup-session-queue-message">soup_session_queue_message ()</a>
+</dt>
+<dt>soup_session_redirect_message, <a class="indexterm" href="SoupSession.html#soup-session-redirect-message">soup_session_redirect_message ()</a>
 </dt>
 <dt>soup_session_remove_feature, <a class="indexterm" href="SoupSession.html#soup-session-remove-feature">soup_session_remove_feature ()</a>
 </dt>
@@ -1085,17 +1113,25 @@
 </dt>
 <dt>SOUP_SESSION_SSL_STRICT, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-SSL-STRICT:CAPS">SOUP_SESSION_SSL_STRICT</a>
 </dt>
+<dt>SOUP_SESSION_SSL_USE_SYSTEM_CA_FILE, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-SSL-USE-SYSTEM-CA-FILE:CAPS">SOUP_SESSION_SSL_USE_SYSTEM_CA_FILE</a>
+</dt>
 <dt>soup_session_sync_new, <a class="indexterm" href="SoupSessionSync.html#soup-session-sync-new">soup_session_sync_new ()</a>
 </dt>
 <dt>soup_session_sync_new_with_options, <a class="indexterm" href="SoupSessionSync.html#soup-session-sync-new-with-options">soup_session_sync_new_with_options ()</a>
 </dt>
 <dt>SOUP_SESSION_TIMEOUT, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-TIMEOUT:CAPS">SOUP_SESSION_TIMEOUT</a>
 </dt>
+<dt>SOUP_SESSION_TLS_DATABASE, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-TLS-DATABASE:CAPS">SOUP_SESSION_TLS_DATABASE</a>
+</dt>
 <dt>soup_session_unpause_message, <a class="indexterm" href="SoupSession.html#soup-session-unpause-message">soup_session_unpause_message ()</a>
 </dt>
 <dt>SOUP_SESSION_USER_AGENT, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-USER-AGENT:CAPS">SOUP_SESSION_USER_AGENT</a>
 </dt>
 <dt>SOUP_SESSION_USE_NTLM, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-USE-NTLM:CAPS">SOUP_SESSION_USE_NTLM</a>
+</dt>
+<dt>SOUP_SESSION_USE_THREAD_CONTEXT, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-USE-THREAD-CONTEXT:CAPS">SOUP_SESSION_USE_THREAD_CONTEXT</a>
+</dt>
+<dt>soup_session_would_redirect, <a class="indexterm" href="SoupSession.html#soup-session-would-redirect">soup_session_would_redirect ()</a>
 </dt>
 <dt>SOUP_SOCKET_ASYNC_CONTEXT, <a class="indexterm" href="SoupSocket.html#SOUP-SOCKET-ASYNC-CONTEXT:CAPS">SOUP_SOCKET_ASYNC_CONTEXT</a>
 </dt>
@@ -1147,9 +1183,9 @@
 </dt>
 <dt>SOUP_SOCKET_TRUSTED_CERTIFICATE, <a class="indexterm" href="SoupSocket.html#SOUP-SOCKET-TRUSTED-CERTIFICATE:CAPS">SOUP_SOCKET_TRUSTED_CERTIFICATE</a>
 </dt>
-<dt>soup_socket_write, <a class="indexterm" href="SoupSocket.html#soup-socket-write">soup_socket_write ()</a>
+<dt>SOUP_SOCKET_USE_THREAD_CONTEXT, <a class="indexterm" href="SoupSocket.html#SOUP-SOCKET-USE-THREAD-CONTEXT:CAPS">SOUP_SOCKET_USE_THREAD_CONTEXT</a>
 </dt>
-<dt>SOUP_SSL_ERROR, <a class="indexterm" href="SoupSocket.html#SOUP-SSL-ERROR:CAPS">SOUP_SSL_ERROR</a>
+<dt>soup_socket_write, <a class="indexterm" href="SoupSocket.html#soup-socket-write">soup_socket_write ()</a>
 </dt>
 <dt>soup_ssl_supported, <a class="indexterm" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-ssl-supported">soup_ssl_supported</a>
 </dt>
@@ -1216,6 +1252,8 @@
 <dt>soup_uri_host_equal, <a class="indexterm" href="SoupURI.html#soup-uri-host-equal">soup_uri_host_equal ()</a>
 </dt>
 <dt>soup_uri_host_hash, <a class="indexterm" href="SoupURI.html#soup-uri-host-hash">soup_uri_host_hash ()</a>
+</dt>
+<dt>SOUP_URI_IS_VALID, <a class="indexterm" href="SoupURI.html#SOUP-URI-IS-VALID:CAPS">SOUP_URI_IS_VALID()</a>
 </dt>
 <dt>soup_uri_new, <a class="indexterm" href="SoupURI.html#soup-uri-new">soup_uri_new ()</a>
 </dt>

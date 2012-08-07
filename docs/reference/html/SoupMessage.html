@@ -56,12 +56,12 @@
                                                          <em class="parameter"><code>const <span class="type">char</span> *content_type</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageBody.html#SoupMemoryUse" title="enum SoupMemoryUse"><span class="type">SoupMemoryUse</span></a> req_use</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *req_body</code></em>,
-                                                         <em class="parameter"><code><span class="type">gsize</span> req_length</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> req_length</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessage.html#soup-message-set-response" title="soup_message_set_response ()">soup_message_set_response</a>           (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *content_type</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageBody.html#SoupMemoryUse" title="enum SoupMemoryUse"><span class="type">SoupMemoryUse</span></a> resp_use</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *resp_body</code></em>,
-                                                         <em class="parameter"><code><span class="type">gsize</span> resp_length</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> resp_length</code></em>);
 
 enum                <a class="link" href="SoupMessage.html#SoupHTTPVersion" title="enum SoupHTTPVersion">SoupHTTPVersion</a>;
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessage.html#soup-message-set-http-version" title="soup_message_set_http_version ()">soup_message_set_http_version</a>       (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
@@ -73,45 +73,48 @@ enum                <a class="link" href="SoupMessage.html#SoupHTTPVersion" titl
 <a class="link" href="SoupAddress.html" title="SoupAddress"><span class="returnvalue">SoupAddress</span></a> *       <a class="link" href="SoupMessage.html#soup-message-get-address" title="soup_message_get_address ()">soup_message_get_address</a>            (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>);
 
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessage.html#soup-message-set-status" title="soup_message_set_status ()">soup_message_set_status</a>             (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                                                         <em class="parameter"><code><span class="type">guint</span> status_code</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> status_code</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessage.html#soup-message-set-status-full" title="soup_message_set_status_full ()">soup_message_set_status_full</a>        (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                                                         <em class="parameter"><code><span class="type">guint</span> status_code</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> status_code</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *reason_phrase</code></em>);
-<span class="returnvalue">gboolean</span>            <a class="link" href="SoupMessage.html#soup-message-is-keepalive" title="soup_message_is_keepalive ()">soup_message_is_keepalive</a>           (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>);
-<span class="returnvalue">gboolean</span>            <a class="link" href="SoupMessage.html#soup-message-get-https-status" title="soup_message_get_https_status ()">soup_message_get_https_status</a>       (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                                                         <em class="parameter"><code><span class="type">GTlsCertificate</span> **certificate</code></em>,
-                                                         <em class="parameter"><code><span class="type">GTlsCertificateFlags</span> *errors</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="SoupMessage.html#soup-message-set-redirect" title="soup_message_set_redirect ()">soup_message_set_redirect</a>           (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> status_code</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *redirect_uri</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="SoupMessage.html#soup-message-is-keepalive" title="soup_message_is_keepalive ()">soup_message_is_keepalive</a>           (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="SoupMessage.html#soup-message-get-https-status" title="soup_message_get_https_status ()">soup_message_get_https_status</a>       (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a> **certificate</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/gio-TLS-Overview.html#GTlsCertificateFlags"><span class="type">GTlsCertificateFlags</span></a> *errors</code></em>);
 
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessage.html#soup-message-set-first-party" title="soup_message_set_first_party ()">soup_message_set_first_party</a>        (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *first_party</code></em>);
 <a class="link" href="SoupURI.html" title="SoupURI"><span class="returnvalue">SoupURI</span></a> *           <a class="link" href="SoupMessage.html#soup-message-get-first-party" title="soup_message_get_first_party ()">soup_message_get_first_party</a>        (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>);
 
-<span class="returnvalue">guint</span>               <a class="link" href="SoupMessage.html#soup-message-add-header-handler" title="soup_message_add_header_handler ()">soup_message_add_header_handler</a>     (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="SoupMessage.html#soup-message-add-header-handler" title="soup_message_add_header_handler ()">soup_message_add_header_handler</a>     (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *signal</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *header</code></em>,
-                                                         <em class="parameter"><code><span class="type">GCallback</span> callback</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
-<span class="returnvalue">guint</span>               <a class="link" href="SoupMessage.html#soup-message-add-status-code-handler" title="soup_message_add_status_code_handler ()">soup_message_add_status_code_handler</a>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Closures.html#GCallback"><span class="type">GCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="SoupMessage.html#soup-message-add-status-code-handler" title="soup_message_add_status_code_handler ()">soup_message_add_status_code_handler</a>
                                                         (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *signal</code></em>,
-                                                         <em class="parameter"><code><span class="type">guint</span> status_code</code></em>,
-                                                         <em class="parameter"><code><span class="type">GCallback</span> callback</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> status_code</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Closures.html#GCallback"><span class="type">GCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
 
 enum                <a class="link" href="SoupMessage.html#SoupMessageFlags" title="enum SoupMessageFlags">SoupMessageFlags</a>;
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessage.html#soup-message-set-flags" title="soup_message_set_flags ()">soup_message_set_flags</a>              (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html#SoupMessageFlags" title="enum SoupMessageFlags"><span class="type">SoupMessageFlags</span></a> flags</code></em>);
 <a class="link" href="SoupMessage.html#SoupMessageFlags" title="enum SoupMessageFlags"><span class="returnvalue">SoupMessageFlags</span></a>    <a class="link" href="SoupMessage.html#soup-message-get-flags" title="soup_message_get_flags ()">soup_message_get_flags</a>              (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>);
 <a class="link" href="SoupMessageBody.html#SoupBuffer"><span class="returnvalue">SoupBuffer</span></a> *        (<a class="link" href="SoupMessage.html#SoupChunkAllocator" title="SoupChunkAllocator ()">*SoupChunkAllocator</a>)               (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                                                         <em class="parameter"><code><span class="type">gsize</span> max_len</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> max_len</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessage.html#soup-message-set-chunk-allocator" title="soup_message_set_chunk_allocator ()">soup_message_set_chunk_allocator</a>    (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html#SoupChunkAllocator" title="SoupChunkAllocator ()"><span class="type">SoupChunkAllocator</span></a> allocator</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> destroy_notify</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_notify</code></em>);
 
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessage.html#soup-message-disable-feature" title="soup_message_disable_feature ()">soup_message_disable_feature</a>        (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                                                         <em class="parameter"><code><span class="type">GType</span> feature_type</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> feature_type</code></em>);
 
 #define             <a class="link" href="SoupMessage.html#SOUP-MESSAGE-METHOD:CAPS" title="SOUP_MESSAGE_METHOD">SOUP_MESSAGE_METHOD</a>
 #define             <a class="link" href="SoupMessage.html#SOUP-MESSAGE-URI:CAPS" title="SOUP_MESSAGE_URI">SOUP_MESSAGE_URI</a>
@@ -132,7 +135,7 @@ enum                <a class="link" href="SoupMessage.html#SoupMessageFlags" tit
 <div class="refsect1">
 <a name="SoupMessage.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="synopsis">
-  GObject
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
    +----SoupMessage
 </pre>
 </div>
@@ -142,34 +145,35 @@ enum                <a class="link" href="SoupMessage.html#SoupMessageFlags" tit
   "<a class="link" href="SoupMessage.html#SoupMessage--first-party" title='The "first-party" property'>first-party</a>"              <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a>*              : Read / Write
   "<a class="link" href="SoupMessage.html#SoupMessage--flags" title='The "flags" property'>flags</a>"                    <a class="link" href="SoupMessage.html#SoupMessageFlags" title="enum SoupMessageFlags"><span class="type">SoupMessageFlags</span></a>      : Read / Write
   "<a class="link" href="SoupMessage.html#SoupMessage--http-version" title='The "http-version" property'>http-version</a>"             <a class="link" href="SoupMessage.html#SoupHTTPVersion" title="enum SoupHTTPVersion"><span class="type">SoupHTTPVersion</span></a>       : Read / Write
-  "<a class="link" href="SoupMessage.html#SoupMessage--method" title='The "method" property'>method</a>"                   <span class="type">gchar</span>*                : Read / Write
-  "<a class="link" href="SoupMessage.html#SoupMessage--reason-phrase" title='The "reason-phrase" property'>reason-phrase</a>"            <span class="type">gchar</span>*                : Read / Write
+  "<a class="link" href="SoupMessage.html#SoupMessage--method" title='The "method" property'>method</a>"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="SoupMessage.html#SoupMessage--reason-phrase" title='The "reason-phrase" property'>reason-phrase</a>"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
   "<a class="link" href="SoupMessage.html#SoupMessage--request-body" title='The "request-body" property'>request-body</a>"             <a class="link" href="SoupMessageBody.html" title="SoupMessageBody"><span class="type">SoupMessageBody</span></a>*      : Read
   "<a class="link" href="SoupMessage.html#SoupMessage--request-headers" title='The "request-headers" property'>request-headers</a>"          <a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a>*   : Read
   "<a class="link" href="SoupMessage.html#SoupMessage--response-body" title='The "response-body" property'>response-body</a>"            <a class="link" href="SoupMessageBody.html" title="SoupMessageBody"><span class="type">SoupMessageBody</span></a>*      : Read
   "<a class="link" href="SoupMessage.html#SoupMessage--response-headers" title='The "response-headers" property'>response-headers</a>"         <a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a>*   : Read
-  "<a class="link" href="SoupMessage.html#SoupMessage--server-side" title='The "server-side" property'>server-side</a>"              <span class="type">gboolean</span>              : Read / Write / Construct Only
-  "<a class="link" href="SoupMessage.html#SoupMessage--status-code" title='The "status-code" property'>status-code</a>"              <span class="type">guint</span>                 : Read / Write
-  "<a class="link" href="SoupMessage.html#SoupMessage--tls-certificate" title='The "tls-certificate" property'>tls-certificate</a>"          <span class="type">GTlsCertificate</span>*      : Read / Write
-  "<a class="link" href="SoupMessage.html#SoupMessage--tls-errors" title='The "tls-errors" property'>tls-errors</a>"               <span class="type">GTlsCertificateFlags</span>  : Read / Write
+  "<a class="link" href="SoupMessage.html#SoupMessage--server-side" title='The "server-side" property'>server-side</a>"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write / Construct Only
+  "<a class="link" href="SoupMessage.html#SoupMessage--status-code" title='The "status-code" property'>status-code</a>"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write
+  "<a class="link" href="SoupMessage.html#SoupMessage--tls-certificate" title='The "tls-certificate" property'>tls-certificate</a>"          <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a>*      : Read / Write
+  "<a class="link" href="SoupMessage.html#SoupMessage--tls-errors" title='The "tls-errors" property'>tls-errors</a>"               <a href="http://library.gnome.org/devel/gio/unstable/gio-TLS-Overview.html#GTlsCertificateFlags"><span class="type">GTlsCertificateFlags</span></a>  : Read / Write
   "<a class="link" href="SoupMessage.html#SoupMessage--uri" title='The "uri" property'>uri</a>"                      <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a>*              : Read / Write
 </pre>
 </div>
 <div class="refsect1">
 <a name="SoupMessage.signals"></a><h2>Signals</h2>
 <pre class="synopsis">
-  "<a class="link" href="SoupMessage.html#SoupMessage-content-sniffed" title='The "content-sniffed" signal'>content-sniffed</a>"                                : <code class="literal">Run First</code>
-  "<a class="link" href="SoupMessage.html#SoupMessage-finished" title='The "finished" signal'>finished</a>"                                       : <code class="literal">Run First</code>
-  "<a class="link" href="SoupMessage.html#SoupMessage-got-body" title='The "got-body" signal'>got-body</a>"                                       : <code class="literal">Run First</code>
-  "<a class="link" href="SoupMessage.html#SoupMessage-got-chunk" title='The "got-chunk" signal'>got-chunk</a>"                                      : <code class="literal">Run First</code>
-  "<a class="link" href="SoupMessage.html#SoupMessage-got-headers" title='The "got-headers" signal'>got-headers</a>"                                    : <code class="literal">Run First</code>
-  "<a class="link" href="SoupMessage.html#SoupMessage-got-informational" title='The "got-informational" signal'>got-informational</a>"                              : <code class="literal">Run First</code>
-  "<a class="link" href="SoupMessage.html#SoupMessage-restarted" title='The "restarted" signal'>restarted</a>"                                      : <code class="literal">Run First</code>
-  "<a class="link" href="SoupMessage.html#SoupMessage-wrote-body" title='The "wrote-body" signal'>wrote-body</a>"                                     : <code class="literal">Run First</code>
-  "<a class="link" href="SoupMessage.html#SoupMessage-wrote-body-data" title='The "wrote-body-data" signal'>wrote-body-data</a>"                                : <code class="literal">Run First</code>
-  "<a class="link" href="SoupMessage.html#SoupMessage-wrote-chunk" title='The "wrote-chunk" signal'>wrote-chunk</a>"                                    : <code class="literal">Run First</code>
-  "<a class="link" href="SoupMessage.html#SoupMessage-wrote-headers" title='The "wrote-headers" signal'>wrote-headers</a>"                                  : <code class="literal">Run First</code>
-  "<a class="link" href="SoupMessage.html#SoupMessage-wrote-informational" title='The "wrote-informational" signal'>wrote-informational</a>"                            : <code class="literal">Run First</code>
+  "<a class="link" href="SoupMessage.html#SoupMessage-content-sniffed" title='The "content-sniffed" signal'>content-sniffed</a>"                                : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
+  "<a class="link" href="SoupMessage.html#SoupMessage-finished" title='The "finished" signal'>finished</a>"                                       : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
+  "<a class="link" href="SoupMessage.html#SoupMessage-got-body" title='The "got-body" signal'>got-body</a>"                                       : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
+  "<a class="link" href="SoupMessage.html#SoupMessage-got-chunk" title='The "got-chunk" signal'>got-chunk</a>"                                      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
+  "<a class="link" href="SoupMessage.html#SoupMessage-got-headers" title='The "got-headers" signal'>got-headers</a>"                                    : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
+  "<a class="link" href="SoupMessage.html#SoupMessage-got-informational" title='The "got-informational" signal'>got-informational</a>"                              : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
+  "<a class="link" href="SoupMessage.html#SoupMessage-network-event" title='The "network-event" signal'>network-event</a>"                                  : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
+  "<a class="link" href="SoupMessage.html#SoupMessage-restarted" title='The "restarted" signal'>restarted</a>"                                      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
+  "<a class="link" href="SoupMessage.html#SoupMessage-wrote-body" title='The "wrote-body" signal'>wrote-body</a>"                                     : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
+  "<a class="link" href="SoupMessage.html#SoupMessage-wrote-body-data" title='The "wrote-body-data" signal'>wrote-body-data</a>"                                : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
+  "<a class="link" href="SoupMessage.html#SoupMessage-wrote-chunk" title='The "wrote-chunk" signal'>wrote-chunk</a>"                                    : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
+  "<a class="link" href="SoupMessage.html#SoupMessage-wrote-headers" title='The "wrote-headers" signal'>wrote-headers</a>"                                  : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
+  "<a class="link" href="SoupMessage.html#SoupMessage-wrote-informational" title='The "wrote-informational" signal'>wrote-informational</a>"                            : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
 </pre>
 </div>
 <div class="refsect1">
@@ -252,7 +256,7 @@ To prevent the <code class="literal">data</code> field from being filled in at a
 are handling the data from a <a class="link" href="SoupMessage.html#SoupMessage-got-chunk" title='The "got-chunk" signal'><span class="type">"got_chunk"</span></a>, and so don't
 need to see it all at the end), call
 <a class="link" href="SoupMessageBody.html#soup-message-body-set-accumulate" title="soup_message_body_set_accumulate ()"><code class="function">soup_message_body_set_accumulate()</code></a> on <em class="parameter"><code>response_body</code></em> or
-<em class="parameter"><code>request_body</code></em> as appropriate, passing <code class="literal">FALSE</code>.
+<em class="parameter"><code>request_body</code></em> as appropriate, passing <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.
 </p>
 <div class="variablelist"><table border="0">
 <col align="left" valign="top">
@@ -262,7 +266,7 @@ need to see it all at the end), call
 <td>the HTTP method</td>
 </tr>
 <tr>
-<td><p><span class="term"><span class="type">guint</span> <em class="structfield"><code><a name="SoupMessage-struct.status-code"></a>status_code</code></em>;</span></p></td>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> <em class="structfield"><code><a name="SoupMessage-struct.status-code"></a>status_code</code></em>;</span></p></td>
 <td>the HTTP status code</td>
 </tr>
 <tr>
@@ -310,7 +314,7 @@ Creates a new empty <a class="link" href="SoupMessage.html" title="SoupMessage">
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>the new <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> (or <code class="literal">NULL</code> if <em class="parameter"><code>uri</code></em> could not
+<td>the new <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> (or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>uri</code></em> could not
 be parsed).</td>
 </tr>
 </tbody>
@@ -350,10 +354,10 @@ Creates a new empty <a class="link" href="SoupMessage.html" title="SoupMessage">
                                                          <em class="parameter"><code>const <span class="type">char</span> *content_type</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageBody.html#SoupMemoryUse" title="enum SoupMemoryUse"><span class="type">SoupMemoryUse</span></a> req_use</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *req_body</code></em>,
-                                                         <em class="parameter"><code><span class="type">gsize</span> req_length</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> req_length</code></em>);</pre>
 <p>
 Convenience function to set the request body of a <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a>. If
-<em class="parameter"><code>content_type</code></em> is <code class="literal">NULL</code>, the request body must be empty as well.
+<em class="parameter"><code>content_type</code></em> is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, the request body must be empty as well.
 </p>
 <div class="variablelist"><table border="0">
 <col align="left" valign="top">
@@ -389,10 +393,10 @@ Convenience function to set the request body of a <a class="link" href="SoupMess
                                                          <em class="parameter"><code>const <span class="type">char</span> *content_type</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageBody.html#SoupMemoryUse" title="enum SoupMemoryUse"><span class="type">SoupMemoryUse</span></a> resp_use</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *resp_body</code></em>,
-                                                         <em class="parameter"><code><span class="type">gsize</span> resp_length</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> resp_length</code></em>);</pre>
 <p>
 Convenience function to set the response body of a <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a>. If
-<em class="parameter"><code>content_type</code></em> is <code class="literal">NULL</code>, the response body must be empty as well.
+<em class="parameter"><code>content_type</code></em> is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, the response body must be empty as well.
 </p>
 <div class="variablelist"><table border="0">
 <col align="left" valign="top">
@@ -578,7 +582,7 @@ session will resolve it before sending the message.
 <div class="refsect2">
 <a name="soup-message-set-status"></a><h3>soup_message_set_status ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_message_set_status             (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                                                         <em class="parameter"><code><span class="type">guint</span> status_code</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> status_code</code></em>);</pre>
 <p>
 Sets <em class="parameter"><code>msg</code></em>'s status code to <em class="parameter"><code>status_code</code></em>. If <em class="parameter"><code>status_code</code></em> is a
 known value, it will also set <em class="parameter"><code>msg</code></em>'s reason_phrase.
@@ -602,7 +606,7 @@ known value, it will also set <em class="parameter"><code>msg</code></em>'s reas
 <div class="refsect2">
 <a name="soup-message-set-status-full"></a><h3>soup_message_set_status_full ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_message_set_status_full        (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                                                         <em class="parameter"><code><span class="type">guint</span> status_code</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> status_code</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *reason_phrase</code></em>);</pre>
 <p>
 Sets <em class="parameter"><code>msg</code></em>'s status code and reason phrase.
@@ -628,8 +632,45 @@ Sets <em class="parameter"><code>msg</code></em>'s status code and reason phrase
 </div>
 <hr>
 <div class="refsect2">
+<a name="soup-message-set-redirect"></a><h3>soup_message_set_redirect ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                soup_message_set_redirect           (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> status_code</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *redirect_uri</code></em>);</pre>
+<p>
+Sets <em class="parameter"><code>msg</code></em>'s status_code to <em class="parameter"><code>status_code</code></em> and adds a Location header
+pointing to <em class="parameter"><code>redirect_uri</code></em>. Use this from a <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> when you
+want to redirect the client to another URI.
+</p>
+<p>
+<em class="parameter"><code>redirect_uri</code></em> can be a relative URI, in which case it is
+interpreted relative to <em class="parameter"><code>msg</code></em>'s current URI. In particular, if
+<em class="parameter"><code>redirect_uri</code></em> is just a path, it will replace the path
+<span class="emphasis"><em>and query</em></span> of <em class="parameter"><code>msg</code></em>'s URI.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>msg</code></em> :</span></p></td>
+<td>a <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>status_code</code></em> :</span></p></td>
+<td>a 3xx status code</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>redirect_uri</code></em> :</span></p></td>
+<td>the URI to redirect <em class="parameter"><code>msg</code></em> to</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.38</p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="soup-message-is-keepalive"></a><h3>soup_message_is_keepalive ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_message_is_keepalive           (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_message_is_keepalive           (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>);</pre>
 <p>
 Determines whether or not <em class="parameter"><code>msg</code></em>'s connection can be kept alive for
 further requests after processing <em class="parameter"><code>msg</code></em>, based on the HTTP version,
@@ -646,7 +687,7 @@ Connection header, etc.
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> or <code class="literal">FALSE</code>.</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
 </tr>
 </tbody>
 </table></div>
@@ -654,12 +695,12 @@ Connection header, etc.
 <hr>
 <div class="refsect2">
 <a name="soup-message-get-https-status"></a><h3>soup_message_get_https_status ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_message_get_https_status       (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                                                         <em class="parameter"><code><span class="type">GTlsCertificate</span> **certificate</code></em>,
-                                                         <em class="parameter"><code><span class="type">GTlsCertificateFlags</span> *errors</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_message_get_https_status       (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a> **certificate</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/gio-TLS-Overview.html#GTlsCertificateFlags"><span class="type">GTlsCertificateFlags</span></a> *errors</code></em>);</pre>
 <p>
-If <em class="parameter"><code>msg</code></em> is using https, this retrieves the <span class="type">GTlsCertificate</span>
-associated with its connection, and the <span class="type">GTlsCertificateFlags</span> showing
+If <em class="parameter"><code>msg</code></em> is using https, this retrieves the <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a>
+associated with its connection, and the <a href="http://library.gnome.org/devel/gio/unstable/gio-TLS-Overview.html#GTlsCertificateFlags"><span class="type">GTlsCertificateFlags</span></a> showing
 what problems, if any, have been found with that certificate.
 </p>
 <div class="variablelist"><table border="0">
@@ -684,7 +725,7 @@ what problems, if any, have been found with that certificate.
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> if <em class="parameter"><code>msg</code></em> uses https, <code class="literal">FALSE</code> if not</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>msg</code></em> uses https, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if not</td>
 </tr>
 </tbody>
 </table></div>
@@ -743,14 +784,14 @@ Gets <em class="parameter"><code>msg</code></em>'s first-party <a class="link" h
 <hr>
 <div class="refsect2">
 <a name="soup-message-add-header-handler"></a><h3>soup_message_add_header_handler ()</h3>
-<pre class="programlisting"><span class="returnvalue">guint</span>               soup_message_add_header_handler     (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               soup_message_add_header_handler     (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *signal</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *header</code></em>,
-                                                         <em class="parameter"><code><span class="type">GCallback</span> callback</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Closures.html#GCallback"><span class="type">GCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>
 Adds a signal handler to <em class="parameter"><code>msg</code></em> for <em class="parameter"><code>signal</code></em>, as with
-<code class="function">g_signal_connect()</code>, but with two differences: the <em class="parameter"><code>callback</code></em> will
+<a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#g-signal-connect"><code class="function">g_signal_connect()</code></a>, but with two differences: the <em class="parameter"><code>callback</code></em> will
 only be run if <em class="parameter"><code>msg</code></em> has a header named <em class="parameter"><code>header</code></em>, and it will only be
 run if no earlier handler cancelled or requeued the message.
 </p>
@@ -789,7 +830,7 @@ client <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>the handler ID from <code class="function">g_signal_connect()</code>
+<td>the handler ID from <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#g-signal-connect"><code class="function">g_signal_connect()</code></a>
 </td>
 </tr>
 </tbody>
@@ -798,15 +839,15 @@ client <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="
 <hr>
 <div class="refsect2">
 <a name="soup-message-add-status-code-handler"></a><h3>soup_message_add_status_code_handler ()</h3>
-<pre class="programlisting"><span class="returnvalue">guint</span>               soup_message_add_status_code_handler
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               soup_message_add_status_code_handler
                                                         (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *signal</code></em>,
-                                                         <em class="parameter"><code><span class="type">guint</span> status_code</code></em>,
-                                                         <em class="parameter"><code><span class="type">GCallback</span> callback</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> status_code</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Closures.html#GCallback"><span class="type">GCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>
 Adds a signal handler to <em class="parameter"><code>msg</code></em> for <em class="parameter"><code>signal</code></em>, as with
-<code class="function">g_signal_connect()</code> but with two differences: the <em class="parameter"><code>callback</code></em> will
+<a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#g-signal-connect"><code class="function">g_signal_connect()</code></a> but with two differences: the <em class="parameter"><code>callback</code></em> will
 only be run if <em class="parameter"><code>msg</code></em> has the status <em class="parameter"><code>status_code</code></em>, and it will only
 be run if no earlier handler cancelled or requeued the message.
 </p>
@@ -843,7 +884,7 @@ signal.
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>the handler ID from <code class="function">g_signal_connect()</code>
+<td>the handler ID from <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#g-signal-connect"><code class="function">g_signal_connect()</code></a>
 </td>
 </tr>
 </tbody>
@@ -859,7 +900,8 @@ signal.
 	SOUP_MESSAGE_OVERWRITE_CHUNKS     = (1 &lt;&lt; 3),
 #endif
 	SOUP_MESSAGE_CONTENT_DECODED      = (1 &lt;&lt; 4),
-	SOUP_MESSAGE_CERTIFICATE_TRUSTED  = (1 &lt;&lt; 5)
+	SOUP_MESSAGE_CERTIFICATE_TRUSTED  = (1 &lt;&lt; 5),
+	SOUP_MESSAGE_NEW_CONNECTION       = (1 &lt;&lt; 6)
 } SoupMessageFlags;
 </pre>
 <p>
@@ -887,7 +929,7 @@ behavior.
 <td>Deprecated: equivalent to calling
   <a class="link" href="SoupMessageBody.html#soup-message-body-set-accumulate" title="soup_message_body_set_accumulate ()"><code class="function">soup_message_body_set_accumulate()</code></a> on the incoming message body
   (ie, <a class="link" href="SoupMessage.html#SoupMessage--response-body" title='The "response-body" property'><span class="type">"response_body"</span></a> for a client-side request),
-  passing <code class="literal">FALSE</code>.
+  passing <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.
 </td>
 </tr>
 <tr>
@@ -903,6 +945,14 @@ behavior.
 <td>if set after an https response
   has been received, indicates that the server's SSL certificate is
   trusted according to the session's CA.
+</td>
+</tr>
+<tr>
+<td><p><a name="SOUP-MESSAGE-NEW-CONNECTION:CAPS"></a><span class="term"><code class="literal">SOUP_MESSAGE_NEW_CONNECTION</code></span></p></td>
+<td>The message should be sent on a
+  newly-created connection, not reusing an existing persistent
+  connection. Note that messages with non-idempotent
+  <a class="link" href="SoupMessage.html#SoupMessage--method" title='The "method" property'><span class="type">"method"</span></a>s behave this way by default.
 </td>
 </tr>
 </tbody>
@@ -957,8 +1007,8 @@ Gets the flags on <em class="parameter"><code>msg</code></em>
 <div class="refsect2">
 <a name="SoupChunkAllocator"></a><h3>SoupChunkAllocator ()</h3>
 <pre class="programlisting"><a class="link" href="SoupMessageBody.html#SoupBuffer"><span class="returnvalue">SoupBuffer</span></a> *        (*SoupChunkAllocator)               (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                                                         <em class="parameter"><code><span class="type">gsize</span> max_len</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> max_len</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>
 The prototype for a chunk allocation callback. This should allocate
 a new <a class="link" href="SoupMessageBody.html#SoupBuffer"><span class="type">SoupBuffer</span></a> and return it for the I/O layer to read message
@@ -974,7 +1024,7 @@ and the allocator should return a buffer of a size that it finds
 convenient.
 </p>
 <p>
-If the allocator returns <code class="literal">NULL</code>, the message will be paused. It is
+If the allocator returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, the message will be paused. It is
 up to the application to make sure that it gets unpaused when it
 becomes possible to allocate a new buffer.
 </p>
@@ -996,7 +1046,7 @@ becomes possible to allocate a new buffer.
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>the new buffer (or <code class="literal">NULL</code>)</td>
+<td>the new buffer (or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>)</td>
 </tr>
 </tbody>
 </table></div>
@@ -1006,8 +1056,8 @@ becomes possible to allocate a new buffer.
 <a name="soup-message-set-chunk-allocator"></a><h3>soup_message_set_chunk_allocator ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_message_set_chunk_allocator    (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html#SoupChunkAllocator" title="SoupChunkAllocator ()"><span class="type">SoupChunkAllocator</span></a> allocator</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> destroy_notify</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_notify</code></em>);</pre>
 <p>
 Sets an alternate chunk-allocation function to use when reading
 <em class="parameter"><code>msg</code></em>'s body. Every time data is available to read, libsoup will
@@ -1018,7 +1068,7 @@ data from the network into that buffer, and update the buffer's
 </p>
 <p>
 Generally, a custom chunk allocator would be used in conjunction
-with <a class="link" href="SoupMessageBody.html#soup-message-body-set-accumulate" title="soup_message_body_set_accumulate ()"><code class="function">soup_message_body_set_accumulate()</code></a> <code class="literal">FALSE</code> and
+with <a class="link" href="SoupMessageBody.html#soup-message-body-set-accumulate" title="soup_message_body_set_accumulate ()"><code class="function">soup_message_body_set_accumulate()</code></a> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> and
 <a class="link" href="SoupMessage.html#SoupMessage-got-chunk" title='The "got-chunk" signal'><span class="type">"got_chunk"</span></a>, as part of a strategy to avoid unnecessary
 copying of data. However, you cannot assume that every call to the
 allocator will be followed by a call to your
@@ -1067,7 +1117,7 @@ destroyed</td>
 <div class="refsect2">
 <a name="soup-message-disable-feature"></a><h3>soup_message_disable_feature ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_message_disable_feature        (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                                                         <em class="parameter"><code><span class="type">GType</span> feature_type</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> feature_type</code></em>);</pre>
 <p>
 This disables the actions of <a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="type">SoupSessionFeature</span></a>s with the
 given <em class="parameter"><code>feature_type</code></em> (or a subclass of that type) on <em class="parameter"><code>msg</code></em>, so that
@@ -1093,7 +1143,7 @@ redirect or authentication.
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>feature_type</code></em> :</span></p></td>
-<td>the <span class="type">GType</span> of a <a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="type">SoupSessionFeature</span></a>
+<td>the <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> of a <a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="type">SoupSessionFeature</span></a>
 </td>
 </tr>
 </tbody>
@@ -1166,7 +1216,7 @@ message's HTTP response reason phrase.)
 <pre class="programlisting">#define SOUP_MESSAGE_SERVER_SIDE      "server-side"
 </pre>
 <p>
-Alias for the <a class="link" href="SoupMessage.html#SoupMessage--server-side" title='The "server-side" property'><span class="type">"server-side"</span></a> property. (<code class="literal">TRUE</code> if
+Alias for the <a class="link" href="SoupMessage.html#SoupMessage--server-side" title='The "server-side" property'><span class="type">"server-side"</span></a> property. (<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if
 the message was created by <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>.)
 </p>
 </div>
@@ -1272,14 +1322,14 @@ queued.
 <hr>
 <div class="refsect2">
 <a name="SoupMessage--method"></a><h3>The <code class="literal">"method"</code> property</h3>
-<pre class="programlisting">  "method"                   <span class="type">gchar</span>*                : Read / Write</pre>
+<pre class="programlisting">  "method"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
 <p>The message's HTTP method.</p>
 <p>Default value: "GET"</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupMessage--reason-phrase"></a><h3>The <code class="literal">"reason-phrase"</code> property</h3>
-<pre class="programlisting">  "reason-phrase"            <span class="type">gchar</span>*                : Read / Write</pre>
+<pre class="programlisting">  "reason-phrase"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
 <p>The HTTP response reason phrase.</p>
 <p>Default value: NULL</p>
 </div>
@@ -1310,14 +1360,14 @@ queued.
 <hr>
 <div class="refsect2">
 <a name="SoupMessage--server-side"></a><h3>The <code class="literal">"server-side"</code> property</h3>
-<pre class="programlisting">  "server-side"              <span class="type">gboolean</span>              : Read / Write / Construct Only</pre>
+<pre class="programlisting">  "server-side"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write / Construct Only</pre>
 <p>Whether or not the message is server-side rather than client-side.</p>
 <p>Default value: FALSE</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupMessage--status-code"></a><h3>The <code class="literal">"status-code"</code> property</h3>
-<pre class="programlisting">  "status-code"              <span class="type">guint</span>                 : Read / Write</pre>
+<pre class="programlisting">  "status-code"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write</pre>
 <p>The HTTP response status code.</p>
 <p>Allowed values: &lt;= 599</p>
 <p>Default value: 0</p>
@@ -1325,7 +1375,7 @@ queued.
 <hr>
 <div class="refsect2">
 <a name="SoupMessage--tls-certificate"></a><h3>The <code class="literal">"tls-certificate"</code> property</h3>
-<pre class="programlisting">  "tls-certificate"          <span class="type">GTlsCertificate</span>*      : Read / Write</pre>
+<pre class="programlisting">  "tls-certificate"          <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a>*      : Read / Write</pre>
 <p>
 The verification errors on <a class="link" href="SoupMessage.html#SoupMessage--tls-certificate" title='The "tls-certificate" property'><span class="type">"tls-certificate"</span></a>
 </p>
@@ -1334,7 +1384,7 @@ The verification errors on <a class="link" href="SoupMessage.html#SoupMessage--t
 <hr>
 <div class="refsect2">
 <a name="SoupMessage--tls-errors"></a><h3>The <code class="literal">"tls-errors"</code> property</h3>
-<pre class="programlisting">  "tls-errors"               <span class="type">GTlsCertificateFlags</span>  : Read / Write</pre>
+<pre class="programlisting">  "tls-errors"               <a href="http://library.gnome.org/devel/gio/unstable/gio-TLS-Overview.html#GTlsCertificateFlags"><span class="type">GTlsCertificateFlags</span></a>  : Read / Write</pre>
 <p>The verification errors on the message's TLS certificate.</p>
 </div>
 <hr>
@@ -1349,9 +1399,9 @@ The verification errors on <a class="link" href="SoupMessage.html#SoupMessage--t
 <div class="refsect2">
 <a name="SoupMessage-content-sniffed"></a><h3>The <code class="literal">"content-sniffed"</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg,
-                                                        <span class="type">gchar</span>       *type,
-                                                        <span class="type">GHashTable</span>  *params,
-                                                        <span class="type">gpointer</span>     user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>       *type,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a>  *params,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 This signal is emitted after <a class="link" href="SoupMessage.html#SoupMessage-got-headers" title='The "got-headers" signal'><span class="type">"got-headers"</span></a>, and
 before the first <a class="link" href="SoupMessage.html#SoupMessage-got-chunk" title='The "got-chunk" signal'><span class="type">"got-chunk"</span></a>. If content
@@ -1359,7 +1409,7 @@ sniffing is disabled, or no content sniffing will be
 performed, due to the sniffer deciding to trust the
 Content-Type sent by the server, this signal is emitted
 immediately after <a class="link" href="SoupMessage.html#SoupMessage-got-headers" title='The "got-headers" signal'><span class="type">"got-headers"</span></a>, and <em class="parameter"><code>type</code></em> is
-<code class="literal">NULL</code>.
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.
 </p>
 <p>
 If the <a class="link" href="SoupContentSniffer.html" title="SoupContentSniffer"><span class="type">SoupContentSniffer</span></a> feature is enabled, and the
@@ -1388,7 +1438,7 @@ emission of <a class="link" href="SoupMessage.html#SoupMessage-got-chunk" title=
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>params</code></em> :</span></p></td>
-<td>a <span class="type">GHashTable</span> with the parameters. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8 utf8]</span>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> with the parameters. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8 utf8]</span>
 </td>
 </tr>
 <tr>
@@ -1403,7 +1453,7 @@ emission of <a class="link" href="SoupMessage.html#SoupMessage-got-chunk" title=
 <div class="refsect2">
 <a name="SoupMessage-finished"></a><h3>The <code class="literal">"finished"</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg,
-                                                        <span class="type">gpointer</span>     user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 Emitted when all HTTP processing is finished for a message.
 (After <a class="link" href="SoupMessage.html#SoupMessage-got-body" title='The "got-body" signal'><span class="type">"got_body"</span></a> for client-side messages, or
@@ -1427,7 +1477,7 @@ after <a class="link" href="SoupMessage.html#SoupMessage-wrote-body" title='The 
 <div class="refsect2">
 <a name="SoupMessage-got-body"></a><h3>The <code class="literal">"got-body"</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg,
-                                                        <span class="type">gpointer</span>     user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 Emitted after receiving the complete message body. (For a
 server-side message, this means it has received the request
@@ -1458,7 +1508,7 @@ to connect to a subset of emissions of this signal.
 <a name="SoupMessage-got-chunk"></a><h3>The <code class="literal">"got-chunk"</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg,
                                                         <a class="link" href="SoupMessageBody.html#SoupBuffer"><span class="type">SoupBuffer</span></a>  *chunk,
-                                                        <span class="type">gpointer</span>     user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 Emitted after receiving a chunk of a message body. Note
 that "chunk" in this context means any subpiece of the
@@ -1492,7 +1542,7 @@ emission finished, and <em class="parameter"><code>msg</code></em>'s connection 
 <div class="refsect2">
 <a name="SoupMessage-got-headers"></a><h3>The <code class="literal">"got-headers"</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg,
-                                                        <span class="type">gpointer</span>     user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 Emitted after receiving all message headers for a message.
 (For a client-side message, this is after receiving the
@@ -1533,7 +1583,7 @@ existing HTTP connection can be reused.)
 <div class="refsect2">
 <a name="SoupMessage-got-informational"></a><h3>The <code class="literal">"got-informational"</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg,
-                                                        <span class="type">gpointer</span>     user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 Emitted after receiving a 1xx (Informational) response for
 a (client-side) message. The response_headers will be
@@ -1562,9 +1612,54 @@ emission finished, and <em class="parameter"><code>msg</code></em>'s connection 
 </div>
 <hr>
 <div class="refsect2">
+<a name="SoupMessage-network-event"></a><h3>The <code class="literal">"network-event"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a>       *msg,
+                                                        <a href="http://library.gnome.org/devel/gio/unstable/GSocketClient.html#GSocketClientEvent"><span class="type">GSocketClientEvent</span></a> event,
+                                                        <a href="http://library.gnome.org/devel/gio/unstable/GIOStream.html"><span class="type">GIOStream</span></a>         *connection,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)       : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
+<p>
+Emitted to indicate that some network-related event
+related to <em class="parameter"><code>msg</code></em> has occurred. This essentially proxies the
+<a href="http://library.gnome.org/devel/gio/unstable/GSocketClient.html#GSocketClient-event"><span class="type">"event"</span></a> signal, but only for events that
+occur while <em class="parameter"><code>msg</code></em> "owns" the connection; if <em class="parameter"><code>msg</code></em> is sent on
+an existing persistent connection, then this signal will
+not be emitted. (If you want to force the message to be
+sent on a new connection, set the
+<a class="link" href="SoupMessage.html#SOUP-MESSAGE-NEW-CONNECTION:CAPS"><code class="literal">SOUP_MESSAGE_NEW_CONNECTION</code></a> flag on it.)
+</p>
+<p>
+See <a href="http://library.gnome.org/devel/gio/unstable/GSocketClient.html#GSocketClient-event"><span class="type">"event"</span></a> for more information on what
+the different values of <em class="parameter"><code>event</code></em> correspond to, and what
+<em class="parameter"><code>connection</code></em> will be in each case.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>msg</code></em> :</span></p></td>
+<td>the message</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>event</code></em> :</span></p></td>
+<td>the network event</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>connection</code></em> :</span></p></td>
+<td>the current state of the network connection</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.38</p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="SoupMessage-restarted"></a><h3>The <code class="literal">"restarted"</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg,
-                                                        <span class="type">gpointer</span>     user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 Emitted when a request that was already sent once is now
 being sent again (eg, because the first attempt received a
@@ -1589,7 +1684,7 @@ authentication).
 <div class="refsect2">
 <a name="SoupMessage-wrote-body"></a><h3>The <code class="literal">"wrote-body"</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg,
-                                                        <span class="type">gpointer</span>     user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 Emitted immediately after writing the complete body for a
 message. (For a client-side message, this means that
@@ -1617,7 +1712,7 @@ done with the message.)
 <a name="SoupMessage-wrote-body-data"></a><h3>The <code class="literal">"wrote-body-data"</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg,
                                                         <a class="link" href="SoupMessageBody.html#SoupBuffer"><span class="type">SoupBuffer</span></a>  *chunk,
-                                                        <span class="type">gpointer</span>     user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 Emitted immediately after writing a portion of the message
 body to the network.
@@ -1650,7 +1745,7 @@ complete "chunk".
 <div class="refsect2">
 <a name="SoupMessage-wrote-chunk"></a><h3>The <code class="literal">"wrote-chunk"</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg,
-                                                        <span class="type">gpointer</span>     user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 Emitted immediately after writing a body chunk for a message.
 </p>
@@ -1680,7 +1775,7 @@ more useful continuous progress information, use
 <div class="refsect2">
 <a name="SoupMessage-wrote-headers"></a><h3>The <code class="literal">"wrote-headers"</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg,
-                                                        <span class="type">gpointer</span>     user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 Emitted immediately after writing the headers for a
 message. (For a client-side message, this is after writing
@@ -1705,7 +1800,7 @@ writing the response headers.)
 <div class="refsect2">
 <a name="SoupMessage-wrote-informational"></a><h3>The <code class="literal">"wrote-informational"</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg,
-                                                        <span class="type">gpointer</span>     user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 Emitted immediately after writing a 1xx (Informational)
 response for a (server-side) message.

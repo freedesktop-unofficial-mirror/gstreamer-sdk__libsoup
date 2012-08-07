@@ -49,26 +49,26 @@
                     <a class="link" href="SoupServer.html#SoupServer-struct" title="SoupServer">SoupServer</a>;
 <a class="link" href="SoupServer.html" title="SoupServer"><span class="returnvalue">SoupServer</span></a> *        <a class="link" href="SoupServer.html#soup-server-new" title="soup_server_new ()">soup_server_new</a>                     (<em class="parameter"><code>const <span class="type">char</span> *optname1</code></em>,
                                                          <em class="parameter"><code>...</code></em>);
-<span class="returnvalue">gboolean</span>            <a class="link" href="SoupServer.html#soup-server-is-https" title="soup_server_is_https ()">soup_server_is_https</a>                (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);
-<span class="returnvalue">guint</span>               <a class="link" href="SoupServer.html#soup-server-get-port" title="soup_server_get_port ()">soup_server_get_port</a>                (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="SoupServer.html#soup-server-is-https" title="soup_server_is_https ()">soup_server_is_https</a>                (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="SoupServer.html#soup-server-get-port" title="soup_server_get_port ()">soup_server_get_port</a>                (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);
 <a class="link" href="SoupSocket.html" title="SoupSocket"><span class="returnvalue">SoupSocket</span></a> *        <a class="link" href="SoupServer.html#soup-server-get-listener" title="soup_server_get_listener ()">soup_server_get_listener</a>            (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupServer.html#soup-server-run" title="soup_server_run ()">soup_server_run</a>                     (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupServer.html#soup-server-run-async" title="soup_server_run_async ()">soup_server_run_async</a>               (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupServer.html#soup-server-quit" title="soup_server_quit ()">soup_server_quit</a>                    (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupServer.html#soup-server-disconnect" title="soup_server_disconnect ()">soup_server_disconnect</a>              (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);
-<span class="returnvalue">GMainContext</span> *      <a class="link" href="SoupServer.html#soup-server-get-async-context" title="soup_server_get_async_context ()">soup_server_get_async_context</a>       (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="returnvalue">GMainContext</span></a> *      <a class="link" href="SoupServer.html#soup-server-get-async-context" title="soup_server_get_async_context ()">soup_server_get_async_context</a>       (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);
 
 <span class="returnvalue">void</span>                (<a class="link" href="SoupServer.html#SoupServerCallback" title="SoupServerCallback ()">*SoupServerCallback</a>)               (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *path</code></em>,
-                                                         <em class="parameter"><code><span class="type">GHashTable</span> *query</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> *query</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupServer.html#SoupClientContext"><span class="type">SoupClientContext</span></a> *client</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupServer.html#soup-server-add-handler" title="soup_server_add_handler ()">soup_server_add_handler</a>             (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *path</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupServer.html#SoupServerCallback" title="SoupServerCallback ()"><span class="type">SoupServerCallback</span></a> callback</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> destroy</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupServer.html#soup-server-remove-handler" title="soup_server_remove_handler ()">soup_server_remove_handler</a>          (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *path</code></em>);
 
@@ -93,6 +93,7 @@ const <span class="returnvalue">char</span> *        <a class="link" href="SoupS
 #define             <a class="link" href="SoupServer.html#SOUP-SERVER-INTERFACE:CAPS" title="SOUP_SERVER_INTERFACE">SOUP_SERVER_INTERFACE</a>
 #define             <a class="link" href="SoupServer.html#SOUP-SERVER-SSL-CERT-FILE:CAPS" title="SOUP_SERVER_SSL_CERT_FILE">SOUP_SERVER_SSL_CERT_FILE</a>
 #define             <a class="link" href="SoupServer.html#SOUP-SERVER-SSL-KEY-FILE:CAPS" title="SOUP_SERVER_SSL_KEY_FILE">SOUP_SERVER_SSL_KEY_FILE</a>
+#define             <a class="link" href="SoupServer.html#SOUP-SERVER-TLS-CERTIFICATE:CAPS" title="SOUP_SERVER_TLS_CERTIFICATE">SOUP_SERVER_TLS_CERTIFICATE</a>
 #define             <a class="link" href="SoupServer.html#SOUP-SERVER-ASYNC-CONTEXT:CAPS" title="SOUP_SERVER_ASYNC_CONTEXT">SOUP_SERVER_ASYNC_CONTEXT</a>
 #define             <a class="link" href="SoupServer.html#SOUP-SERVER-RAW-PATHS:CAPS" title="SOUP_SERVER_RAW_PATHS">SOUP_SERVER_RAW_PATHS</a>
 #define             <a class="link" href="SoupServer.html#SOUP-SERVER-SERVER-HEADER:CAPS" title="SOUP_SERVER_SERVER_HEADER">SOUP_SERVER_SERVER_HEADER</a>
@@ -101,7 +102,7 @@ const <span class="returnvalue">char</span> *        <a class="link" href="SoupS
 <div class="refsect1">
 <a name="SoupServer.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="synopsis">
-  GObject
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
    +----SoupServer
 </pre>
 <pre class="synopsis">
@@ -112,22 +113,23 @@ const <span class="returnvalue">char</span> *        <a class="link" href="SoupS
 <div class="refsect1">
 <a name="SoupServer.properties"></a><h2>Properties</h2>
 <pre class="synopsis">
-  "<a class="link" href="SoupServer.html#SoupServer--async-context" title='The "async-context" property'>async-context</a>"            <span class="type">gpointer</span>              : Read / Write / Construct Only
+  "<a class="link" href="SoupServer.html#SoupServer--async-context" title='The "async-context" property'>async-context</a>"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write / Construct Only
   "<a class="link" href="SoupServer.html#SoupServer--interface" title='The "interface" property'>interface</a>"                <a class="link" href="SoupAddress.html" title="SoupAddress"><span class="type">SoupAddress</span></a>*          : Read / Write / Construct Only
-  "<a class="link" href="SoupServer.html#SoupServer--port" title='The "port" property'>port</a>"                     <span class="type">guint</span>                 : Read / Write / Construct Only
-  "<a class="link" href="SoupServer.html#SoupServer--raw-paths" title='The "raw-paths" property'>raw-paths</a>"                <span class="type">gboolean</span>              : Read / Write / Construct Only
-  "<a class="link" href="SoupServer.html#SoupServer--server-header" title='The "server-header" property'>server-header</a>"            <span class="type">gchar</span>*                : Read / Write / Construct
-  "<a class="link" href="SoupServer.html#SoupServer--ssl-cert-file" title='The "ssl-cert-file" property'>ssl-cert-file</a>"            <span class="type">gchar</span>*                : Read / Write / Construct Only
-  "<a class="link" href="SoupServer.html#SoupServer--ssl-key-file" title='The "ssl-key-file" property'>ssl-key-file</a>"             <span class="type">gchar</span>*                : Read / Write / Construct Only
+  "<a class="link" href="SoupServer.html#SoupServer--port" title='The "port" property'>port</a>"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write / Construct Only
+  "<a class="link" href="SoupServer.html#SoupServer--raw-paths" title='The "raw-paths" property'>raw-paths</a>"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write / Construct Only
+  "<a class="link" href="SoupServer.html#SoupServer--server-header" title='The "server-header" property'>server-header</a>"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct
+  "<a class="link" href="SoupServer.html#SoupServer--ssl-cert-file" title='The "ssl-cert-file" property'>ssl-cert-file</a>"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only
+  "<a class="link" href="SoupServer.html#SoupServer--ssl-key-file" title='The "ssl-key-file" property'>ssl-key-file</a>"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only
+  "<a class="link" href="SoupServer.html#SoupServer--tls-certificate" title='The "tls-certificate" property'>tls-certificate</a>"          <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a>*      : Read / Write / Construct Only
 </pre>
 </div>
 <div class="refsect1">
 <a name="SoupServer.signals"></a><h2>Signals</h2>
 <pre class="synopsis">
-  "<a class="link" href="SoupServer.html#SoupServer-request-aborted" title='The "request-aborted" signal'>request-aborted</a>"                                : <code class="literal">Run First</code>
-  "<a class="link" href="SoupServer.html#SoupServer-request-finished" title='The "request-finished" signal'>request-finished</a>"                               : <code class="literal">Run First</code>
-  "<a class="link" href="SoupServer.html#SoupServer-request-read" title='The "request-read" signal'>request-read</a>"                                   : <code class="literal">Run First</code>
-  "<a class="link" href="SoupServer.html#SoupServer-request-started" title='The "request-started" signal'>request-started</a>"                                : <code class="literal">Run First</code>
+  "<a class="link" href="SoupServer.html#SoupServer-request-aborted" title='The "request-aborted" signal'>request-aborted</a>"                                : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
+  "<a class="link" href="SoupServer.html#SoupServer-request-finished" title='The "request-finished" signal'>request-finished</a>"                               : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
+  "<a class="link" href="SoupServer.html#SoupServer-request-read" title='The "request-read" signal'>request-read</a>"                                   : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
+  "<a class="link" href="SoupServer.html#SoupServer-request-started" title='The "request-started" signal'>request-started</a>"                                : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a>
 </pre>
 </div>
 <div class="refsect1">
@@ -140,7 +142,7 @@ To begin, create a server using <a class="link" href="SoupServer.html#soup-serve
 handler by calling <a class="link" href="SoupServer.html#soup-server-add-handler" title="soup_server_add_handler ()"><code class="function">soup_server_add_handler()</code></a>; the handler will be
 called to process any requests underneath the path passed to
 <a class="link" href="SoupServer.html#soup-server-add-handler" title="soup_server_add_handler ()"><code class="function">soup_server_add_handler()</code></a>. (If you want all requests to go to the
-same handler, just pass "/" (or <code class="literal">NULL</code>) for the path.) Any request
+same handler, just pass "/" (or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>) for the path.) Any request
 that does not match any handler will automatically be returned to
 the client with a 404 (Not Found) status.
 </p>
@@ -167,7 +169,7 @@ Once the server is set up, start it processing connections by
 calling <a class="link" href="SoupServer.html#soup-server-run-async" title="soup_server_run_async ()"><code class="function">soup_server_run_async()</code></a> or <a class="link" href="SoupServer.html#soup-server-run" title="soup_server_run ()"><code class="function">soup_server_run()</code></a>. <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>
 runs via the glib main loop; if you need to have a server that runs
 in another thread (or merely isn't bound to the default main loop),
-create a <span class="type">GMainContext</span> for it to use, and set that via the
+create a <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> for it to use, and set that via the
 <a class="link" href="SoupServer.html#SOUP-SERVER-ASYNC-CONTEXT:CAPS" title="SOUP_SERVER_ASYNC_CONTEXT"><span class="type">SOUP_SERVER_ASYNC_CONTEXT</span></a> property.
 </p>
 </div>
@@ -209,7 +211,7 @@ Creates a new <a class="link" href="SoupServer.html" title="SoupServer"><span cl
 <hr>
 <div class="refsect2">
 <a name="soup-server-is-https"></a><h3>soup_server_is_https ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_server_is_https                (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_server_is_https                (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);</pre>
 <p>
 Checks whether <em class="parameter"><code>server</code></em> is running plain http or https.
 </p>
@@ -229,7 +231,7 @@ to provide it with an SSL certificate to use.
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> if <em class="parameter"><code>server</code></em> is serving https.</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>server</code></em> is serving https.</td>
 </tr>
 </tbody>
 </table></div>
@@ -237,7 +239,7 @@ to provide it with an SSL certificate to use.
 <hr>
 <div class="refsect2">
 <a name="soup-server-get-port"></a><h3>soup_server_get_port ()</h3>
-<pre class="programlisting"><span class="returnvalue">guint</span>               soup_server_get_port                (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               soup_server_get_port                (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);</pre>
 <p>
 Gets the TCP port that <em class="parameter"><code>server</code></em> is listening on. This is most useful
 when you did not request a specific port (or explicitly requested
@@ -290,7 +292,7 @@ malfunction.
 <p>
 Starts <em class="parameter"><code>server</code></em>, causing it to listen for and process incoming
 connections. Unlike <a class="link" href="SoupServer.html#soup-server-run-async" title="soup_server_run_async ()"><code class="function">soup_server_run_async()</code></a>, this creates a
-<span class="type">GMainLoop</span> and runs it, and it will not return until someone calls
+<a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainLoop"><span class="type">GMainLoop</span></a> and runs it, and it will not return until someone calls
 <a class="link" href="SoupServer.html#soup-server-quit" title="soup_server_quit ()"><code class="function">soup_server_quit()</code></a> to stop the server.
 </p>
 <div class="variablelist"><table border="0">
@@ -311,7 +313,7 @@ Starts <em class="parameter"><code>server</code></em>, causing it to listen for 
 connections.
 </p>
 <p>
-The server actually runs in <em class="parameter"><code>server</code></em>'s <span class="type">GMainContext</span>. It will not
+The server actually runs in <em class="parameter"><code>server</code></em>'s <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a>. It will not
 actually perform any processing unless the appropriate main loop is
 running. In the simple case where you did not set the server's
 <a class="link" href="SoupServer.html#SOUP-SERVER-ASYNC-CONTEXT:CAPS" title="SOUP_SERVER_ASYNC_CONTEXT"><code class="literal">SOUP_SERVER_ASYNC_CONTEXT</code></a> property, this means the server will run
@@ -376,7 +378,7 @@ explicit control over object lifetime.
 <hr>
 <div class="refsect2">
 <a name="soup-server-get-async-context"></a><h3>soup_server_get_async_context ()</h3>
-<pre class="programlisting"><span class="returnvalue">GMainContext</span> *      soup_server_get_async_context       (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="returnvalue">GMainContext</span></a> *      soup_server_get_async_context       (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);</pre>
 <p>
 Gets <em class="parameter"><code>server</code></em>'s async_context. This does not add a ref to the
 context, so you will need to ref it yourself if you want it to
@@ -393,7 +395,7 @@ outlive its server.
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<em class="parameter"><code>server</code></em>'s <span class="type">GMainContext</span>, which may be <code class="literal">NULL</code>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+<em class="parameter"><code>server</code></em>'s <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a>, which may be <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
 </td>
 </tr>
 </tbody>
@@ -405,9 +407,9 @@ outlive its server.
 <pre class="programlisting"><span class="returnvalue">void</span>                (*SoupServerCallback)               (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *path</code></em>,
-                                                         <em class="parameter"><code><span class="type">GHashTable</span> *query</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> *query</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupServer.html#SoupClientContext"><span class="type">SoupClientContext</span></a> *client</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>
 A callback used to handle requests to a <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>. The callback
 will be invoked after receiving the request body; <em class="parameter"><code>msg</code></em>'s
@@ -502,15 +504,15 @@ component of <em class="parameter"><code>msg</code></em>'s Request-URI. <span cl
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_server_add_handler             (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *path</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupServer.html#SoupServerCallback" title="SoupServerCallback ()"><span class="type">SoupServerCallback</span></a> callback</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> destroy</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy</code></em>);</pre>
 <p>
 Adds a handler to <em class="parameter"><code>server</code></em> for requests under <em class="parameter"><code>path</code></em>. See the
 documentation for <a class="link" href="SoupServer.html#SoupServerCallback" title="SoupServerCallback ()"><span class="type">SoupServerCallback</span></a> for information about
 how callbacks should behave.
 </p>
 <p>
-If <em class="parameter"><code>path</code></em> is <code class="literal">NULL</code> or "/", then this will be the default handler for
+If <em class="parameter"><code>path</code></em> is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> or "/", then this will be the default handler for
 all requests that don't have a more specific handler. Note though
 that if you want to handle requests to the special "*" URI, you
 must explicitly register a handler for "*"; the default handler
@@ -694,7 +696,7 @@ authenticated it.
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>a <a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a>, or
-<code class="literal">NULL</code> if the request was not authenticated. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the request was not authenticated. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 </tbody>
@@ -719,7 +721,7 @@ authenticated as.
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>the authenticated-as user, or <code class="literal">NULL</code> if the request
+<td>the authenticated-as user, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the request
 was not authenticated.</td>
 </tr>
 </tbody>
@@ -839,7 +841,7 @@ I/O won't actually resume until you return to the main loop.
 <hr>
 <div class="refsect2">
 <a name="SOUP-SERVER-PORT:CAPS"></a><h3>SOUP_SERVER_PORT</h3>
-<pre class="programlisting">#define SOUP_SERVER_PORT          "port"
+<pre class="programlisting">#define SOUP_SERVER_PORT            "port"
 </pre>
 <p>
 Alias for the <a class="link" href="SoupServer.html#SoupServer--port" title='The "port" property'><span class="type">"port"</span></a> property. (The port the
@@ -849,7 +851,7 @@ server listens on.)
 <hr>
 <div class="refsect2">
 <a name="SOUP-SERVER-INTERFACE:CAPS"></a><h3>SOUP_SERVER_INTERFACE</h3>
-<pre class="programlisting">#define SOUP_SERVER_INTERFACE     "interface"
+<pre class="programlisting">#define SOUP_SERVER_INTERFACE       "interface"
 </pre>
 <p>
 Alias for the <a class="link" href="SoupServer.html#SoupServer--interface" title='The "interface" property'><span class="type">"interface"</span></a> property. (The address
@@ -859,40 +861,47 @@ of the network interface the server listens on.)
 <hr>
 <div class="refsect2">
 <a name="SOUP-SERVER-SSL-CERT-FILE:CAPS"></a><h3>SOUP_SERVER_SSL_CERT_FILE</h3>
-<pre class="programlisting">#define SOUP_SERVER_SSL_CERT_FILE "ssl-cert-file"
+<pre class="programlisting">#define SOUP_SERVER_SSL_CERT_FILE   "ssl-cert-file"
 </pre>
 <p>
-Alias for the <a class="link" href="SoupServer.html#SoupServer--ssl-cert-file" title='The "ssl-cert-file" property'><span class="type">"ssl-cert-file"</span></a> property. (The file
-containing the SSL certificate for the server.)
+Alias for the <a class="link" href="SoupServer.html#SoupServer--ssl-cert-file" title='The "ssl-cert-file" property'><span class="type">"ssl-cert-file"</span></a> property, qv.
 </p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SOUP-SERVER-SSL-KEY-FILE:CAPS"></a><h3>SOUP_SERVER_SSL_KEY_FILE</h3>
-<pre class="programlisting">#define SOUP_SERVER_SSL_KEY_FILE  "ssl-key-file"
+<pre class="programlisting">#define SOUP_SERVER_SSL_KEY_FILE    "ssl-key-file"
 </pre>
 <p>
-Alias for the <a class="link" href="SoupServer.html#SoupServer--ssl-key-file" title='The "ssl-key-file" property'><span class="type">"ssl-key-file"</span></a> property. (The file
-containing the SSL certificate key for the server.)
+Alias for the <a class="link" href="SoupServer.html#SoupServer--ssl-key-file" title='The "ssl-key-file" property'><span class="type">"ssl-key-file"</span></a> property, qv.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="SOUP-SERVER-TLS-CERTIFICATE:CAPS"></a><h3>SOUP_SERVER_TLS_CERTIFICATE</h3>
+<pre class="programlisting">#define SOUP_SERVER_TLS_CERTIFICATE "tls-certificate"
+</pre>
+<p>
+Alias for the <a class="link" href="SoupServer.html#SoupServer--tls-certificate" title='The "tls-certificate" property'><span class="type">"tls-certificate"</span></a> property, qv.
 </p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SOUP-SERVER-ASYNC-CONTEXT:CAPS"></a><h3>SOUP_SERVER_ASYNC_CONTEXT</h3>
-<pre class="programlisting">#define SOUP_SERVER_ASYNC_CONTEXT "async-context"
+<pre class="programlisting">#define SOUP_SERVER_ASYNC_CONTEXT   "async-context"
 </pre>
 <p>
 Alias for the <a class="link" href="SoupServer.html#SoupServer--async-context" title='The "async-context" property'><span class="type">"async-context"</span></a> property. (The
-server's <span class="type">GMainContext</span>.)
+server's <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a>.)
 </p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SOUP-SERVER-RAW-PATHS:CAPS"></a><h3>SOUP_SERVER_RAW_PATHS</h3>
-<pre class="programlisting">#define SOUP_SERVER_RAW_PATHS     "raw-paths"
+<pre class="programlisting">#define SOUP_SERVER_RAW_PATHS       "raw-paths"
 </pre>
 <p>
-Alias for the <a class="link" href="SoupServer.html#SoupServer--raw-paths" title='The "raw-paths" property'><span class="type">"raw-paths"</span></a> property. (If <code class="literal">TRUE</code>,
+Alias for the <a class="link" href="SoupServer.html#SoupServer--raw-paths" title='The "raw-paths" property'><span class="type">"raw-paths"</span></a> property. (If <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>,
 percent-encoding in the Request-URI path will not be
 automatically decoded.)
 </p>
@@ -900,7 +909,7 @@ automatically decoded.)
 <hr>
 <div class="refsect2">
 <a name="SOUP-SERVER-SERVER-HEADER:CAPS"></a><h3>SOUP_SERVER_SERVER_HEADER</h3>
-<pre class="programlisting">#define SOUP_SERVER_SERVER_HEADER "server-header"
+<pre class="programlisting">#define SOUP_SERVER_SERVER_HEADER   "server-header"
 </pre>
 <p>
 Alias for the <a class="link" href="SoupServer.html#SoupServer--server-header" title='The "server-header" property'><span class="type">"server-header"</span></a> property, qv.
@@ -911,7 +920,7 @@ Alias for the <a class="link" href="SoupServer.html#SoupServer--server-header" t
 <a name="SoupServer.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="SoupServer--async-context"></a><h3>The <code class="literal">"async-context"</code> property</h3>
-<pre class="programlisting">  "async-context"            <span class="type">gpointer</span>              : Read / Write / Construct Only</pre>
+<pre class="programlisting">  "async-context"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write / Construct Only</pre>
 <p>The GMainContext to dispatch async I/O in.</p>
 </div>
 <hr>
@@ -923,7 +932,7 @@ Alias for the <a class="link" href="SoupServer.html#SoupServer--server-header" t
 <hr>
 <div class="refsect2">
 <a name="SoupServer--port"></a><h3>The <code class="literal">"port"</code> property</h3>
-<pre class="programlisting">  "port"                     <span class="type">guint</span>                 : Read / Write / Construct Only</pre>
+<pre class="programlisting">  "port"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write / Construct Only</pre>
 <p>Port to listen on.</p>
 <p>Allowed values: &lt;= 65536</p>
 <p>Default value: 0</p>
@@ -931,16 +940,16 @@ Alias for the <a class="link" href="SoupServer.html#SoupServer--server-header" t
 <hr>
 <div class="refsect2">
 <a name="SoupServer--raw-paths"></a><h3>The <code class="literal">"raw-paths"</code> property</h3>
-<pre class="programlisting">  "raw-paths"                <span class="type">gboolean</span>              : Read / Write / Construct Only</pre>
+<pre class="programlisting">  "raw-paths"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write / Construct Only</pre>
 <p>If %TRUE, percent-encoding in the Request-URI path will not be automatically decoded.</p>
 <p>Default value: FALSE</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupServer--server-header"></a><h3>The <code class="literal">"server-header"</code> property</h3>
-<pre class="programlisting">  "server-header"            <span class="type">gchar</span>*                : Read / Write / Construct</pre>
+<pre class="programlisting">  "server-header"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct</pre>
 <p>
-If non-<code class="literal">NULL</code>, the value to use for the "Server" header on
+If non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, the value to use for the "Server" header on
 <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a>s processed by this server.
 </p>
 <p>
@@ -973,16 +982,49 @@ header for you.
 <hr>
 <div class="refsect2">
 <a name="SoupServer--ssl-cert-file"></a><h3>The <code class="literal">"ssl-cert-file"</code> property</h3>
-<pre class="programlisting">  "ssl-cert-file"            <span class="type">gchar</span>*                : Read / Write / Construct Only</pre>
-<p>File containing server SSL certificate.</p>
+<pre class="programlisting">  "ssl-cert-file"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only</pre>
+<p>
+Path to a file containing a PEM-encoded certificate. If
+this and <a class="link" href="SoupServer.html#SoupServer--ssl-key-file" title='The "ssl-key-file" property'><span class="type">"ssl-key-file"</span></a> are both set, then the
+server will speak https rather than plain http.
+</p>
+<p>
+Alternatively, you can use <a class="link" href="SoupServer.html#SoupServer--tls-certificate" title='The "tls-certificate" property'><span class="type">"tls-certificate"</span></a>
+to provide an arbitrary <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a>.
+</p>
 <p>Default value: NULL</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupServer--ssl-key-file"></a><h3>The <code class="literal">"ssl-key-file"</code> property</h3>
-<pre class="programlisting">  "ssl-key-file"             <span class="type">gchar</span>*                : Read / Write / Construct Only</pre>
-<p>File containing server SSL key.</p>
+<pre class="programlisting">  "ssl-key-file"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only</pre>
+<p>
+Path to a file containing a PEM-encoded private key. If
+this and <a class="link" href="SoupServer.html#SoupServer--ssl-key-file" title='The "ssl-key-file" property'><span class="type">"ssl-key-file"</span></a> are both set, then the
+server will speak https rather than plain http. Note that
+you are allowed to set them to the same value, if you have
+a single file containing both the certificate and the key.
+</p>
+<p>
+Alternatively, you can use <a class="link" href="SoupServer.html#SoupServer--tls-certificate" title='The "tls-certificate" property'><span class="type">"tls-certificate"</span></a>
+to provide an arbitrary <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a>.
+</p>
 <p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="SoupServer--tls-certificate"></a><h3>The <code class="literal">"tls-certificate"</code> property</h3>
+<pre class="programlisting">  "tls-certificate"          <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a>*      : Read / Write / Construct Only</pre>
+<p>
+A <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a> that has a <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html#GTlsCertificate--private-key"><span class="type">"private-key"</span></a>
+set. If this is set, then the server will speak https
+rather than plain http.
+</p>
+<p>
+Alternatively, you can use <a class="link" href="SoupServer.html#SoupServer--ssl-cert-file" title='The "ssl-cert-file" property'><span class="type">"ssl-cert-file"</span></a> and
+<a class="link" href="SoupServer.html#SoupServer--ssl-key-file" title='The "ssl-key-file" property'><span class="type">"ssl-key-file"</span></a> properties, to have <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>
+read in a a certificate from a file.
+</p>
 </div>
 </div>
 <div class="refsect1">
@@ -992,7 +1034,7 @@ header for you.
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>        *server,
                                                         <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a>       *message,
                                                         <a class="link" href="SoupServer.html#SoupClientContext"><span class="type">SoupClientContext</span></a> *client,
-                                                        <span class="type">gpointer</span>           user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 Emitted when processing has failed for a message; this
 could mean either that it could not be read (if
@@ -1035,7 +1077,7 @@ free any state that it may have allocated in
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>        *server,
                                                         <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a>       *message,
                                                         <a class="link" href="SoupServer.html#SoupClientContext"><span class="type">SoupClientContext</span></a> *client,
-                                                        <span class="type">gpointer</span>           user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 Emitted when the server has finished writing a response to
 a request.
@@ -1068,7 +1110,7 @@ a request.
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>        *server,
                                                         <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a>       *message,
                                                         <a class="link" href="SoupServer.html#SoupClientContext"><span class="type">SoupClientContext</span></a> *client,
-                                                        <span class="type">gpointer</span>           user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 Emitted when the server has successfully read a request.
 <em class="parameter"><code>message</code></em> will have all of its request-side information
@@ -1106,7 +1148,7 @@ processing will be skipped.
 <pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>        *server,
                                                         <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a>       *message,
                                                         <a class="link" href="SoupServer.html#SoupClientContext"><span class="type">SoupClientContext</span></a> *client,
-                                                        <span class="type">gpointer</span>           user_data)      : <code class="literal">Run First</code></pre>
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS"><code class="literal">Run First</code></a></pre>
 <p>
 Emitted when the server has started reading a new request.
 <em class="parameter"><code>message</code></em> will be completely blank; not even the

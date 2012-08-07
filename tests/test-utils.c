@@ -81,7 +81,6 @@ test_init (int argc, char **argv, GOptionEntry *entries)
 	GError *error = NULL;
 	GTlsBackend *tls_backend;
 
-	g_thread_init (NULL);
 	g_type_init ();
 
 	name = strrchr (argv[0], '/');
@@ -297,8 +296,7 @@ test_server_new (gboolean in_own_thread, gboolean ssl)
 	if (in_own_thread) {
 		GThread *thread;
 
-		thread = g_thread_create (run_server_thread, server,
-					  TRUE, NULL);
+		thread = g_thread_new ("server_thread", run_server_thread, server);
 		g_object_set_data (G_OBJECT (server), "thread", thread);
 	} else
 		soup_server_run_async (server);

@@ -9,10 +9,12 @@ SoupMessage
 
 </para>
 
+
 <!-- ##### SECTION See_Also ##### -->
 <para>
 
 </para>
+
 
 <!-- ##### SECTION Stability_Level ##### -->
 
@@ -77,6 +79,15 @@ SoupMessage
 </para>
 
 @soupmessage: the object which received the signal.
+
+<!-- ##### SIGNAL SoupMessage::network-event ##### -->
+<para>
+
+</para>
+
+@soupmessage: the object which received the signal.
+@arg1: 
+@arg2: 
 
 <!-- ##### SIGNAL SoupMessage::restarted ##### -->
 <para>
@@ -307,6 +318,16 @@ SoupMessage
 @reason_phrase: 
 
 
+<!-- ##### FUNCTION soup_message_set_redirect ##### -->
+<para>
+
+</para>
+
+@msg: 
+@status_code: 
+@redirect_uri: 
+
+
 <!-- ##### FUNCTION soup_message_is_keepalive ##### -->
 <para>
 
@@ -381,6 +402,7 @@ SoupMessage
 @SOUP_MESSAGE_OVERWRITE_CHUNKS: 
 @SOUP_MESSAGE_CONTENT_DECODED: 
 @SOUP_MESSAGE_CERTIFICATE_TRUSTED: 
+@SOUP_MESSAGE_NEW_CONNECTION: 
 
 <!-- ##### FUNCTION soup_message_set_flags ##### -->
 <para>

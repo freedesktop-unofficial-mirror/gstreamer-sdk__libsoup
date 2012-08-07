@@ -49,7 +49,7 @@ typedef             <a class="link" href="SoupMultipart.html" title="SoupMultipa
 <span class="returnvalue">void</span>                <a class="link" href="SoupMultipart.html#soup-multipart-free" title="soup_multipart_free ()">soup_multipart_free</a>                 (<em class="parameter"><code><a class="link" href="SoupMultipart.html" title="SoupMultipart"><span class="type">SoupMultipart</span></a> *multipart</code></em>);
 
 <span class="returnvalue">int</span>                 <a class="link" href="SoupMultipart.html#soup-multipart-get-length" title="soup_multipart_get_length ()">soup_multipart_get_length</a>           (<em class="parameter"><code><a class="link" href="SoupMultipart.html" title="SoupMultipart"><span class="type">SoupMultipart</span></a> *multipart</code></em>);
-<span class="returnvalue">gboolean</span>            <a class="link" href="SoupMultipart.html#soup-multipart-get-part" title="soup_multipart_get_part ()">soup_multipart_get_part</a>             (<em class="parameter"><code><a class="link" href="SoupMultipart.html" title="SoupMultipart"><span class="type">SoupMultipart</span></a> *multipart</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="SoupMultipart.html#soup-multipart-get-part" title="soup_multipart_get_part ()">soup_multipart_get_part</a>             (<em class="parameter"><code><a class="link" href="SoupMultipart.html" title="SoupMultipart"><span class="type">SoupMultipart</span></a> *multipart</code></em>,
                                                          <em class="parameter"><code><span class="type">int</span> part</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> **headers</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageBody.html#SoupBuffer"><span class="type">SoupBuffer</span></a> **body</code></em>);
@@ -147,7 +147,7 @@ Parses <em class="parameter"><code>headers</code></em> and <em class="parameter"
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a new <a class="link" href="SoupMultipart.html" title="SoupMultipart"><span class="type">SoupMultipart</span></a> (or <code class="literal">NULL</code> if the message couldn't
+<td>a new <a class="link" href="SoupMultipart.html" title="SoupMultipart"><span class="type">SoupMultipart</span></a> (or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the message couldn't
 be parsed or wasn't multipart).</td>
 </tr>
 </tbody>
@@ -198,7 +198,7 @@ Gets the number of body parts in <em class="parameter"><code>multipart</code></e
 <hr>
 <div class="refsect2">
 <a name="soup-multipart-get-part"></a><h3>soup_multipart_get_part ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_multipart_get_part             (<em class="parameter"><code><a class="link" href="SoupMultipart.html" title="SoupMultipart"><span class="type">SoupMultipart</span></a> *multipart</code></em>,
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_multipart_get_part             (<em class="parameter"><code><a class="link" href="SoupMultipart.html" title="SoupMultipart"><span class="type">SoupMultipart</span></a> *multipart</code></em>,
                                                          <em class="parameter"><code><span class="type">int</span> part</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> **headers</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageBody.html#SoupBuffer"><span class="type">SoupBuffer</span></a> **body</code></em>);</pre>
@@ -232,7 +232,7 @@ body. <span class="annotation">[<acronym title="Parameter for returning results.
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> on success, <code class="literal">FALSE</code> if <em class="parameter"><code>part</code></em> is out of range (in
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>part</code></em> is out of range (in
 which case <em class="parameter"><code>headers</code></em> and <em class="parameter"><code>body</code></em> won't be set)</td>
 </tr>
 </tbody>
@@ -330,11 +330,11 @@ details.
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>filename</code></em> :</span></p></td>
-<td>the name of the file, or <code class="literal">NULL</code> if not known</td>
+<td>the name of the file, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not known</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>content_type</code></em> :</span></p></td>
-<td>the MIME type of the file, or <code class="literal">NULL</code> if not known</td>
+<td>the MIME type of the file, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not known</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>body</code></em> :</span></p></td>

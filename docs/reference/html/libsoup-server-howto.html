@@ -29,7 +29,7 @@
 <td valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect2">
-<a name="id614528"></a><h3>Creating a SoupSession</h3>
+<a name="id619752"></a><h3>Creating a SoupSession</h3>
 <p>
 As with the client API, there is a single object that will encapsulate
 most of your interactions with libsoup. In this case, <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>.
@@ -78,7 +78,7 @@ various additional options:
 <tr>
 <td><p><span class="term"><a class="link" href="SoupServer.html#SOUP-SERVER-ASYNC-CONTEXT:CAPS" title="SOUP_SERVER_ASYNC_CONTEXT"><code class="literal">SOUP_SERVER_ASYNC_CONTEXT</code></a></span></p></td>
 <td><p>
-	    A <span class="type">GMainContext</span> which
+	    A <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> which
 	    the server will use for asynchronous operations. This can
 	    be set if you want to use a SoupServer in a thread
 	    other than the main thread.
@@ -99,7 +99,7 @@ various additional options:
 </div>
 <hr>
 <div class="refsect2">
-<a name="id617646"></a><h3>Adding Handlers</h3>
+<a name="id617164"></a><h3>Adding Handlers</h3>
 <p>
 By default, <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>
 returns "404 Not Found" in response to all requests (except ones that
@@ -138,7 +138,7 @@ match any other handler.
 </div>
 <hr>
 <div class="refsect2">
-<a name="id614894"></a><h3>Responding to Requests</h3>
+<a name="id608415"></a><h3>Responding to Requests</h3>
 <p>
 A handler callback looks something like this:
 </p>
@@ -201,7 +201,7 @@ If the response requires a body, you must decide whether to use
 <code class="literal">chunked</code> encoding.
 </p>
 <div class="refsect3">
-<a name="id604300"></a><h4>Responding with <code class="literal">Content-Length</code>
+<a name="id621291"></a><h4>Responding with <code class="literal">Content-Length</code>
 Encoding</h4>
 <p>
 This is the simpler way to set a response body, if you have all of the
@@ -262,8 +262,8 @@ data available at once.
 <span class="normal">    </span><span class="comment">/* This is somewhat silly. Presumably your server will do</span>
 <span class="comment">     * something more interesting.</span>
 <span class="comment">     */</span>
-<span class="normal">    body </span><span class="symbol">=</span><span class="normal"> </span><span class="function">g_hash_table_lookup</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">server_data</span><span class="symbol">-&gt;</span><span class="normal">bodies</span><span class="symbol">,</span><span class="normal"> path</span><span class="symbol">);</span>
-<span class="normal">    mime_type </span><span class="symbol">=</span><span class="normal"> </span><span class="function">g_hash_table_lookup</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">server_data</span><span class="symbol">-&gt;</span><span class="normal">mime_types</span><span class="symbol">,</span><span class="normal"> path</span><span class="symbol">);</span>
+<span class="normal">    body </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#g-hash-table-lookup">g_hash_table_lookup</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">server_data</span><span class="symbol">-&gt;</span><span class="normal">bodies</span><span class="symbol">,</span><span class="normal"> path</span><span class="symbol">);</span>
+<span class="normal">    mime_type </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#g-hash-table-lookup">g_hash_table_lookup</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">server_data</span><span class="symbol">-&gt;</span><span class="normal">mime_types</span><span class="symbol">,</span><span class="normal"> path</span><span class="symbol">);</span>
 <span class="normal">    </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(!</span><span class="normal">body </span><span class="symbol">||</span><span class="normal"> </span><span class="symbol">!</span><span class="normal">mime_type</span><span class="symbol">)</span><span class="normal"> </span><span class="cbracket">{</span>
 <span class="normal">        </span><span class="function"><a href="SoupMessage.html#soup-message-set-status">soup_message_set_status</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">msg</span><span class="symbol">,</span><span class="normal"> <a href="libsoup-2.4-soup-status.html#SOUP-STATUS-NOT-FOUND:CAPS">SOUP_STATUS_NOT_FOUND</a></span><span class="symbol">);</span>
 <span class="normal">        </span><span class="keyword">return</span><span class="symbol">;</span>
@@ -280,7 +280,7 @@ data available at once.
 
 </div>
 <div class="refsect3">
-<a name="id604332"></a><h4>Responding with <code class="literal">chunked</code> Encoding</h4>
+<a name="id621323"></a><h4>Responding with <code class="literal">chunked</code> Encoding</h4>
 <p>
 If you want to supply the response body in chunks as it becomes
 available, use <code class="literal">chunked</code> encoding instead. In this
@@ -314,7 +314,7 @@ using <code class="literal">chunked</code> encoding.
 </div>
 <hr>
 <div class="refsect2">
-<a name="id604489"></a><h3>Handling Authentication</h3>
+<a name="id621480"></a><h3>Handling Authentication</h3>
 <p>
 To have <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>
 handle HTTP authentication for you, create a <a class="link" href="SoupAuthDomainBasic.html" title="SoupAuthDomainBasic"><span class="type">SoupAuthDomainBasic</span></a>
@@ -344,9 +344,9 @@ and pass it to <a class="link" href="SoupServer.html#soup-server-add-auth-domain
 <span class="normal">    <a href="SoupAuthDomainBasic.html#SOUP-AUTH-DOMAIN-BASIC-AUTH-DATA:CAPS">SOUP_AUTH_DOMAIN_BASIC_AUTH_DATA</a></span><span class="symbol">,</span><span class="normal"> auth_data</span><span class="symbol">,</span>
 <span class="normal">    <a href="SoupAuthDomain.html#SOUP-AUTH-DOMAIN-ADD-PATH:CAPS">SOUP_AUTH_DOMAIN_ADD_PATH</a></span><span class="symbol">,</span><span class="normal"> </span><span class="string">"/foo"</span><span class="symbol">,</span>
 <span class="normal">    <a href="SoupAuthDomain.html#SOUP-AUTH-DOMAIN-ADD-PATH:CAPS">SOUP_AUTH_DOMAIN_ADD_PATH</a></span><span class="symbol">,</span><span class="normal"> </span><span class="string">"/bar/private"</span><span class="symbol">,</span>
-<span class="normal">    NULL</span><span class="symbol">);</span>
+<span class="normal">    <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
 <span class="function"><a href="SoupServer.html#soup-server-add-auth-domain">soup_server_add_auth_domain</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">server</span><span class="symbol">,</span><span class="normal"> domain</span><span class="symbol">);</span>
-<span class="function">g_object_unref</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">domain</span><span class="symbol">);</span></pre></td>
+<span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">g_object_unref</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">domain</span><span class="symbol">);</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -378,7 +378,7 @@ passed to the <code class="literal">server_callback</code>:
 15
 16
 17</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="keyword">static</span><span class="normal"> gboolean</span>
+        <td class="listing_code"><pre class="programlisting"><span class="keyword">static</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a></span>
 <span class="function">auth_callback</span><span class="normal"> </span><span class="symbol">(</span><span class="usertype">SoupAuthDomain</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">domain</span><span class="symbol">,</span><span class="normal"> </span><span class="usertype">SoupMessage</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">msg</span><span class="symbol">,</span>
 <span class="normal">           </span><span class="keyword">const</span><span class="normal"> </span><span class="type">char</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">username</span><span class="symbol">,</span><span class="normal"> </span><span class="keyword">const</span><span class="normal"> </span><span class="type">char</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">password</span><span class="symbol">,</span>
 <span class="normal">           </span><span class="usertype">gpointer</span><span class="normal"> user_data</span><span class="symbol">)</span>
@@ -388,7 +388,7 @@ passed to the <code class="literal">server_callback</code>:
 
 <span class="normal">    user </span><span class="symbol">=</span><span class="normal"> </span><span class="function">my_server_data_lookup_user</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">server_data</span><span class="symbol">,</span><span class="normal"> username</span><span class="symbol">);</span>
 <span class="normal">    </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(!</span><span class="normal">user</span><span class="symbol">)</span>
-<span class="normal">        </span><span class="keyword">return</span><span class="normal"> FALSE</span><span class="symbol">;</span>
+<span class="normal">        </span><span class="keyword">return</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a></span><span class="symbol">;</span>
 
 <span class="normal">    </span><span class="comment">/* </span><span class="todo">FIXME:</span><span class="comment"> Don't do this. Keeping a cleartext password database</span>
 <span class="comment">     * is bad.</span>

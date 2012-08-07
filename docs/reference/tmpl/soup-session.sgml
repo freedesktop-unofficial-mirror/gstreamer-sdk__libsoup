@@ -9,10 +9,12 @@ SoupSession
 
 </para>
 
+
 <!-- ##### SECTION See_Also ##### -->
 <para>
 
 </para>
+
 
 <!-- ##### SECTION Stability_Level ##### -->
 
@@ -102,6 +104,16 @@ SoupSession
 
 </para>
 
+<!-- ##### ARG SoupSession:http-aliases ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG SoupSession:https-aliases ##### -->
+<para>
+
+</para>
+
 <!-- ##### ARG SoupSession:idle-timeout ##### -->
 <para>
 
@@ -137,12 +149,27 @@ SoupSession
 
 </para>
 
+<!-- ##### ARG SoupSession:ssl-use-system-ca-file ##### -->
+<para>
+
+</para>
+
 <!-- ##### ARG SoupSession:timeout ##### -->
 <para>
 
 </para>
 
+<!-- ##### ARG SoupSession:tls-database ##### -->
+<para>
+
+</para>
+
 <!-- ##### ARG SoupSession:use-ntlm ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG SoupSession:use-thread-context ##### -->
 <para>
 
 </para>
@@ -202,6 +229,18 @@ SoupSession
 @status_code: 
 
 
+<!-- ##### FUNCTION soup_session_prefetch_dns ##### -->
+<para>
+
+</para>
+
+@session: 
+@hostname: 
+@cancellable: 
+@callback: 
+@user_data: 
+
+
 <!-- ##### FUNCTION soup_session_prepare_for_uri ##### -->
 <para>
 
@@ -217,6 +256,26 @@ SoupSession
 </para>
 
 @session: 
+
+
+<!-- ##### FUNCTION soup_session_would_redirect ##### -->
+<para>
+
+</para>
+
+@session: 
+@msg: 
+@Returns: 
+
+
+<!-- ##### FUNCTION soup_session_redirect_message ##### -->
+<para>
+
+</para>
+
+@session: 
+@msg: 
+@Returns: 
 
 
 <!-- ##### FUNCTION soup_session_pause_message ##### -->
@@ -348,6 +407,20 @@ SoupSession
 
 
 
+<!-- ##### MACRO SOUP_SESSION_SSL_USE_SYSTEM_CA_FILE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO SOUP_SESSION_TLS_DATABASE ##### -->
+<para>
+
+</para>
+
+
+
 <!-- ##### MACRO SOUP_SESSION_ASYNC_CONTEXT ##### -->
 <para>
 
@@ -412,6 +485,27 @@ SoupSession
 
 
 <!-- ##### MACRO SOUP_SESSION_SSL_STRICT ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO SOUP_SESSION_HTTP_ALIASES ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO SOUP_SESSION_HTTPS_ALIASES ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO SOUP_SESSION_USE_THREAD_CONTEXT ##### -->
 <para>
 
 </para>

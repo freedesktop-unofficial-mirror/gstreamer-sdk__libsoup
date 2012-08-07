@@ -48,16 +48,16 @@
 <a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="returnvalue">SoupAuthDomain</span></a> *    <a class="link" href="SoupAuthDomainBasic.html#soup-auth-domain-basic-new" title="soup_auth_domain_basic_new ()">soup_auth_domain_basic_new</a>          (<em class="parameter"><code>const <span class="type">char</span> *optname1</code></em>,
                                                          <em class="parameter"><code>...</code></em>);
 
-<span class="returnvalue">gboolean</span>            (<a class="link" href="SoupAuthDomainBasic.html#SoupAuthDomainBasicAuthCallback" title="SoupAuthDomainBasicAuthCallback ()">*SoupAuthDomainBasicAuthCallback</a>)  (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            (<a class="link" href="SoupAuthDomainBasic.html#SoupAuthDomainBasicAuthCallback" title="SoupAuthDomainBasicAuthCallback ()">*SoupAuthDomainBasicAuthCallback</a>)  (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *username</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *password</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupAuthDomainBasic.html#soup-auth-domain-basic-set-auth-callback" title="soup_auth_domain_basic_set_auth_callback ()">soup_auth_domain_basic_set_auth_callback</a>
                                                         (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupAuthDomainBasic.html#SoupAuthDomainBasicAuthCallback" title="SoupAuthDomainBasicAuthCallback ()"><span class="type">SoupAuthDomainBasicAuthCallback</span></a> callback</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> dnotify</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> dnotify</code></em>);
 
 #define             <a class="link" href="SoupAuthDomainBasic.html#SOUP-AUTH-DOMAIN-BASIC-AUTH-CALLBACK:CAPS" title="SOUP_AUTH_DOMAIN_BASIC_AUTH_CALLBACK">SOUP_AUTH_DOMAIN_BASIC_AUTH_CALLBACK</a>
 #define             <a class="link" href="SoupAuthDomainBasic.html#SOUP-AUTH-DOMAIN-BASIC-AUTH-DATA:CAPS" title="SOUP_AUTH_DOMAIN_BASIC_AUTH_DATA">SOUP_AUTH_DOMAIN_BASIC_AUTH_DATA</a>
@@ -66,7 +66,7 @@
 <div class="refsect1">
 <a name="SoupAuthDomainBasic.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="synopsis">
-  GObject
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
    +----<a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain">SoupAuthDomain</a>
          +----SoupAuthDomainBasic
 </pre>
@@ -74,8 +74,8 @@
 <div class="refsect1">
 <a name="SoupAuthDomainBasic.properties"></a><h2>Properties</h2>
 <pre class="synopsis">
-  "<a class="link" href="SoupAuthDomainBasic.html#SoupAuthDomainBasic--auth-callback" title='The "auth-callback" property'>auth-callback</a>"            <span class="type">gpointer</span>              : Read / Write
-  "<a class="link" href="SoupAuthDomainBasic.html#SoupAuthDomainBasic--auth-data" title='The "auth-data" property'>auth-data</a>"                <span class="type">gpointer</span>              : Read / Write
+  "<a class="link" href="SoupAuthDomainBasic.html#SoupAuthDomainBasic--auth-callback" title='The "auth-callback" property'>auth-callback</a>"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write
+  "<a class="link" href="SoupAuthDomainBasic.html#SoupAuthDomainBasic--auth-data" title='The "auth-data" property'>auth-data</a>"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write
 </pre>
 </div>
 <div class="refsect1">
@@ -109,7 +109,7 @@ parameters are optional.
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>optname1</code></em> :</span></p></td>
-<td>name of first option, or <code class="literal">NULL</code>
+<td>name of first option, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
 </td>
 </tr>
 <tr>
@@ -127,15 +127,15 @@ parameters are optional.
 <hr>
 <div class="refsect2">
 <a name="SoupAuthDomainBasicAuthCallback"></a><h3>SoupAuthDomainBasicAuthCallback ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            (*SoupAuthDomainBasicAuthCallback)  (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            (*SoupAuthDomainBasicAuthCallback)  (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *username</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *password</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>
 Callback used by <a class="link" href="SoupAuthDomainBasic.html" title="SoupAuthDomainBasic"><span class="type">SoupAuthDomainBasic</span></a> for authentication purposes.
 The application should verify that <em class="parameter"><code>username</code></em> and <em class="parameter"><code>password</code></em> and valid
-and return <code class="literal">TRUE</code> or <code class="literal">FALSE</code>.
+and return <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.
 </p>
 <p>
 If you are maintaining your own password database (rather than
@@ -176,7 +176,7 @@ as well.
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> if <em class="parameter"><code>username</code></em> and <em class="parameter"><code>password</code></em> are valid</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>username</code></em> and <em class="parameter"><code>password</code></em> are valid</td>
 </tr>
 </tbody>
 </table></div>
@@ -187,8 +187,8 @@ as well.
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_auth_domain_basic_set_auth_callback
                                                         (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupAuthDomainBasic.html#SoupAuthDomainBasicAuthCallback" title="SoupAuthDomainBasicAuthCallback ()"><span class="type">SoupAuthDomainBasicAuthCallback</span></a> callback</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> dnotify</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> dnotify</code></em>);</pre>
 <p>
 Sets the callback that <em class="parameter"><code>domain</code></em> will use to authenticate incoming
 requests. For each request containing authorization, <em class="parameter"><code>domain</code></em> will
@@ -250,13 +250,13 @@ Alias for the <a class="link" href="SoupAuthDomainBasic.html#SoupAuthDomainBasic
 <a name="SoupAuthDomainBasic.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="SoupAuthDomainBasic--auth-callback"></a><h3>The <code class="literal">"auth-callback"</code> property</h3>
-<pre class="programlisting">  "auth-callback"            <span class="type">gpointer</span>              : Read / Write</pre>
+<pre class="programlisting">  "auth-callback"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write</pre>
 <p>Password-checking callback.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupAuthDomainBasic--auth-data"></a><h3>The <code class="literal">"auth-data"</code> property</h3>
-<pre class="programlisting">  "auth-data"                <span class="type">gpointer</span>              : Read / Write</pre>
+<pre class="programlisting">  "auth-data"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write</pre>
 <p>Data to pass to authentication callback.</p>
 </div>
 </div>

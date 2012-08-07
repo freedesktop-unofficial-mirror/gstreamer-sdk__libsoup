@@ -61,20 +61,20 @@
     <sub name="Annotation Glossary" link="annotation-glossary.html"/>
   </chapters>
   <functions>
-    <keyword type="" name="Using pkg-config" link="libsoup-build-howto.html#id610904"/>
-    <keyword type="" name="Headers" link="libsoup-build-howto.html#id548533"/>
-    <keyword type="" name="Creating a SoupSession" link="libsoup-client-howto.html#id618795"/>
+    <keyword type="" name="Using pkg-config" link="libsoup-build-howto.html#id626366"/>
+    <keyword type="" name="Headers" link="libsoup-build-howto.html#id563020"/>
+    <keyword type="" name="Creating a SoupSession" link="libsoup-client-howto.html#id634672"/>
     <keyword type="" name="Session features" link="libsoup-client-howto.html#session-features"/>
-    <keyword type="" name="Creating and Sending SoupMessages" link="libsoup-client-howto.html#id592611"/>
-    <keyword type="" name="Processing the Response" link="libsoup-client-howto.html#id592888"/>
-    <keyword type="" name="Intermediate/Automatic Processing" link="libsoup-client-howto.html#id592997"/>
-    <keyword type="" name="Handling Authentication" link="libsoup-client-howto.html#id593079"/>
-    <keyword type="" name="Multi-threaded usage" link="libsoup-client-howto.html#id593214"/>
-    <keyword type="" name="Sample Programs" link="libsoup-client-howto.html#id593304"/>
-    <keyword type="" name="Creating a SoupSession" link="libsoup-server-howto.html#id614528"/>
-    <keyword type="" name="Adding Handlers" link="libsoup-server-howto.html#id617646"/>
-    <keyword type="" name="Responding to Requests" link="libsoup-server-howto.html#id614894"/>
-    <keyword type="" name="Handling Authentication" link="libsoup-server-howto.html#id604489"/>
+    <keyword type="" name="Creating and Sending SoupMessages" link="libsoup-client-howto.html#id602926"/>
+    <keyword type="" name="Processing the Response" link="libsoup-client-howto.html#id603203"/>
+    <keyword type="" name="Intermediate/Automatic Processing" link="libsoup-client-howto.html#id603312"/>
+    <keyword type="" name="Handling Authentication" link="libsoup-client-howto.html#id603393"/>
+    <keyword type="" name="Multi-threaded usage" link="libsoup-client-howto.html#id603529"/>
+    <keyword type="" name="Sample Programs" link="libsoup-client-howto.html#id603619"/>
+    <keyword type="" name="Creating a SoupSession" link="libsoup-server-howto.html#id619752"/>
+    <keyword type="" name="Adding Handlers" link="libsoup-server-howto.html#id617164"/>
+    <keyword type="" name="Responding to Requests" link="libsoup-server-howto.html#id608415"/>
+    <keyword type="" name="Handling Authentication" link="libsoup-server-howto.html#id621480"/>
     <keyword type="struct" name="SoupAuth" link="SoupAuth.html#SoupAuth-struct"/>
     <keyword type="function" name="soup_auth_new ()" link="SoupAuth.html#soup-auth-new"/>
     <keyword type="function" name="soup_auth_update ()" link="SoupAuth.html#soup-auth-update"/>
@@ -194,6 +194,7 @@
     <keyword type="function" name="soup_message_get_address ()" link="SoupMessage.html#soup-message-get-address" since="2.26"/>
     <keyword type="function" name="soup_message_set_status ()" link="SoupMessage.html#soup-message-set-status"/>
     <keyword type="function" name="soup_message_set_status_full ()" link="SoupMessage.html#soup-message-set-status-full"/>
+    <keyword type="function" name="soup_message_set_redirect ()" link="SoupMessage.html#soup-message-set-redirect" since="2.38"/>
     <keyword type="function" name="soup_message_is_keepalive ()" link="SoupMessage.html#soup-message-is-keepalive"/>
     <keyword type="function" name="soup_message_get_https_status ()" link="SoupMessage.html#soup-message-get-https-status" since="2.34"/>
     <keyword type="function" name="soup_message_set_first_party ()" link="SoupMessage.html#soup-message-set-first-party" since="2.30"/>
@@ -240,6 +241,7 @@
     <keyword type="signal" name="The &quot;got-chunk&quot; signal" link="SoupMessage.html#SoupMessage-got-chunk"/>
     <keyword type="signal" name="The &quot;got-headers&quot; signal" link="SoupMessage.html#SoupMessage-got-headers"/>
     <keyword type="signal" name="The &quot;got-informational&quot; signal" link="SoupMessage.html#SoupMessage-got-informational"/>
+    <keyword type="signal" name="The &quot;network-event&quot; signal" link="SoupMessage.html#SoupMessage-network-event"/>
     <keyword type="signal" name="The &quot;restarted&quot; signal" link="SoupMessage.html#SoupMessage-restarted"/>
     <keyword type="signal" name="The &quot;wrote-body&quot; signal" link="SoupMessage.html#SoupMessage-wrote-body"/>
     <keyword type="signal" name="The &quot;wrote-body-data&quot; signal" link="SoupMessage.html#SoupMessage-wrote-body-data"/>
@@ -358,6 +360,7 @@
     <keyword type="macro" name="SOUP_SERVER_INTERFACE" link="SoupServer.html#SOUP-SERVER-INTERFACE:CAPS"/>
     <keyword type="macro" name="SOUP_SERVER_SSL_CERT_FILE" link="SoupServer.html#SOUP-SERVER-SSL-CERT-FILE:CAPS"/>
     <keyword type="macro" name="SOUP_SERVER_SSL_KEY_FILE" link="SoupServer.html#SOUP-SERVER-SSL-KEY-FILE:CAPS"/>
+    <keyword type="macro" name="SOUP_SERVER_TLS_CERTIFICATE" link="SoupServer.html#SOUP-SERVER-TLS-CERTIFICATE:CAPS"/>
     <keyword type="macro" name="SOUP_SERVER_ASYNC_CONTEXT" link="SoupServer.html#SOUP-SERVER-ASYNC-CONTEXT:CAPS"/>
     <keyword type="macro" name="SOUP_SERVER_RAW_PATHS" link="SoupServer.html#SOUP-SERVER-RAW-PATHS:CAPS"/>
     <keyword type="macro" name="SOUP_SERVER_SERVER_HEADER" link="SoupServer.html#SOUP-SERVER-SERVER-HEADER:CAPS"/>
@@ -368,6 +371,7 @@
     <keyword type="property" name="The &quot;server-header&quot; property" link="SoupServer.html#SoupServer--server-header"/>
     <keyword type="property" name="The &quot;ssl-cert-file&quot; property" link="SoupServer.html#SoupServer--ssl-cert-file"/>
     <keyword type="property" name="The &quot;ssl-key-file&quot; property" link="SoupServer.html#SoupServer--ssl-key-file"/>
+    <keyword type="property" name="The &quot;tls-certificate&quot; property" link="SoupServer.html#SoupServer--tls-certificate"/>
     <keyword type="signal" name="The &quot;request-aborted&quot; signal" link="SoupServer.html#SoupServer-request-aborted"/>
     <keyword type="signal" name="The &quot;request-finished&quot; signal" link="SoupServer.html#SoupServer-request-finished"/>
     <keyword type="signal" name="The &quot;request-read&quot; signal" link="SoupServer.html#SoupServer-request-read"/>
@@ -378,8 +382,11 @@
     <keyword type="function" name="soup_session_requeue_message ()" link="SoupSession.html#soup-session-requeue-message"/>
     <keyword type="function" name="soup_session_send_message ()" link="SoupSession.html#soup-session-send-message"/>
     <keyword type="function" name="soup_session_cancel_message ()" link="SoupSession.html#soup-session-cancel-message"/>
-    <keyword type="function" name="soup_session_prepare_for_uri ()" link="SoupSession.html#soup-session-prepare-for-uri" since="2.30"/>
+    <keyword type="function" name="soup_session_prefetch_dns ()" link="SoupSession.html#soup-session-prefetch-dns" since="2.38"/>
+    <keyword type="function" name="soup_session_prepare_for_uri ()" link="SoupSession.html#soup-session-prepare-for-uri" deprecated="2.38: use soup_session_prefetch_dns() instead" since="2.30"/>
     <keyword type="function" name="soup_session_abort ()" link="SoupSession.html#soup-session-abort"/>
+    <keyword type="function" name="soup_session_would_redirect ()" link="SoupSession.html#soup-session-would-redirect" since="2.38"/>
+    <keyword type="function" name="soup_session_redirect_message ()" link="SoupSession.html#soup-session-redirect-message" since="2.38"/>
     <keyword type="function" name="soup_session_pause_message ()" link="SoupSession.html#soup-session-pause-message"/>
     <keyword type="function" name="soup_session_unpause_message ()" link="SoupSession.html#soup-session-unpause-message"/>
     <keyword type="function" name="soup_session_get_async_context ()" link="SoupSession.html#soup-session-get-async-context"/>
@@ -394,7 +401,9 @@
     <keyword type="macro" name="SOUP_SESSION_MAX_CONNS" link="SoupSession.html#SOUP-SESSION-MAX-CONNS:CAPS"/>
     <keyword type="macro" name="SOUP_SESSION_MAX_CONNS_PER_HOST" link="SoupSession.html#SOUP-SESSION-MAX-CONNS-PER-HOST:CAPS"/>
     <keyword type="macro" name="SOUP_SESSION_USE_NTLM" link="SoupSession.html#SOUP-SESSION-USE-NTLM:CAPS"/>
-    <keyword type="macro" name="SOUP_SESSION_SSL_CA_FILE" link="SoupSession.html#SOUP-SESSION-SSL-CA-FILE:CAPS"/>
+    <keyword type="macro" name="SOUP_SESSION_SSL_CA_FILE" link="SoupSession.html#SOUP-SESSION-SSL-CA-FILE:CAPS" deprecated=""/>
+    <keyword type="macro" name="SOUP_SESSION_SSL_USE_SYSTEM_CA_FILE" link="SoupSession.html#SOUP-SESSION-SSL-USE-SYSTEM-CA-FILE:CAPS"/>
+    <keyword type="macro" name="SOUP_SESSION_TLS_DATABASE" link="SoupSession.html#SOUP-SESSION-TLS-DATABASE:CAPS" since="2.38"/>
     <keyword type="macro" name="SOUP_SESSION_ASYNC_CONTEXT" link="SoupSession.html#SOUP-SESSION-ASYNC-CONTEXT:CAPS"/>
     <keyword type="macro" name="SOUP_SESSION_TIMEOUT" link="SoupSession.html#SOUP-SESSION-TIMEOUT:CAPS"/>
     <keyword type="macro" name="SOUP_SESSION_IDLE_TIMEOUT" link="SoupSession.html#SOUP-SESSION-IDLE-TIMEOUT:CAPS" since="2.4.1"/>
@@ -405,11 +414,16 @@
     <keyword type="macro" name="SOUP_SESSION_ACCEPT_LANGUAGE" link="SoupSession.html#SOUP-SESSION-ACCEPT-LANGUAGE:CAPS" since="2.30"/>
     <keyword type="macro" name="SOUP_SESSION_ACCEPT_LANGUAGE_AUTO" link="SoupSession.html#SOUP-SESSION-ACCEPT-LANGUAGE-AUTO:CAPS" since="2.30"/>
     <keyword type="macro" name="SOUP_SESSION_SSL_STRICT" link="SoupSession.html#SOUP-SESSION-SSL-STRICT:CAPS" since="2.30"/>
+    <keyword type="macro" name="SOUP_SESSION_HTTP_ALIASES" link="SoupSession.html#SOUP-SESSION-HTTP-ALIASES:CAPS" since="2.38"/>
+    <keyword type="macro" name="SOUP_SESSION_HTTPS_ALIASES" link="SoupSession.html#SOUP-SESSION-HTTPS-ALIASES:CAPS" since="2.38"/>
+    <keyword type="macro" name="SOUP_SESSION_USE_THREAD_CONTEXT" link="SoupSession.html#SOUP-SESSION-USE-THREAD-CONTEXT:CAPS" since="2.38"/>
     <keyword type="property" name="The &quot;accept-language&quot; property" link="SoupSession.html#SoupSession--accept-language"/>
     <keyword type="property" name="The &quot;accept-language-auto&quot; property" link="SoupSession.html#SoupSession--accept-language-auto"/>
     <keyword type="property" name="The &quot;add-feature&quot; property" link="SoupSession.html#SoupSession--add-feature"/>
     <keyword type="property" name="The &quot;add-feature-by-type&quot; property" link="SoupSession.html#SoupSession--add-feature-by-type"/>
     <keyword type="property" name="The &quot;async-context&quot; property" link="SoupSession.html#SoupSession--async-context"/>
+    <keyword type="property" name="The &quot;http-aliases&quot; property" link="SoupSession.html#SoupSession--http-aliases"/>
+    <keyword type="property" name="The &quot;https-aliases&quot; property" link="SoupSession.html#SoupSession--https-aliases"/>
     <keyword type="property" name="The &quot;idle-timeout&quot; property" link="SoupSession.html#SoupSession--idle-timeout"/>
     <keyword type="property" name="The &quot;max-conns&quot; property" link="SoupSession.html#SoupSession--max-conns"/>
     <keyword type="property" name="The &quot;max-conns-per-host&quot; property" link="SoupSession.html#SoupSession--max-conns-per-host"/>
@@ -417,8 +431,11 @@
     <keyword type="property" name="The &quot;remove-feature-by-type&quot; property" link="SoupSession.html#SoupSession--remove-feature-by-type"/>
     <keyword type="property" name="The &quot;ssl-ca-file&quot; property" link="SoupSession.html#SoupSession--ssl-ca-file"/>
     <keyword type="property" name="The &quot;ssl-strict&quot; property" link="SoupSession.html#SoupSession--ssl-strict"/>
+    <keyword type="property" name="The &quot;ssl-use-system-ca-file&quot; property" link="SoupSession.html#SoupSession--ssl-use-system-ca-file"/>
     <keyword type="property" name="The &quot;timeout&quot; property" link="SoupSession.html#SoupSession--timeout"/>
+    <keyword type="property" name="The &quot;tls-database&quot; property" link="SoupSession.html#SoupSession--tls-database"/>
     <keyword type="property" name="The &quot;use-ntlm&quot; property" link="SoupSession.html#SoupSession--use-ntlm"/>
+    <keyword type="property" name="The &quot;use-thread-context&quot; property" link="SoupSession.html#SoupSession--use-thread-context"/>
     <keyword type="property" name="The &quot;user-agent&quot; property" link="SoupSession.html#SoupSession--user-agent"/>
     <keyword type="signal" name="The &quot;authenticate&quot; signal" link="SoupSession.html#SoupSession-authenticate"/>
     <keyword type="signal" name="The &quot;connection-created&quot; signal" link="SoupSession.html#SoupSession-connection-created"/>
@@ -461,6 +478,7 @@
     <keyword type="macro" name="SOUP_URI_SCHEME_FILE" link="SoupURI.html#SOUP-URI-SCHEME-FILE:CAPS"/>
     <keyword type="macro" name="SOUP_URI_SCHEME_FTP" link="SoupURI.html#SOUP-URI-SCHEME-FTP:CAPS"/>
     <keyword type="function" name="soup_uri_uses_default_port ()" link="SoupURI.html#soup-uri-uses-default-port"/>
+    <keyword type="macro" name="SOUP_URI_IS_VALID()" link="SoupURI.html#SOUP-URI-IS-VALID:CAPS" since="2.38"/>
     <keyword type="macro" name="SOUP_URI_VALID_FOR_HTTP()" link="SoupURI.html#SOUP-URI-VALID-FOR-HTTP:CAPS" since="2.24"/>
     <keyword type="function" name="soup_uri_set_scheme ()" link="SoupURI.html#soup-uri-set-scheme"/>
     <keyword type="function" name="soup_uri_get_scheme ()" link="SoupURI.html#soup-uri-get-scheme" since="2.32"/>
@@ -655,8 +673,6 @@
     <keyword type="function" name="soup_socket_read ()" link="SoupSocket.html#soup-socket-read"/>
     <keyword type="function" name="soup_socket_read_until ()" link="SoupSocket.html#soup-socket-read-until"/>
     <keyword type="function" name="soup_socket_write ()" link="SoupSocket.html#soup-socket-write"/>
-    <keyword type="macro" name="SOUP_SSL_ERROR" link="SoupSocket.html#SOUP-SSL-ERROR:CAPS"/>
-    <keyword type="enum" name="enum SoupSSLError" link="SoupSocket.html#SoupSSLError"/>
     <keyword type="macro" name="SOUP_SOCKET_LOCAL_ADDRESS" link="SoupSocket.html#SOUP-SOCKET-LOCAL-ADDRESS:CAPS"/>
     <keyword type="macro" name="SOUP_SOCKET_REMOTE_ADDRESS" link="SoupSocket.html#SOUP-SOCKET-REMOTE-ADDRESS:CAPS"/>
     <keyword type="macro" name="SOUP_SOCKET_FLAG_NONBLOCKING" link="SoupSocket.html#SOUP-SOCKET-FLAG-NONBLOCKING:CAPS"/>
@@ -669,6 +685,7 @@
     <keyword type="macro" name="SOUP_SOCKET_TLS_CERTIFICATE" link="SoupSocket.html#SOUP-SOCKET-TLS-CERTIFICATE:CAPS" since="2.34"/>
     <keyword type="macro" name="SOUP_SOCKET_TLS_ERRORS" link="SoupSocket.html#SOUP-SOCKET-TLS-ERRORS:CAPS" since="2.34"/>
     <keyword type="macro" name="SOUP_SOCKET_TRUSTED_CERTIFICATE" link="SoupSocket.html#SOUP-SOCKET-TRUSTED-CERTIFICATE:CAPS"/>
+    <keyword type="macro" name="SOUP_SOCKET_USE_THREAD_CONTEXT" link="SoupSocket.html#SOUP-SOCKET-USE-THREAD-CONTEXT:CAPS" since="2.36.1"/>
     <keyword type="property" name="The &quot;async-context&quot; property" link="SoupSocket.html#SoupSocket--async-context"/>
     <keyword type="property" name="The &quot;clean-dispose&quot; property" link="SoupSocket.html#SoupSocket--clean-dispose"/>
     <keyword type="property" name="The &quot;is-server&quot; property" link="SoupSocket.html#SoupSocket--is-server"/>
@@ -682,7 +699,9 @@
     <keyword type="property" name="The &quot;tls-certificate&quot; property" link="SoupSocket.html#SoupSocket--tls-certificate"/>
     <keyword type="property" name="The &quot;tls-errors&quot; property" link="SoupSocket.html#SoupSocket--tls-errors"/>
     <keyword type="property" name="The &quot;trusted-certificate&quot; property" link="SoupSocket.html#SoupSocket--trusted-certificate"/>
+    <keyword type="property" name="The &quot;use-thread-context&quot; property" link="SoupSocket.html#SoupSocket--use-thread-context"/>
     <keyword type="signal" name="The &quot;disconnected&quot; signal" link="SoupSocket.html#SoupSocket-disconnected"/>
+    <keyword type="signal" name="The &quot;event&quot; signal" link="SoupSocket.html#SoupSocket-event"/>
     <keyword type="signal" name="The &quot;new-connection&quot; signal" link="SoupSocket.html#SoupSocket-new-connection"/>
     <keyword type="signal" name="The &quot;readable&quot; signal" link="SoupSocket.html#SoupSocket-readable"/>
     <keyword type="signal" name="The &quot;writable&quot; signal" link="SoupSocket.html#SoupSocket-writable"/>
@@ -727,6 +746,7 @@
     <keyword type="constant" name="SOUP_MESSAGE_OVERWRITE_CHUNKS" link="SoupMessage.html#SOUP-MESSAGE-OVERWRITE-CHUNKS:CAPS"/>
     <keyword type="constant" name="SOUP_MESSAGE_CONTENT_DECODED" link="SoupMessage.html#SOUP-MESSAGE-CONTENT-DECODED:CAPS"/>
     <keyword type="constant" name="SOUP_MESSAGE_CERTIFICATE_TRUSTED" link="SoupMessage.html#SOUP-MESSAGE-CERTIFICATE-TRUSTED:CAPS"/>
+    <keyword type="constant" name="SOUP_MESSAGE_NEW_CONNECTION" link="SoupMessage.html#SOUP-MESSAGE-NEW-CONNECTION:CAPS"/>
     <keyword type="constant" name="SOUP_MESSAGE_HEADERS_REQUEST" link="SoupMessageHeaders.html#SOUP-MESSAGE-HEADERS-REQUEST:CAPS"/>
     <keyword type="constant" name="SOUP_MESSAGE_HEADERS_RESPONSE" link="SoupMessageHeaders.html#SOUP-MESSAGE-HEADERS-RESPONSE:CAPS"/>
     <keyword type="constant" name="SOUP_MESSAGE_HEADERS_MULTIPART" link="SoupMessageHeaders.html#SOUP-MESSAGE-HEADERS-MULTIPART:CAPS"/>
@@ -836,10 +856,6 @@
     <keyword type="constant" name="SOUP_SOCKET_WOULD_BLOCK" link="SoupSocket.html#SOUP-SOCKET-WOULD-BLOCK:CAPS"/>
     <keyword type="constant" name="SOUP_SOCKET_EOF" link="SoupSocket.html#SOUP-SOCKET-EOF:CAPS"/>
     <keyword type="constant" name="SOUP_SOCKET_ERROR" link="SoupSocket.html#SOUP-SOCKET-ERROR:CAPS"/>
-    <keyword type="constant" name="SOUP_SSL_ERROR_HANDSHAKE_NEEDS_READ" link="SoupSocket.html#SOUP-SSL-ERROR-HANDSHAKE-NEEDS-READ:CAPS"/>
-    <keyword type="constant" name="SOUP_SSL_ERROR_HANDSHAKE_NEEDS_WRITE" link="SoupSocket.html#SOUP-SSL-ERROR-HANDSHAKE-NEEDS-WRITE:CAPS"/>
-    <keyword type="constant" name="SOUP_SSL_ERROR_CERTIFICATE" link="SoupSocket.html#SOUP-SSL-ERROR-CERTIFICATE:CAPS"/>
-    <keyword type="constant" name="SOUP_SSL_ERROR_HANDSHAKE_FAILED" link="SoupSocket.html#SOUP-SSL-ERROR-HANDSHAKE-FAILED:CAPS"/>
     <keyword type="constant" name="SOUP_REQUESTER_ERROR_BAD_URI" link="SoupRequester.html#SOUP-REQUESTER-ERROR-BAD-URI:CAPS"/>
     <keyword type="constant" name="SOUP_REQUESTER_ERROR_UNSUPPORTED_URI_SCHEME" link="SoupRequester.html#SOUP-REQUESTER-ERROR-UNSUPPORTED-URI-SCHEME:CAPS"/>
     <keyword type="constant" name="SOUP_CACHE_SINGLE_USER" link="SoupCache.html#SOUP-CACHE-SINGLE-USER:CAPS"/>

@@ -50,31 +50,31 @@
                                                          <em class="parameter"><code>const <span class="type">char</span> *path</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupAuthDomain.html#soup-auth-domain-remove-path" title="soup_auth_domain_remove_path ()">soup_auth_domain_remove_path</a>        (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *path</code></em>);
-<span class="returnvalue">gboolean</span>            (<a class="link" href="SoupAuthDomain.html#SoupAuthDomainFilter" title="SoupAuthDomainFilter ()">*SoupAuthDomainFilter</a>)             (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            (<a class="link" href="SoupAuthDomain.html#SoupAuthDomainFilter" title="SoupAuthDomainFilter ()">*SoupAuthDomainFilter</a>)             (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupAuthDomain.html#soup-auth-domain-set-filter" title="soup_auth_domain_set_filter ()">soup_auth_domain_set_filter</a>         (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupAuthDomain.html#SoupAuthDomainFilter" title="SoupAuthDomainFilter ()"><span class="type">SoupAuthDomainFilter</span></a> filter</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> filter_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> dnotify</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> filter_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> dnotify</code></em>);
 const <span class="returnvalue">char</span> *        <a class="link" href="SoupAuthDomain.html#soup-auth-domain-get-realm" title="soup_auth_domain_get_realm ()">soup_auth_domain_get_realm</a>          (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>);
 
-<span class="returnvalue">gboolean</span>            (<a class="link" href="SoupAuthDomain.html#SoupAuthDomainGenericAuthCallback" title="SoupAuthDomainGenericAuthCallback ()">*SoupAuthDomainGenericAuthCallback</a>)
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            (<a class="link" href="SoupAuthDomain.html#SoupAuthDomainGenericAuthCallback" title="SoupAuthDomainGenericAuthCallback ()">*SoupAuthDomainGenericAuthCallback</a>)
                                                         (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *username</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupAuthDomain.html#soup-auth-domain-set-generic-auth-callback" title="soup_auth_domain_set_generic_auth_callback ()">soup_auth_domain_set_generic_auth_callback</a>
                                                         (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupAuthDomain.html#SoupAuthDomainGenericAuthCallback" title="SoupAuthDomainGenericAuthCallback ()"><span class="type">SoupAuthDomainGenericAuthCallback</span></a> auth_callback</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> auth_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> dnotify</code></em>);
-<span class="returnvalue">gboolean</span>            <a class="link" href="SoupAuthDomain.html#soup-auth-domain-check-password" title="soup_auth_domain_check_password ()">soup_auth_domain_check_password</a>     (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> auth_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> dnotify</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="SoupAuthDomain.html#soup-auth-domain-check-password" title="soup_auth_domain_check_password ()">soup_auth_domain_check_password</a>     (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *username</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *password</code></em>);
 
-<span class="returnvalue">gboolean</span>            <a class="link" href="SoupAuthDomain.html#soup-auth-domain-covers" title="soup_auth_domain_covers ()">soup_auth_domain_covers</a>             (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="SoupAuthDomain.html#soup-auth-domain-covers" title="soup_auth_domain_covers ()">soup_auth_domain_covers</a>             (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>);
 <span class="returnvalue">char</span> *              <a class="link" href="SoupAuthDomain.html#soup-auth-domain-accepts" title="soup_auth_domain_accepts ()">soup_auth_domain_accepts</a>            (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>);
@@ -94,7 +94,7 @@ const <span class="returnvalue">char</span> *        <a class="link" href="SoupA
 <div class="refsect1">
 <a name="SoupAuthDomain.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="synopsis">
-  GObject
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
    +----SoupAuthDomain
          +----<a class="link" href="SoupAuthDomainBasic.html" title="SoupAuthDomainBasic">SoupAuthDomainBasic</a>
          +----<a class="link" href="SoupAuthDomainDigest.html" title="SoupAuthDomainDigest">SoupAuthDomainDigest</a>
@@ -103,14 +103,14 @@ const <span class="returnvalue">char</span> *        <a class="link" href="SoupA
 <div class="refsect1">
 <a name="SoupAuthDomain.properties"></a><h2>Properties</h2>
 <pre class="synopsis">
-  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--add-path" title='The "add-path" property'>add-path</a>"                 <span class="type">gchar</span>*                : Write
-  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--filter" title='The "filter" property'>filter</a>"                   <span class="type">gpointer</span>              : Read / Write
-  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--filter-data" title='The "filter-data" property'>filter-data</a>"              <span class="type">gpointer</span>              : Read / Write
-  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--generic-auth-callback" title='The "generic-auth-callback" property'>generic-auth-callback</a>"    <span class="type">gpointer</span>              : Read / Write
-  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--generic-auth-data" title='The "generic-auth-data" property'>generic-auth-data</a>"        <span class="type">gpointer</span>              : Read / Write
-  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--proxy" title='The "proxy" property'>proxy</a>"                    <span class="type">gboolean</span>              : Read / Write / Construct Only
-  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--realm" title='The "realm" property'>realm</a>"                    <span class="type">gchar</span>*                : Read / Write / Construct Only
-  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--remove-path" title='The "remove-path" property'>remove-path</a>"              <span class="type">gchar</span>*                : Write
+  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--add-path" title='The "add-path" property'>add-path</a>"                 <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Write
+  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--filter" title='The "filter" property'>filter</a>"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write
+  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--filter-data" title='The "filter-data" property'>filter-data</a>"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write
+  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--generic-auth-callback" title='The "generic-auth-callback" property'>generic-auth-callback</a>"    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write
+  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--generic-auth-data" title='The "generic-auth-data" property'>generic-auth-data</a>"        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write
+  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--proxy" title='The "proxy" property'>proxy</a>"                    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write / Construct Only
+  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--realm" title='The "realm" property'>realm</a>"                    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only
+  "<a class="link" href="SoupAuthDomain.html#SoupAuthDomain--remove-path" title='The "remove-path" property'>remove-path</a>"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Write
 </pre>
 </div>
 <div class="refsect1">
@@ -218,9 +218,9 @@ remove one or more paths at construct time.
 <hr>
 <div class="refsect2">
 <a name="SoupAuthDomainFilter"></a><h3>SoupAuthDomainFilter ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            (*SoupAuthDomainFilter)             (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            (*SoupAuthDomainFilter)             (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>
 The prototype for a <a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> filter; see
 <a class="link" href="SoupAuthDomain.html#soup-auth-domain-set-filter" title="soup_auth_domain_set_filter ()"><code class="function">soup_auth_domain_set_filter()</code></a> for details.
@@ -246,7 +246,7 @@ The prototype for a <a class="link" href="SoupAuthDomain.html" title="SoupAuthDo
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> if <em class="parameter"><code>msg</code></em> requires authentication, <code class="literal">FALSE</code> if not.</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>msg</code></em> requires authentication, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if not.</td>
 </tr>
 </tbody>
 </table></div>
@@ -256,8 +256,8 @@ The prototype for a <a class="link" href="SoupAuthDomain.html" title="SoupAuthDo
 <a name="soup-auth-domain-set-filter"></a><h3>soup_auth_domain_set_filter ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_auth_domain_set_filter         (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupAuthDomain.html#SoupAuthDomainFilter" title="SoupAuthDomainFilter ()"><span class="type">SoupAuthDomainFilter</span></a> filter</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> filter_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> dnotify</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> filter_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> dnotify</code></em>);</pre>
 <p>
 Adds <em class="parameter"><code>filter</code></em> as an authentication filter to <em class="parameter"><code>domain</code></em>. The filter
 gets a chance to bypass authentication for certain requests that
@@ -266,18 +266,18 @@ in some way that is too complicated to do via the other methods, or
 it might check the message's method, and allow GETs but not PUTs.
 </p>
 <p>
-The filter function returns <code class="literal">TRUE</code> if the request should still
-require authentication, or <code class="literal">FALSE</code> if authentication is unnecessary
+The filter function returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the request should still
+require authentication, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if authentication is unnecessary
 for this request.
 </p>
 <p>
-To help prevent security holes, your filter should return <code class="literal">TRUE</code> by
-default, and only return <code class="literal">FALSE</code> under specifically-tested
+To help prevent security holes, your filter should return <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> by
+default, and only return <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> under specifically-tested
 circumstances, rather than the other way around. Eg, in the example
 above, where you want to authenticate PUTs but not GETs, you should
-check if the method is GET and return <code class="literal">FALSE</code> in that case, and then
-return <code class="literal">TRUE</code> for all other methods (rather than returning <code class="literal">TRUE</code> for
-PUT and <code class="literal">FALSE</code> for all other methods). This way if it turned out
+check if the method is GET and return <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> in that case, and then
+return <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> for all other methods (rather than returning <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> for
+PUT and <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> for all other methods). This way if it turned out
 (now or later) that some paths supported additional methods besides
 GET and PUT, those methods would default to being NOT allowed for
 unauthenticated users.
@@ -339,11 +339,11 @@ Gets the realm name associated with <em class="parameter"><code>domain</code></e
 <hr>
 <div class="refsect2">
 <a name="SoupAuthDomainGenericAuthCallback"></a><h3>SoupAuthDomainGenericAuthCallback ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            (*SoupAuthDomainGenericAuthCallback)
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            (*SoupAuthDomainGenericAuthCallback)
                                                         (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *username</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>
 The prototype for a <a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> generic authentication callback.
 </p>
@@ -390,7 +390,7 @@ be worth considering.
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> if <em class="parameter"><code>msg</code></em> is authenticated, <code class="literal">FALSE</code> if not.</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>msg</code></em> is authenticated, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if not.</td>
 </tr>
 </tbody>
 </table></div>
@@ -401,8 +401,8 @@ be worth considering.
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_auth_domain_set_generic_auth_callback
                                                         (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupAuthDomain.html#SoupAuthDomainGenericAuthCallback" title="SoupAuthDomainGenericAuthCallback ()"><span class="type">SoupAuthDomainGenericAuthCallback</span></a> auth_callback</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> auth_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> dnotify</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> auth_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> dnotify</code></em>);</pre>
 <p>
 Sets <em class="parameter"><code>auth_callback</code></em> as an authentication-handling callback for
 <em class="parameter"><code>domain</code></em>. Whenever a request comes in to <em class="parameter"><code>domain</code></em> which cannot be
@@ -439,7 +439,7 @@ is destroyed</td>
 <hr>
 <div class="refsect2">
 <a name="soup-auth-domain-check-password"></a><h3>soup_auth_domain_check_password ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_auth_domain_check_password     (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_auth_domain_check_password     (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *username</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *password</code></em>);</pre>
@@ -479,7 +479,7 @@ Checks if <em class="parameter"><code>msg</code></em> authenticates to <em class
 <hr>
 <div class="refsect2">
 <a name="soup-auth-domain-covers"></a><h3>soup_auth_domain_covers ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_auth_domain_covers             (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_auth_domain_covers             (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>);</pre>
 <p>
 Checks if <em class="parameter"><code>domain</code></em> requires <em class="parameter"><code>msg</code></em> to be authenticated (according to
@@ -507,7 +507,7 @@ anyone else.
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> if <em class="parameter"><code>domain</code></em> requires <em class="parameter"><code>msg</code></em> to be authenticated</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>domain</code></em> requires <em class="parameter"><code>msg</code></em> to be authenticated</td>
 </tr>
 </tbody>
 </table></div>
@@ -543,7 +543,7 @@ anyone else.
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>the username that <em class="parameter"><code>msg</code></em> has authenticated as, if in
-fact it has authenticated. <code class="literal">NULL</code> otherwise.</td>
+fact it has authenticated. <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> otherwise.</td>
 </tr>
 </tbody>
 </table></div>
@@ -663,52 +663,52 @@ Alias for the <a class="link" href="SoupAuthDomain.html#SoupAuthDomain--generic-
 <a name="SoupAuthDomain.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="SoupAuthDomain--add-path"></a><h3>The <code class="literal">"add-path"</code> property</h3>
-<pre class="programlisting">  "add-path"                 <span class="type">gchar</span>*                : Write</pre>
+<pre class="programlisting">  "add-path"                 <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Write</pre>
 <p>Add a path covered by this auth domain.</p>
 <p>Default value: NULL</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupAuthDomain--filter"></a><h3>The <code class="literal">"filter"</code> property</h3>
-<pre class="programlisting">  "filter"                   <span class="type">gpointer</span>              : Read / Write</pre>
+<pre class="programlisting">  "filter"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write</pre>
 <p>A filter for deciding whether or not to require authentication.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupAuthDomain--filter-data"></a><h3>The <code class="literal">"filter-data"</code> property</h3>
-<pre class="programlisting">  "filter-data"              <span class="type">gpointer</span>              : Read / Write</pre>
+<pre class="programlisting">  "filter-data"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write</pre>
 <p>Data to pass to filter.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupAuthDomain--generic-auth-callback"></a><h3>The <code class="literal">"generic-auth-callback"</code> property</h3>
-<pre class="programlisting">  "generic-auth-callback"    <span class="type">gpointer</span>              : Read / Write</pre>
+<pre class="programlisting">  "generic-auth-callback"    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write</pre>
 <p>An authentication callback that can be used with any SoupAuthDomain subclass.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupAuthDomain--generic-auth-data"></a><h3>The <code class="literal">"generic-auth-data"</code> property</h3>
-<pre class="programlisting">  "generic-auth-data"        <span class="type">gpointer</span>              : Read / Write</pre>
+<pre class="programlisting">  "generic-auth-data"        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write</pre>
 <p>Data to pass to auth callback.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupAuthDomain--proxy"></a><h3>The <code class="literal">"proxy"</code> property</h3>
-<pre class="programlisting">  "proxy"                    <span class="type">gboolean</span>              : Read / Write / Construct Only</pre>
+<pre class="programlisting">  "proxy"                    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write / Construct Only</pre>
 <p>Whether or not this is a proxy auth domain.</p>
 <p>Default value: FALSE</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupAuthDomain--realm"></a><h3>The <code class="literal">"realm"</code> property</h3>
-<pre class="programlisting">  "realm"                    <span class="type">gchar</span>*                : Read / Write / Construct Only</pre>
+<pre class="programlisting">  "realm"                    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only</pre>
 <p>The realm of this auth domain.</p>
 <p>Default value: NULL</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupAuthDomain--remove-path"></a><h3>The <code class="literal">"remove-path"</code> property</h3>
-<pre class="programlisting">  "remove-path"              <span class="type">gchar</span>*                : Write</pre>
+<pre class="programlisting">  "remove-path"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Write</pre>
 <p>Remove a path covered by this auth domain.</p>
 <p>Default value: NULL</p>
 </div>
