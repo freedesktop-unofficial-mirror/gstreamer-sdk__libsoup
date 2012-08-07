@@ -67,15 +67,15 @@ const <span class="returnvalue">char</span> *        <a class="link" href="SoupM
 
 <span class="returnvalue">void</span>                (<a class="link" href="SoupMessageHeaders.html#SoupMessageHeadersForeachFunc" title="SoupMessageHeadersForeachFunc ()">*SoupMessageHeadersForeachFunc</a>)    (<em class="parameter"><code>const <span class="type">char</span> *name</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *value</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessageHeaders.html#soup-message-headers-foreach" title="soup_message_headers_foreach ()">soup_message_headers_foreach</a>        (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html#SoupMessageHeadersForeachFunc" title="SoupMessageHeadersForeachFunc ()"><span class="type">SoupMessageHeadersForeachFunc</span></a> func</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
 
                     <a class="link" href="SoupMessageHeaders.html#SoupMessageHeadersIter" title="SoupMessageHeadersIter">SoupMessageHeadersIter</a>;
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessageHeaders.html#soup-message-headers-iter-init" title="soup_message_headers_iter_init ()">soup_message_headers_iter_init</a>      (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html#SoupMessageHeadersIter" title="SoupMessageHeadersIter"><span class="type">SoupMessageHeadersIter</span></a> *iter</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>);
-<span class="returnvalue">gboolean</span>            <a class="link" href="SoupMessageHeaders.html#soup-message-headers-iter-next" title="soup_message_headers_iter_next ()">soup_message_headers_iter_next</a>      (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html#SoupMessageHeadersIter" title="SoupMessageHeadersIter"><span class="type">SoupMessageHeadersIter</span></a> *iter</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="SoupMessageHeaders.html#soup-message-headers-iter-next" title="soup_message_headers_iter_next ()">soup_message_headers_iter_next</a>      (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html#SoupMessageHeadersIter" title="SoupMessageHeadersIter"><span class="type">SoupMessageHeadersIter</span></a> *iter</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> **name</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> **value</code></em>);
 
@@ -83,11 +83,11 @@ enum                <a class="link" href="SoupMessageHeaders.html#SoupEncoding" 
 <a class="link" href="SoupMessageHeaders.html#SoupEncoding" title="enum SoupEncoding"><span class="returnvalue">SoupEncoding</span></a>        <a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-encoding" title="soup_message_headers_get_encoding ()">soup_message_headers_get_encoding</a>   (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessageHeaders.html#soup-message-headers-set-encoding" title="soup_message_headers_set_encoding ()">soup_message_headers_set_encoding</a>   (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html#SoupEncoding" title="enum SoupEncoding"><span class="type">SoupEncoding</span></a> encoding</code></em>);
-<span class="returnvalue">goffset</span>             <a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-content-length" title="soup_message_headers_get_content_length ()">soup_message_headers_get_content_length</a>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="returnvalue">goffset</span></a>             <a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-content-length" title="soup_message_headers_get_content_length ()">soup_message_headers_get_content_length</a>
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessageHeaders.html#soup-message-headers-set-content-length" title="soup_message_headers_set_content_length ()">soup_message_headers_set_content_length</a>
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> content_length</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> content_length</code></em>);
 
 enum                <a class="link" href="SoupMessageHeaders.html#SoupExpectation" title="enum SoupExpectation">SoupExpectation</a>;
 <a class="link" href="SoupMessageHeaders.html#SoupExpectation" title="enum SoupExpectation"><span class="returnvalue">SoupExpectation</span></a>     <a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-expectations" title="soup_message_headers_get_expectations ()">soup_message_headers_get_expectations</a>
@@ -98,44 +98,44 @@ enum                <a class="link" href="SoupMessageHeaders.html#SoupExpectatio
 
 const <span class="returnvalue">char</span> *        <a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-content-type" title="soup_message_headers_get_content_type ()">soup_message_headers_get_content_type</a>
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
-                                                         <em class="parameter"><code><span class="type">GHashTable</span> **params</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> **params</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessageHeaders.html#soup-message-headers-set-content-type" title="soup_message_headers_set_content_type ()">soup_message_headers_set_content_type</a>
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *content_type</code></em>,
-                                                         <em class="parameter"><code><span class="type">GHashTable</span> *params</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> *params</code></em>);
 
-<span class="returnvalue">gboolean</span>            <a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-content-disposition" title="soup_message_headers_get_content_disposition ()">soup_message_headers_get_content_disposition</a>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-content-disposition" title="soup_message_headers_get_content_disposition ()">soup_message_headers_get_content_disposition</a>
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
                                                          <em class="parameter"><code><span class="type">char</span> **disposition</code></em>,
-                                                         <em class="parameter"><code><span class="type">GHashTable</span> **params</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> **params</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessageHeaders.html#soup-message-headers-set-content-disposition" title="soup_message_headers_set_content_disposition ()">soup_message_headers_set_content_disposition</a>
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *disposition</code></em>,
-                                                         <em class="parameter"><code><span class="type">GHashTable</span> *params</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> *params</code></em>);
 
                     <a class="link" href="SoupMessageHeaders.html#SoupRange" title="SoupRange">SoupRange</a>;
-<span class="returnvalue">gboolean</span>            <a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-ranges" title="soup_message_headers_get_ranges ()">soup_message_headers_get_ranges</a>     (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> total_length</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-ranges" title="soup_message_headers_get_ranges ()">soup_message_headers_get_ranges</a>     (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> total_length</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html#SoupRange" title="SoupRange"><span class="type">SoupRange</span></a> **ranges</code></em>,
                                                          <em class="parameter"><code><span class="type">int</span> *length</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessageHeaders.html#soup-message-headers-set-ranges" title="soup_message_headers_set_ranges ()">soup_message_headers_set_ranges</a>     (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html#SoupRange" title="SoupRange"><span class="type">SoupRange</span></a> *ranges</code></em>,
                                                          <em class="parameter"><code><span class="type">int</span> length</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessageHeaders.html#soup-message-headers-set-range" title="soup_message_headers_set_range ()">soup_message_headers_set_range</a>      (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> start</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> end</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> start</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> end</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessageHeaders.html#soup-message-headers-free-ranges" title="soup_message_headers_free_ranges ()">soup_message_headers_free_ranges</a>    (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html#SoupRange" title="SoupRange"><span class="type">SoupRange</span></a> *ranges</code></em>);
-<span class="returnvalue">gboolean</span>            <a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-content-range" title="soup_message_headers_get_content_range ()">soup_message_headers_get_content_range</a>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-content-range" title="soup_message_headers_get_content_range ()">soup_message_headers_get_content_range</a>
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> *start</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> *end</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> *total_length</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> *start</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> *end</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> *total_length</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupMessageHeaders.html#soup-message-headers-set-content-range" title="soup_message_headers_set_content_range ()">soup_message_headers_set_content_range</a>
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> start</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> end</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> total_length</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> start</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> end</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> total_length</code></em>);
 </pre>
 </div>
 <div class="refsect1">
@@ -395,7 +395,7 @@ implementations.)
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>the header's value or <code class="literal">NULL</code> if not found.</td>
+<td>the header's value or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not found.</td>
 </tr>
 </tbody>
 </table></div>
@@ -435,7 +435,7 @@ same thing.
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>the header's value or <code class="literal">NULL</code> if not found.</td>
+<td>the header's value or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not found.</td>
 </tr>
 </tbody>
 </table></div>
@@ -487,7 +487,7 @@ explicitly state which behavior they are expecting.
 <a name="SoupMessageHeadersForeachFunc"></a><h3>SoupMessageHeadersForeachFunc ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                (*SoupMessageHeadersForeachFunc)    (<em class="parameter"><code>const <span class="type">char</span> *name</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *value</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>
 The callback passed to <a class="link" href="SoupMessageHeaders.html#soup-message-headers-foreach" title="soup_message_headers_foreach ()"><code class="function">soup_message_headers_foreach()</code></a>.
 </p>
@@ -515,7 +515,7 @@ The callback passed to <a class="link" href="SoupMessageHeaders.html#soup-messag
 <a name="soup-message-headers-foreach"></a><h3>soup_message_headers_foreach ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_message_headers_foreach        (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html#SoupMessageHeadersForeachFunc" title="SoupMessageHeadersForeachFunc ()"><span class="type">SoupMessageHeadersForeachFunc</span></a> func</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>
 Calls <em class="parameter"><code>func</code></em> once for each header value in <em class="parameter"><code>hdrs</code></em>.
 </p>
@@ -600,13 +600,13 @@ structure. <span class="annotation">[<acronym title="Parameter for returning res
 <hr>
 <div class="refsect2">
 <a name="soup-message-headers-iter-next"></a><h3>soup_message_headers_iter_next ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_message_headers_iter_next      (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html#SoupMessageHeadersIter" title="SoupMessageHeadersIter"><span class="type">SoupMessageHeadersIter</span></a> *iter</code></em>,
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_message_headers_iter_next      (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html#SoupMessageHeadersIter" title="SoupMessageHeadersIter"><span class="type">SoupMessageHeadersIter</span></a> *iter</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> **name</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> **value</code></em>);</pre>
 <p>
 Yields the next name/value pair in the <a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><code class="literal">SoupMessageHeaders</code></a> being
 iterated by <em class="parameter"><code>iter</code></em>. If <em class="parameter"><code>iter</code></em> has already yielded the last header,
-then <a class="link" href="SoupMessageHeaders.html#soup-message-headers-iter-next" title="soup_message_headers_iter_next ()"><code class="function">soup_message_headers_iter_next()</code></a> will return <code class="literal">FALSE</code> and <em class="parameter"><code>name</code></em>
+then <a class="link" href="SoupMessageHeaders.html#soup-message-headers-iter-next" title="soup_message_headers_iter_next ()"><code class="function">soup_message_headers_iter_next()</code></a> will return <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> and <em class="parameter"><code>name</code></em>
 and <em class="parameter"><code>value</code></em> will be unchanged.
 </p>
 <div class="variablelist"><table border="0">
@@ -632,7 +632,7 @@ the header value in. <span class="annotation">[<acronym title="Parameter for ret
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> if another name and value were returned, <code class="literal">FALSE</code>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if another name and value were returned, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>
 if the end of the headers has been reached.</td>
 </tr>
 </tbody>
@@ -746,7 +746,7 @@ chunked encoding.
 <hr>
 <div class="refsect2">
 <a name="soup-message-headers-get-content-length"></a><h3>soup_message_headers_get_content_length ()</h3>
-<pre class="programlisting"><span class="returnvalue">goffset</span>             soup_message_headers_get_content_length
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="returnvalue">goffset</span></a>             soup_message_headers_get_content_length
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>);</pre>
 <p>
 Gets the message body length that <em class="parameter"><code>hdrs</code></em> declare. This will only
@@ -773,7 +773,7 @@ be non-0 if <a class="link" href="SoupMessageHeaders.html#soup-message-headers-g
 <a name="soup-message-headers-set-content-length"></a><h3>soup_message_headers_set_content_length ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_message_headers_set_content_length
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> content_length</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> content_length</code></em>);</pre>
 <p>
 Sets the message body length that <em class="parameter"><code>hdrs</code></em> will declare, and sets
 <em class="parameter"><code>hdrs</code></em>'s encoding to <a class="link" href="SoupMessageHeaders.html#SOUP-ENCODING-CONTENT-LENGTH:CAPS"><code class="literal">SOUP_ENCODING_CONTENT_LENGTH</code></a>.
@@ -894,10 +894,10 @@ server is just going to ignore it anyway.
 <a name="soup-message-headers-get-content-type"></a><h3>soup_message_headers_get_content_type ()</h3>
 <pre class="programlisting">const <span class="returnvalue">char</span> *        soup_message_headers_get_content_type
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
-                                                         <em class="parameter"><code><span class="type">GHashTable</span> **params</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> **params</code></em>);</pre>
 <p>
 Looks up the "Content-Type" header in <em class="parameter"><code>hdrs</code></em>, parses it, and returns
-its value in *<em class="parameter"><code>content_type</code></em> and *<em class="parameter"><code>params</code></em>. <em class="parameter"><code>params</code></em> can be <code class="literal">NULL</code> if you
+its value in *<em class="parameter"><code>content_type</code></em> and *<em class="parameter"><code>params</code></em>. <em class="parameter"><code>params</code></em> can be <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if you
 are only interested in the content type itself.
 </p>
 <div class="variablelist"><table border="0">
@@ -911,7 +911,7 @@ are only interested in the content type itself.
 <tr>
 <td><p><span class="term"><em class="parameter"><code>params</code></em> :</span></p></td>
 <td>return location for
-the Content-Type parameters (eg, "charset"), or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+the Content-Type parameters (eg, "charset"), or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -930,7 +930,7 @@ parsed (in which case *<em class="parameter"><code>params</code></em> will be un
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_message_headers_set_content_type
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *content_type</code></em>,
-                                                         <em class="parameter"><code><span class="type">GHashTable</span> *params</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> *params</code></em>);</pre>
 <p>
 Sets the "Content-Type" header in <em class="parameter"><code>hdrs</code></em> to <em class="parameter"><code>content_type</code></em>,
 optionally with additional parameters specified in <em class="parameter"><code>params</code></em>.
@@ -950,7 +950,7 @@ optionally with additional parameters specified in <em class="parameter"><code>p
 <tr>
 <td><p><span class="term"><em class="parameter"><code>params</code></em> :</span></p></td>
 <td>additional
-parameters, or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8 utf8]</span>
+parameters, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8 utf8]</span>
 </td>
 </tr>
 </tbody>
@@ -960,14 +960,14 @@ parameters, or <code class="literal">NULL</code>. <span class="annotation">[<acr
 <hr>
 <div class="refsect2">
 <a name="soup-message-headers-get-content-disposition"></a><h3>soup_message_headers_get_content_disposition ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_message_headers_get_content_disposition
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_message_headers_get_content_disposition
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
                                                          <em class="parameter"><code><span class="type">char</span> **disposition</code></em>,
-                                                         <em class="parameter"><code><span class="type">GHashTable</span> **params</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> **params</code></em>);</pre>
 <p>
 Looks up the "Content-Disposition" header in <em class="parameter"><code>hdrs</code></em>, parses it, and
 returns its value in *<em class="parameter"><code>disposition</code></em> and *<em class="parameter"><code>params</code></em>. <em class="parameter"><code>params</code></em> can be
-<code class="literal">NULL</code> if you are only interested in the disposition-type.
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if you are only interested in the disposition-type.
 </p>
 <p>
 In HTTP, the most common use of this header is to set a
@@ -995,20 +995,20 @@ form methods.
 <tr>
 <td><p><span class="term"><em class="parameter"><code>disposition</code></em> :</span></p></td>
 <td>return location for the
-disposition-type, or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+disposition-type, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>params</code></em> :</span></p></td>
 <td>return
-location for the Content-Disposition parameters, or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8 utf8]</span>
+location for the Content-Disposition parameters, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8 utf8]</span>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> if <em class="parameter"><code>hdrs</code></em> contains a "Content-Disposition"
-header, <code class="literal">FALSE</code> if not (in which case *<em class="parameter"><code>disposition</code></em> and *<em class="parameter"><code>params</code></em>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>hdrs</code></em> contains a "Content-Disposition"
+header, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if not (in which case *<em class="parameter"><code>disposition</code></em> and *<em class="parameter"><code>params</code></em>
 will be unchanged).</td>
 </tr>
 </tbody>
@@ -1021,7 +1021,7 @@ will be unchanged).</td>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_message_headers_set_content_disposition
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *disposition</code></em>,
-                                                         <em class="parameter"><code><span class="type">GHashTable</span> *params</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> *params</code></em>);</pre>
 <p>
 Sets the "Content-Disposition" header in <em class="parameter"><code>hdrs</code></em> to <em class="parameter"><code>disposition</code></em>,
 optionally with additional parameters specified in <em class="parameter"><code>params</code></em>.
@@ -1045,7 +1045,7 @@ of how Content-Disposition is used in HTTP.
 <tr>
 <td><p><span class="term"><em class="parameter"><code>params</code></em> :</span></p></td>
 <td>additional
-parameters, or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8 utf8]</span>
+parameters, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8 utf8]</span>
 </td>
 </tr>
 </tbody>
@@ -1083,11 +1083,11 @@ range", referring to the last -<em class="parameter"><code>start</code></em> byt
 <col align="left" valign="top">
 <tbody>
 <tr>
-<td><p><span class="term"><span class="type">goffset</span> <em class="structfield"><code><a name="SoupRange.start"></a>start</code></em>;</span></p></td>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> <em class="structfield"><code><a name="SoupRange.start"></a>start</code></em>;</span></p></td>
 <td>the start of the range</td>
 </tr>
 <tr>
-<td><p><span class="term"><span class="type">goffset</span> <em class="structfield"><code><a name="SoupRange.end"></a>end</code></em>;</span></p></td>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> <em class="structfield"><code><a name="SoupRange.end"></a>end</code></em>;</span></p></td>
 <td>the end of the range</td>
 </tr>
 </tbody>
@@ -1097,8 +1097,8 @@ range", referring to the last -<em class="parameter"><code>start</code></em> byt
 <hr>
 <div class="refsect2">
 <a name="soup-message-headers-get-ranges"></a><h3>soup_message_headers_get_ranges ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_message_headers_get_ranges     (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> total_length</code></em>,
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_message_headers_get_ranges     (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> total_length</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html#SoupRange" title="SoupRange"><span class="type">SoupRange</span></a> **ranges</code></em>,
                                                          <em class="parameter"><code><span class="type">int</span> *length</code></em>);</pre>
 <p>
@@ -1138,8 +1138,8 @@ redundant.
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> if <em class="parameter"><code>hdrs</code></em> contained a "Range" header containing
-byte ranges which could be parsed, <code class="literal">FALSE</code> otherwise (in which case
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>hdrs</code></em> contained a "Range" header containing
+byte ranges which could be parsed, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise (in which case
 <em class="parameter"><code>range</code></em> and <em class="parameter"><code>length</code></em> will not be set).</td>
 </tr>
 </tbody>
@@ -1183,8 +1183,8 @@ only want to request a single range, you can use
 <div class="refsect2">
 <a name="soup-message-headers-set-range"></a><h3>soup_message_headers_set_range ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_message_headers_set_range      (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> start</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> end</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> start</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> end</code></em>);</pre>
 <p>
 Sets <em class="parameter"><code>hdrs</code></em>'s Range header to request the indicated range.
 <em class="parameter"><code>start</code></em> and <em class="parameter"><code>end</code></em> are interpreted as in a <a class="link" href="SoupMessageHeaders.html#SoupRange" title="SoupRange"><span class="type">SoupRange</span></a>.
@@ -1241,11 +1241,11 @@ Frees the array of ranges returned from <a class="link" href="SoupMessageHeaders
 <hr>
 <div class="refsect2">
 <a name="soup-message-headers-get-content-range"></a><h3>soup_message_headers_get_content_range ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_message_headers_get_content_range
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_message_headers_get_content_range
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> *start</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> *end</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> *total_length</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> *start</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> *end</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> *total_length</code></em>);</pre>
 <p>
 Parses <em class="parameter"><code>hdrs</code></em>'s Content-Range header and returns it in <em class="parameter"><code>start</code></em>,
 <em class="parameter"><code>end</code></em>, and <em class="parameter"><code>total_length</code></em>. If the total length field in the header
@@ -1270,13 +1270,13 @@ was specified as "*", then <em class="parameter"><code>total_length</code></em> 
 <tr>
 <td><p><span class="term"><em class="parameter"><code>total_length</code></em> :</span></p></td>
 <td>return value for the total length of the resource,
-or <code class="literal">NULL</code> if you don't care.</td>
+or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if you don't care.</td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> if <em class="parameter"><code>hdrs</code></em> contained a "Content-Range" header
-containing a byte range which could be parsed, <code class="literal">FALSE</code> otherwise.</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>hdrs</code></em> contained a "Content-Range" header
+containing a byte range which could be parsed, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</td>
 </tr>
 </tbody>
 </table></div>
@@ -1287,9 +1287,9 @@ containing a byte range which could be parsed, <code class="literal">FALSE</code
 <a name="soup-message-headers-set-content-range"></a><h3>soup_message_headers_set_content_range ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_message_headers_set_content_range
                                                         (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> start</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> end</code></em>,
-                                                         <em class="parameter"><code><span class="type">goffset</span> total_length</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> start</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> end</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#goffset"><span class="type">goffset</span></a> total_length</code></em>);</pre>
 <p>
 Sets <em class="parameter"><code>hdrs</code></em>'s Content-Range header according to the given values.
 (Note that <em class="parameter"><code>total_length</code></em> is the total length of the entire resource

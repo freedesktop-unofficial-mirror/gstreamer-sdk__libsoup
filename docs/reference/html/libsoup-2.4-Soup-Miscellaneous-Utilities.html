@@ -57,8 +57,8 @@ enum                <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utiliti
                                                          <em class="parameter"><code><a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDateFormat" title="enum SoupDateFormat"><span class="type">SoupDateFormat</span></a> format</code></em>);
 <span class="returnvalue">time_t</span>              <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-date-to-time-t" title="soup_date_to_time_t ()">soup_date_to_time_t</a>                 (<em class="parameter"><code><a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDate"><span class="type">SoupDate</span></a> *date</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-date-to-timeval" title="soup_date_to_timeval ()">soup_date_to_timeval</a>                (<em class="parameter"><code><a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDate"><span class="type">SoupDate</span></a> *date</code></em>,
-                                                         <em class="parameter"><code><span class="type">GTimeVal</span> *time</code></em>);
-<span class="returnvalue">gboolean</span>            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-date-is-past" title="soup_date_is_past ()">soup_date_is_past</a>                   (<em class="parameter"><code><a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDate"><span class="type">SoupDate</span></a> *date</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GTimeVal"><span class="type">GTimeVal</span></a> *time</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-date-is-past" title="soup_date_is_past ()">soup_date_is_past</a>                   (<em class="parameter"><code><a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDate"><span class="type">SoupDate</span></a> *date</code></em>);
 <span class="returnvalue">int</span>                 <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-date-get-day" title="soup_date_get_day ()">soup_date_get_day</a>                   (<em class="parameter"><code><a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDate"><span class="type">SoupDate</span></a> *date</code></em>);
 <span class="returnvalue">int</span>                 <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-date-get-hour" title="soup_date_get_hour ()">soup_date_get_hour</a>                  (<em class="parameter"><code><a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDate"><span class="type">SoupDate</span></a> *date</code></em>);
 <span class="returnvalue">int</span>                 <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-date-get-minute" title="soup_date_get_minute ()">soup_date_get_minute</a>                (<em class="parameter"><code><a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDate"><span class="type">SoupDate</span></a> *date</code></em>);
@@ -69,62 +69,62 @@ enum                <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utiliti
 <span class="returnvalue">int</span>                 <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-date-get-year" title="soup_date_get_year ()">soup_date_get_year</a>                  (<em class="parameter"><code><a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDate"><span class="type">SoupDate</span></a> *date</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-date-free" title="soup_date_free ()">soup_date_free</a>                      (<em class="parameter"><code><a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDate"><span class="type">SoupDate</span></a> *date</code></em>);
 
-<span class="returnvalue">guint</span>               <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-headers-parse-request" title="soup_headers_parse_request ()">soup_headers_parse_request</a>          (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-headers-parse-request" title="soup_headers_parse_request ()">soup_headers_parse_request</a>          (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
                                                          <em class="parameter"><code><span class="type">int</span> len</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *req_headers</code></em>,
                                                          <em class="parameter"><code><span class="type">char</span> **req_method</code></em>,
                                                          <em class="parameter"><code><span class="type">char</span> **req_path</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html#SoupHTTPVersion" title="enum SoupHTTPVersion"><span class="type">SoupHTTPVersion</span></a> *ver</code></em>);
-<span class="returnvalue">gboolean</span>            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-headers-parse-response" title="soup_headers_parse_response ()">soup_headers_parse_response</a>         (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-headers-parse-response" title="soup_headers_parse_response ()">soup_headers_parse_response</a>         (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
                                                          <em class="parameter"><code><span class="type">int</span> len</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *headers</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html#SoupHTTPVersion" title="enum SoupHTTPVersion"><span class="type">SoupHTTPVersion</span></a> *ver</code></em>,
-                                                         <em class="parameter"><code><span class="type">guint</span> *status_code</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *status_code</code></em>,
                                                          <em class="parameter"><code><span class="type">char</span> **reason_phrase</code></em>);
-<span class="returnvalue">gboolean</span>            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-headers-parse-status-line" title="soup_headers_parse_status_line ()">soup_headers_parse_status_line</a>      (<em class="parameter"><code>const <span class="type">char</span> *status_line</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-headers-parse-status-line" title="soup_headers_parse_status_line ()">soup_headers_parse_status_line</a>      (<em class="parameter"><code>const <span class="type">char</span> *status_line</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html#SoupHTTPVersion" title="enum SoupHTTPVersion"><span class="type">SoupHTTPVersion</span></a> *ver</code></em>,
-                                                         <em class="parameter"><code><span class="type">guint</span> *status_code</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *status_code</code></em>,
                                                          <em class="parameter"><code><span class="type">char</span> **reason_phrase</code></em>);
-<span class="returnvalue">gboolean</span>            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-headers-parse" title="soup_headers_parse ()">soup_headers_parse</a>                  (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-headers-parse" title="soup_headers_parse ()">soup_headers_parse</a>                  (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
                                                          <em class="parameter"><code><span class="type">int</span> len</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *dest</code></em>);
 
-<span class="returnvalue">GSList</span> *            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-parse-list" title="soup_header_parse_list ()">soup_header_parse_list</a>              (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>);
-<span class="returnvalue">GSList</span> *            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-parse-quality-list" title="soup_header_parse_quality_list ()">soup_header_parse_quality_list</a>      (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>,
-                                                         <em class="parameter"><code><span class="type">GSList</span> **unacceptable</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-free-list" title="soup_header_free_list ()">soup_header_free_list</a>               (<em class="parameter"><code><span class="type">GSList</span> *list</code></em>);
-<span class="returnvalue">gboolean</span>            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-contains" title="soup_header_contains ()">soup_header_contains</a>                (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a> *            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-parse-list" title="soup_header_parse_list ()">soup_header_parse_list</a>              (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a> *            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-parse-quality-list" title="soup_header_parse_quality_list ()">soup_header_parse_quality_list</a>      (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="type">GSList</span></a> **unacceptable</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-free-list" title="soup_header_free_list ()">soup_header_free_list</a>               (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="type">GSList</span></a> *list</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-contains" title="soup_header_contains ()">soup_header_contains</a>                (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *token</code></em>);
-<span class="returnvalue">GHashTable</span> *        <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-parse-param-list" title="soup_header_parse_param_list ()">soup_header_parse_param_list</a>        (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>);
-<span class="returnvalue">GHashTable</span> *        <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-parse-semi-param-list" title="soup_header_parse_semi_param_list ()">soup_header_parse_semi_param_list</a>   (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-free-param-list" title="soup_header_free_param_list ()">soup_header_free_param_list</a>         (<em class="parameter"><code><span class="type">GHashTable</span> *param_list</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-g-string-append-param" title="soup_header_g_string_append_param ()">soup_header_g_string_append_param</a>   (<em class="parameter"><code><span class="type">GString</span> *string</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="returnvalue">GHashTable</span></a> *        <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-parse-param-list" title="soup_header_parse_param_list ()">soup_header_parse_param_list</a>        (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="returnvalue">GHashTable</span></a> *        <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-parse-semi-param-list" title="soup_header_parse_semi_param_list ()">soup_header_parse_semi_param_list</a>   (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-free-param-list" title="soup_header_free_param_list ()">soup_header_free_param_list</a>         (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> *param_list</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-g-string-append-param" title="soup_header_g_string_append_param ()">soup_header_g_string_append_param</a>   (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Strings.html#GString"><span class="type">GString</span></a> *string</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *name</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *value</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-g-string-append-param-quoted" title="soup_header_g_string_append_param_quoted ()">soup_header_g_string_append_param_quoted</a>
-                                                        (<em class="parameter"><code><span class="type">GString</span> *string</code></em>,
+                                                        (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Strings.html#GString"><span class="type">GString</span></a> *string</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *name</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *value</code></em>);
 
-<span class="returnvalue">gboolean</span>            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-str-case-equal" title="soup_str_case_equal ()">soup_str_case_equal</a>                 (<em class="parameter"><code><span class="type">gconstpointer</span> v1</code></em>,
-                                                         <em class="parameter"><code><span class="type">gconstpointer</span> v2</code></em>);
-<span class="returnvalue">guint</span>               <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-str-case-hash" title="soup_str_case_hash ()">soup_str_case_hash</a>                  (<em class="parameter"><code><span class="type">gconstpointer</span> key</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-str-case-equal" title="soup_str_case_equal ()">soup_str_case_equal</a>                 (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v1</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v2</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-str-case-hash" title="soup_str_case_hash ()">soup_str_case_hash</a>                  (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> key</code></em>);
 
-<span class="returnvalue">GSource</span> *           <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-add-completion" title="soup_add_completion ()">soup_add_completion</a>                 (<em class="parameter"><code><span class="type">GMainContext</span> *async_context</code></em>,
-                                                         <em class="parameter"><code><span class="type">GSourceFunc</span> function</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> data</code></em>);
-<span class="returnvalue">GSource</span> *           <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-add-idle" title="soup_add_idle ()">soup_add_idle</a>                       (<em class="parameter"><code><span class="type">GMainContext</span> *async_context</code></em>,
-                                                         <em class="parameter"><code><span class="type">GSourceFunc</span> function</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> data</code></em>);
-<span class="returnvalue">GSource</span> *           <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-add-io-watch" title="soup_add_io_watch ()">soup_add_io_watch</a>                   (<em class="parameter"><code><span class="type">GMainContext</span> *async_context</code></em>,
-                                                         <em class="parameter"><code><span class="type">GIOChannel</span> *chan</code></em>,
-                                                         <em class="parameter"><code><span class="type">GIOCondition</span> condition</code></em>,
-                                                         <em class="parameter"><code><span class="type">GIOFunc</span> function</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> data</code></em>);
-<span class="returnvalue">GSource</span> *           <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-add-timeout" title="soup_add_timeout ()">soup_add_timeout</a>                    (<em class="parameter"><code><span class="type">GMainContext</span> *async_context</code></em>,
-                                                         <em class="parameter"><code><span class="type">guint</span> interval</code></em>,
-                                                         <em class="parameter"><code><span class="type">GSourceFunc</span> function</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> data</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSource"><span class="returnvalue">GSource</span></a> *           <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-add-completion" title="soup_add_completion ()">soup_add_completion</a>                 (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> *async_context</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSourceFunc"><span class="type">GSourceFunc</span></a> function</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSource"><span class="returnvalue">GSource</span></a> *           <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-add-idle" title="soup_add_idle ()">soup_add_idle</a>                       (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> *async_context</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSourceFunc"><span class="type">GSourceFunc</span></a> function</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSource"><span class="returnvalue">GSource</span></a> *           <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-add-io-watch" title="soup_add_io_watch ()">soup_add_io_watch</a>                   (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> *async_context</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-IO-Channels.html#GIOChannel"><span class="type">GIOChannel</span></a> *chan</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-IO-Channels.html#GIOCondition"><span class="type">GIOCondition</span></a> condition</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-IO-Channels.html#GIOFunc"><span class="type">GIOFunc</span></a> function</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSource"><span class="returnvalue">GSource</span></a> *           <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-add-timeout" title="soup_add_timeout ()">soup_add_timeout</a>                    (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> *async_context</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> interval</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSourceFunc"><span class="type">GSourceFunc</span></a> function</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);
 
 extern const gboolean <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-ssl-supported" title="soup_ssl_supported">soup_ssl_supported</a>;
 </pre>
@@ -158,10 +158,10 @@ extern const gboolean <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utili
 </pre>
 <p>
 A date and time. The date is assumed to be in the (proleptic)
-Gregorian calendar. The time is in UTC if <em class="parameter"><code>utc</code></em> is <code class="literal">TRUE</code>. Otherwise,
+Gregorian calendar. The time is in UTC if <em class="parameter"><code>utc</code></em> is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>. Otherwise,
 the time is a local time, and <em class="parameter"><code>offset</code></em> gives the offset from UTC in
 minutes (such that adding <em class="parameter"><code>offset</code></em> to the time would give the
-correct UTC time). If <em class="parameter"><code>utc</code></em> is <code class="literal">FALSE</code> and <em class="parameter"><code>offset</code></em> is 0, then the
+correct UTC time). If <em class="parameter"><code>utc</code></em> is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> and <em class="parameter"><code>offset</code></em> is 0, then the
 <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDate"><code class="literal">SoupDate</code></a> represents a "floating" time with no associated timezone
 information.
 </p>
@@ -193,9 +193,9 @@ information.
 <td>second, 0 to 59 (or up to 61 in the case of leap seconds)</td>
 </tr>
 <tr>
-<td><p><span class="term"><span class="type">gboolean</span> <em class="structfield"><code><a name="SoupDate-struct.utc"></a>utc</code></em>;</span></p></td>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> <em class="structfield"><code><a name="SoupDate-struct.utc"></a>utc</code></em>;</span></p></td>
 <td>
-<code class="literal">TRUE</code> if the date is in UTC</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the date is in UTC</td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="type">int</span> <em class="structfield"><code><a name="SoupDate-struct.offset"></a>offset</code></em>;</span></p></td>
@@ -343,7 +343,7 @@ whitespace, leading "0"s, etc.)
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a new <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDate"><span class="type">SoupDate</span></a>, or <code class="literal">NULL</code> if <em class="parameter"><code>date_string</code></em> could not
+<td>a new <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDate"><span class="type">SoupDate</span></a>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>date_string</code></em> could not
 be parsed.</td>
 </tr>
 </tbody>
@@ -461,9 +461,9 @@ after "Y2.038k" (2038-01-19T03:14:07Z).)
 <div class="refsect2">
 <a name="soup-date-to-timeval"></a><h3>soup_date_to_timeval ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_date_to_timeval                (<em class="parameter"><code><a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDate"><span class="type">SoupDate</span></a> *date</code></em>,
-                                                         <em class="parameter"><code><span class="type">GTimeVal</span> *time</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GTimeVal"><span class="type">GTimeVal</span></a> *time</code></em>);</pre>
 <p>
-Converts <em class="parameter"><code>date</code></em> to a <span class="type">GTimeVal</span>.
+Converts <em class="parameter"><code>date</code></em> to a <a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GTimeVal"><span class="type">GTimeVal</span></a>.
 </p>
 <div class="variablelist"><table border="0">
 <col align="left" valign="top">
@@ -475,7 +475,7 @@ Converts <em class="parameter"><code>date</code></em> to a <span class="type">GT
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
-<td>a <span class="type">GTimeVal</span> structure in which to store the converted time. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GTimeVal"><span class="type">GTimeVal</span></a> structure in which to store the converted time. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span>
 </td>
 </tr>
 </tbody>
@@ -485,7 +485,7 @@ Converts <em class="parameter"><code>date</code></em> to a <span class="type">GT
 <hr>
 <div class="refsect2">
 <a name="soup-date-is-past"></a><h3>soup_date_is_past ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_date_is_past                   (<em class="parameter"><code><a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDate"><span class="type">SoupDate</span></a> *date</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_date_is_past                   (<em class="parameter"><code><a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#SoupDate"><span class="type">SoupDate</span></a> *date</code></em>);</pre>
 <p>
 Determines if <em class="parameter"><code>date</code></em> is in the past.
 </p>
@@ -500,7 +500,7 @@ Determines if <em class="parameter"><code>date</code></em> is in the past.
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> if <em class="parameter"><code>date</code></em> is in the past</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>date</code></em> is in the past</td>
 </tr>
 </tbody>
 </table></div>
@@ -621,7 +621,7 @@ Gets <em class="parameter"><code>date</code></em>'s offset from UTC.
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
 <em class="parameter"><code>date</code></em>'s offset from UTC. If <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-date-get-utc" title="soup_date_get_utc ()"><code class="function">soup_date_get_utc()</code></a>
-returns <code class="literal">FALSE</code> but <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-date-get-offset" title="soup_date_get_offset ()"><code class="function">soup_date_get_offset()</code></a> returns 0, that means the
+returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> but <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-date-get-offset" title="soup_date_get_offset ()"><code class="function">soup_date_get_offset()</code></a> returns 0, that means the
 date is a "floating" time with no associated offset information.</td>
 </tr>
 </tbody>
@@ -670,7 +670,7 @@ Gets <em class="parameter"><code>date</code></em>'s UTC flag
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> if <em class="parameter"><code>date</code></em> is UTC.</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>date</code></em> is UTC.</td>
 </tr>
 </tbody>
 </table></div>
@@ -719,7 +719,7 @@ Frees <em class="parameter"><code>date</code></em>.
 <hr>
 <div class="refsect2">
 <a name="soup-headers-parse-request"></a><h3>soup_headers_parse_request ()</h3>
-<pre class="programlisting"><span class="returnvalue">guint</span>               soup_headers_parse_request          (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               soup_headers_parse_request          (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
                                                          <em class="parameter"><code><span class="type">int</span> len</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *req_headers</code></em>,
                                                          <em class="parameter"><code><span class="type">char</span> **req_method</code></em>,
@@ -737,11 +737,12 @@ Beware that <em class="parameter"><code>req_headers</code></em> may be modified 
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>str</code></em> :</span></p></td>
-<td>the header string (including the trailing blank line)</td>
+<td>the headers (up to, but not including, the trailing blank line)</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>len</code></em> :</span></p></td>
-<td>length of <em class="parameter"><code>str</code></em> up to (but not including) the terminating blank line.</td>
+<td>length of <em class="parameter"><code>str</code></em>
+</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>req_headers</code></em> :</span></p></td>
@@ -750,19 +751,19 @@ Beware that <em class="parameter"><code>req_headers</code></em> may be modified 
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>req_method</code></em> :</span></p></td>
-<td>if non-<code class="literal">NULL</code>, will be filled in with the
+<td>if non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, will be filled in with the
 request method. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>req_path</code></em> :</span></p></td>
-<td>if non-<code class="literal">NULL</code>, will be filled in with the
+<td>if non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, will be filled in with the
 request path. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>ver</code></em> :</span></p></td>
-<td>if non-<code class="literal">NULL</code>, will be filled in with the HTTP
+<td>if non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, will be filled in with the HTTP
 version. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
@@ -778,11 +779,11 @@ HTTP error to be returned to the client if they could not be.</td>
 <hr>
 <div class="refsect2">
 <a name="soup-headers-parse-response"></a><h3>soup_headers_parse_response ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_headers_parse_response         (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_headers_parse_response         (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
                                                          <em class="parameter"><code><span class="type">int</span> len</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *headers</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html#SoupHTTPVersion" title="enum SoupHTTPVersion"><span class="type">SoupHTTPVersion</span></a> *ver</code></em>,
-                                                         <em class="parameter"><code><span class="type">guint</span> *status_code</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *status_code</code></em>,
                                                          <em class="parameter"><code><span class="type">char</span> **reason_phrase</code></em>);</pre>
 <p>
 Parses the headers of an HTTP response in <em class="parameter"><code>str</code></em> and stores the
@@ -796,11 +797,12 @@ Beware that <em class="parameter"><code>headers</code></em> may be modified even
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>str</code></em> :</span></p></td>
-<td>the header string (including the trailing blank line)</td>
+<td>the headers (up to, but not including, the trailing blank line)</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>len</code></em> :</span></p></td>
-<td>length of <em class="parameter"><code>str</code></em> up to (but not including) the terminating blank line.</td>
+<td>length of <em class="parameter"><code>str</code></em>
+</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>headers</code></em> :</span></p></td>
@@ -809,19 +811,19 @@ Beware that <em class="parameter"><code>headers</code></em> may be modified even
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>ver</code></em> :</span></p></td>
-<td>if non-<code class="literal">NULL</code>, will be filled in with the HTTP
+<td>if non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, will be filled in with the HTTP
 version. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>status_code</code></em> :</span></p></td>
-<td>if non-<code class="literal">NULL</code>, will be filled in with
+<td>if non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, will be filled in with
 the status code. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>reason_phrase</code></em> :</span></p></td>
-<td>if non-<code class="literal">NULL</code>, will be filled in with
+<td>if non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, will be filled in with
 the reason phrase. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
@@ -835,9 +837,9 @@ the reason phrase. <span class="annotation">[<acronym title="Parameter for retur
 <hr>
 <div class="refsect2">
 <a name="soup-headers-parse-status-line"></a><h3>soup_headers_parse_status_line ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_headers_parse_status_line      (<em class="parameter"><code>const <span class="type">char</span> *status_line</code></em>,
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_headers_parse_status_line      (<em class="parameter"><code>const <span class="type">char</span> *status_line</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html#SoupHTTPVersion" title="enum SoupHTTPVersion"><span class="type">SoupHTTPVersion</span></a> *ver</code></em>,
-                                                         <em class="parameter"><code><span class="type">guint</span> *status_code</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *status_code</code></em>,
                                                          <em class="parameter"><code><span class="type">char</span> **reason_phrase</code></em>);</pre>
 <p>
 Parses the HTTP Status-Line string in <em class="parameter"><code>status_line</code></em> into <em class="parameter"><code>ver</code></em>,
@@ -853,26 +855,26 @@ either "\0" or "\r\n".
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>ver</code></em> :</span></p></td>
-<td>if non-<code class="literal">NULL</code>, will be filled in with the HTTP
+<td>if non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, will be filled in with the HTTP
 version. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>status_code</code></em> :</span></p></td>
-<td>if non-<code class="literal">NULL</code>, will be filled in with
+<td>if non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, will be filled in with
 the status code. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>reason_phrase</code></em> :</span></p></td>
-<td>if non-<code class="literal">NULL</code>, will be filled in with
+<td>if non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, will be filled in with
 the reason phrase. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> if <em class="parameter"><code>status_line</code></em> was parsed successfully.</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>status_line</code></em> was parsed successfully.</td>
 </tr>
 </tbody>
 </table></div>
@@ -880,7 +882,7 @@ the reason phrase. <span class="annotation">[<acronym title="Parameter for retur
 <hr>
 <div class="refsect2">
 <a name="soup-headers-parse"></a><h3>soup_headers_parse ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_headers_parse                  (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_headers_parse                  (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
                                                          <em class="parameter"><code><span class="type">int</span> len</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *dest</code></em>);</pre>
 <p>
@@ -898,11 +900,12 @@ This is a low-level method; normally you would use
 <tr>
 <td><p><span class="term"><em class="parameter"><code>str</code></em> :</span></p></td>
 <td>the header string (including the Request-Line or Status-Line,
-and the trailing blank line)</td>
+but not the trailing blank line)</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>len</code></em> :</span></p></td>
-<td>length of <em class="parameter"><code>str</code></em> up to (but not including) the terminating blank line.</td>
+<td>length of <em class="parameter"><code>str</code></em>
+</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>dest</code></em> :</span></p></td>
@@ -920,7 +923,7 @@ and the trailing blank line)</td>
 <hr>
 <div class="refsect2">
 <a name="soup-header-parse-list"></a><h3>soup_header_parse_list ()</h3>
-<pre class="programlisting"><span class="returnvalue">GSList</span> *            soup_header_parse_list              (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a> *            soup_header_parse_list              (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>);</pre>
 <p>
 Parses a header whose content is described by RFC2616 as
 "<span class="type">something</span>", where "something" does not itself contain commas,
@@ -935,7 +938,7 @@ except as part of quoted-strings.
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a <span class="type">GSList</span> of
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="type">GSList</span></a> of
 list elements, as allocated strings. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span>
 </td>
 </tr>
@@ -945,15 +948,15 @@ list elements, as allocated strings. <span class="annotation">[<acronym title="F
 <hr>
 <div class="refsect2">
 <a name="soup-header-parse-quality-list"></a><h3>soup_header_parse_quality_list ()</h3>
-<pre class="programlisting"><span class="returnvalue">GSList</span> *            soup_header_parse_quality_list      (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>,
-                                                         <em class="parameter"><code><span class="type">GSList</span> **unacceptable</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a> *            soup_header_parse_quality_list      (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="type">GSList</span></a> **unacceptable</code></em>);</pre>
 <p>
 Parses a header whose content is a list of items with optional
 "qvalue"s (eg, Accept, Accept-Charset, Accept-Encoding,
 Accept-Language, TE).
 </p>
 <p>
-If <em class="parameter"><code>unacceptable</code></em> is not <code class="literal">NULL</code>, then on return, it will contain the
+If <em class="parameter"><code>unacceptable</code></em> is not <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, then on return, it will contain the
 items with qvalue 0. Either way, those items will be removed from
 the main list.
 </p>
@@ -972,7 +975,7 @@ return, will contain a list of unacceptable values. <span class="annotation">[<a
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a <span class="type">GSList</span> of
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="type">GSList</span></a> of
 acceptable values (as allocated strings), highest-qvalue first. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span>
 </td>
 </tr>
@@ -982,7 +985,7 @@ acceptable values (as allocated strings), highest-qvalue first. <span class="ann
 <hr>
 <div class="refsect2">
 <a name="soup-header-free-list"></a><h3>soup_header_free_list ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                soup_header_free_list               (<em class="parameter"><code><span class="type">GSList</span> *list</code></em>);</pre>
+<pre class="programlisting"><span class="returnvalue">void</span>                soup_header_free_list               (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="type">GSList</span></a> *list</code></em>);</pre>
 <p>
 Frees <em class="parameter"><code>list</code></em>.
 </p>
@@ -990,7 +993,7 @@ Frees <em class="parameter"><code>list</code></em>.
 <col align="left" valign="top">
 <tbody><tr>
 <td><p><span class="term"><em class="parameter"><code>list</code></em> :</span></p></td>
-<td>a <span class="type">GSList</span> returned from <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-parse-list" title="soup_header_parse_list ()"><code class="function">soup_header_parse_list()</code></a> or
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="type">GSList</span></a> returned from <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-parse-list" title="soup_header_parse_list ()"><code class="function">soup_header_parse_list()</code></a> or
 <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-parse-quality-list" title="soup_header_parse_quality_list ()"><code class="function">soup_header_parse_quality_list()</code></a>
 </td>
 </tr></tbody>
@@ -999,7 +1002,7 @@ Frees <em class="parameter"><code>list</code></em>.
 <hr>
 <div class="refsect2">
 <a name="soup-header-contains"></a><h3>soup_header_contains ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_header_contains                (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>,
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_header_contains                (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *token</code></em>);</pre>
 <p>
 Parses <em class="parameter"><code>header</code></em> to see if it contains the token <em class="parameter"><code>token</code></em> (matched
@@ -1030,14 +1033,14 @@ that have qvalues.
 <hr>
 <div class="refsect2">
 <a name="soup-header-parse-param-list"></a><h3>soup_header_parse_param_list ()</h3>
-<pre class="programlisting"><span class="returnvalue">GHashTable</span> *        soup_header_parse_param_list        (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="returnvalue">GHashTable</span></a> *        soup_header_parse_param_list        (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>);</pre>
 <p>
 Parses a header which is a comma-delimited list of something like:
 <code class="literal">token [ "=" ( token | quoted-string ) ]</code>.
 </p>
 <p>
 Tokens that don't have an associated value will still be added to
-the resulting hash table, but with a <code class="literal">NULL</code> value.
+the resulting hash table, but with a <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> value.
 </p>
 <p>
 This also handles RFC5987 encoding (which in HTTP is mostly used
@@ -1054,7 +1057,7 @@ header).
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>a
-<span class="type">GHashTable</span> of list elements, which can be freed with
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> of list elements, which can be freed with
 <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-free-param-list" title="soup_header_free_param_list ()"><code class="function">soup_header_free_param_list()</code></a>. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8 utf8][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
 </td>
 </tr>
@@ -1064,14 +1067,14 @@ header).
 <hr>
 <div class="refsect2">
 <a name="soup-header-parse-semi-param-list"></a><h3>soup_header_parse_semi_param_list ()</h3>
-<pre class="programlisting"><span class="returnvalue">GHashTable</span> *        soup_header_parse_semi_param_list   (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="returnvalue">GHashTable</span></a> *        soup_header_parse_semi_param_list   (<em class="parameter"><code>const <span class="type">char</span> *header</code></em>);</pre>
 <p>
 Parses a header which is a semicolon-delimited list of something
 like: <code class="literal">token [ "=" ( token | quoted-string ) ]</code>.
 </p>
 <p>
 Tokens that don't have an associated value will still be added to
-the resulting hash table, but with a <code class="literal">NULL</code> value.
+the resulting hash table, but with a <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> value.
 </p>
 <p>
 This also handles RFC5987 encoding (which in HTTP is mostly used
@@ -1088,7 +1091,7 @@ header).
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>a
-<span class="type">GHashTable</span> of list elements, which can be freed with
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> of list elements, which can be freed with
 <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-free-param-list" title="soup_header_free_param_list ()"><code class="function">soup_header_free_param_list()</code></a>. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8 utf8][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
 </td>
 </tr>
@@ -1099,7 +1102,7 @@ header).
 <hr>
 <div class="refsect2">
 <a name="soup-header-free-param-list"></a><h3>soup_header_free_param_list ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                soup_header_free_param_list         (<em class="parameter"><code><span class="type">GHashTable</span> *param_list</code></em>);</pre>
+<pre class="programlisting"><span class="returnvalue">void</span>                soup_header_free_param_list         (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> *param_list</code></em>);</pre>
 <p>
 Frees <em class="parameter"><code>param_list</code></em>.
 </p>
@@ -1107,7 +1110,7 @@ Frees <em class="parameter"><code>param_list</code></em>.
 <col align="left" valign="top">
 <tbody><tr>
 <td><p><span class="term"><em class="parameter"><code>param_list</code></em> :</span></p></td>
-<td>a <span class="type">GHashTable</span> returned from <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-parse-param-list" title="soup_header_parse_param_list ()"><code class="function">soup_header_parse_param_list()</code></a>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> returned from <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-parse-param-list" title="soup_header_parse_param_list ()"><code class="function">soup_header_parse_param_list()</code></a>
 or <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-parse-semi-param-list" title="soup_header_parse_semi_param_list ()"><code class="function">soup_header_parse_semi_param_list()</code></a>. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8 utf8]</span>
 </td>
 </tr></tbody>
@@ -1116,7 +1119,7 @@ or <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-head
 <hr>
 <div class="refsect2">
 <a name="soup-header-g-string-append-param"></a><h3>soup_header_g_string_append_param ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                soup_header_g_string_append_param   (<em class="parameter"><code><span class="type">GString</span> *string</code></em>,
+<pre class="programlisting"><span class="returnvalue">void</span>                soup_header_g_string_append_param   (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Strings.html#GString"><span class="type">GString</span></a> *string</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *name</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *value</code></em>);</pre>
 <p>
@@ -1132,14 +1135,14 @@ reality, it can only be used portably with the Content-Disposition
 "filename" parameter.
 </p>
 <p>
-If <em class="parameter"><code>value</code></em> is <code class="literal">NULL</code>, this will just append <em class="parameter"><code>name</code></em> to <em class="parameter"><code>string</code></em>.
+If <em class="parameter"><code>value</code></em> is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, this will just append <em class="parameter"><code>name</code></em> to <em class="parameter"><code>string</code></em>.
 </p>
 <div class="variablelist"><table border="0">
 <col align="left" valign="top">
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>string</code></em> :</span></p></td>
-<td>a <span class="type">GString</span> being used to construct an HTTP header value</td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Strings.html#GString"><span class="type">GString</span></a> being used to construct an HTTP header value</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
@@ -1147,7 +1150,7 @@ If <em class="parameter"><code>value</code></em> is <code class="literal">NULL</
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
-<td>a parameter value, or <code class="literal">NULL</code>
+<td>a parameter value, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
 </td>
 </tr>
 </tbody>
@@ -1158,7 +1161,7 @@ If <em class="parameter"><code>value</code></em> is <code class="literal">NULL</
 <div class="refsect2">
 <a name="soup-header-g-string-append-param-quoted"></a><h3>soup_header_g_string_append_param_quoted ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_header_g_string_append_param_quoted
-                                                        (<em class="parameter"><code><span class="type">GString</span> *string</code></em>,
+                                                        (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Strings.html#GString"><span class="type">GString</span></a> *string</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *name</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *value</code></em>);</pre>
 <p>
@@ -1174,7 +1177,7 @@ encoding, just like <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utiliti
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>string</code></em> :</span></p></td>
-<td>a <span class="type">GString</span> being used to construct an HTTP header value</td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Strings.html#GString"><span class="type">GString</span></a> being used to construct an HTTP header value</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
@@ -1191,8 +1194,8 @@ encoding, just like <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utiliti
 <hr>
 <div class="refsect2">
 <a name="soup-str-case-equal"></a><h3>soup_str_case_equal ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_str_case_equal                 (<em class="parameter"><code><span class="type">gconstpointer</span> v1</code></em>,
-                                                         <em class="parameter"><code><span class="type">gconstpointer</span> v2</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_str_case_equal                 (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v1</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v2</code></em>);</pre>
 <p>
 Compares <em class="parameter"><code>v1</code></em> and <em class="parameter"><code>v2</code></em> in a case-insensitive manner
 </p>
@@ -1210,7 +1213,7 @@ Compares <em class="parameter"><code>v1</code></em> and <em class="parameter"><c
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> if they are equal (modulo case)</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if they are equal (modulo case)</td>
 </tr>
 </tbody>
 </table></div>
@@ -1218,7 +1221,7 @@ Compares <em class="parameter"><code>v1</code></em> and <em class="parameter"><c
 <hr>
 <div class="refsect2">
 <a name="soup-str-case-hash"></a><h3>soup_str_case_hash ()</h3>
-<pre class="programlisting"><span class="returnvalue">guint</span>               soup_str_case_hash                  (<em class="parameter"><code><span class="type">gconstpointer</span> key</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               soup_str_case_hash                  (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> key</code></em>);</pre>
 <p>
 Hashes <em class="parameter"><code>key</code></em> in a case-insensitive manner.
 </p>
@@ -1239,9 +1242,9 @@ Hashes <em class="parameter"><code>key</code></em> in a case-insensitive manner.
 <hr>
 <div class="refsect2">
 <a name="soup-add-completion"></a><h3>soup_add_completion ()</h3>
-<pre class="programlisting"><span class="returnvalue">GSource</span> *           soup_add_completion                 (<em class="parameter"><code><span class="type">GMainContext</span> *async_context</code></em>,
-                                                         <em class="parameter"><code><span class="type">GSourceFunc</span> function</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> data</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSource"><span class="returnvalue">GSource</span></a> *           soup_add_completion                 (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> *async_context</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSourceFunc"><span class="type">GSourceFunc</span></a> function</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);</pre>
 <p>
 Adds <em class="parameter"><code>function</code></em> to be executed from inside <em class="parameter"><code>async_context</code></em> with the
 default priority. Use this when you want to complete an action in
@@ -1252,8 +1255,8 @@ default priority. Use this when you want to complete an action in
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>async_context</code></em> :</span></p></td>
-<td>the <span class="type">GMainContext</span> to dispatch the I/O
-watch in, or <code class="literal">NULL</code> for the default context. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>the <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> to dispatch the I/O
+watch in, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for the default context. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -1267,8 +1270,8 @@ watch in, or <code class="literal">NULL</code> for the default context. <span cl
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a <span class="type">GSource</span>, which can be removed from <em class="parameter"><code>async_context</code></em>
-with <code class="function">g_source_destroy()</code>.</td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSource"><span class="type">GSource</span></a>, which can be removed from <em class="parameter"><code>async_context</code></em>
+with <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#g-source-destroy"><code class="function">g_source_destroy()</code></a>.</td>
 </tr>
 </tbody>
 </table></div>
@@ -1277,25 +1280,25 @@ with <code class="function">g_source_destroy()</code>.</td>
 <hr>
 <div class="refsect2">
 <a name="soup-add-idle"></a><h3>soup_add_idle ()</h3>
-<pre class="programlisting"><span class="returnvalue">GSource</span> *           soup_add_idle                       (<em class="parameter"><code><span class="type">GMainContext</span> *async_context</code></em>,
-                                                         <em class="parameter"><code><span class="type">GSourceFunc</span> function</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> data</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSource"><span class="returnvalue">GSource</span></a> *           soup_add_idle                       (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> *async_context</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSourceFunc"><span class="type">GSourceFunc</span></a> function</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);</pre>
 <p>
-Adds an idle event as with <code class="function">g_idle_add()</code>, but using the given
+Adds an idle event as with <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#g-idle-add"><code class="function">g_idle_add()</code></a>, but using the given
 <em class="parameter"><code>async_context</code></em>.
 </p>
 <p>
 If you want <em class="parameter"><code>function</code></em> to run "right away", use
 <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-add-completion" title="soup_add_completion ()"><code class="function">soup_add_completion()</code></a>, since that sets a higher priority on the
-<span class="type">GSource</span> than <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-add-idle" title="soup_add_idle ()"><code class="function">soup_add_idle()</code></a> does.
+<a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSource"><span class="type">GSource</span></a> than <a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-add-idle" title="soup_add_idle ()"><code class="function">soup_add_idle()</code></a> does.
 </p>
 <div class="variablelist"><table border="0">
 <col align="left" valign="top">
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>async_context</code></em> :</span></p></td>
-<td>the <span class="type">GMainContext</span> to dispatch the I/O
-watch in, or <code class="literal">NULL</code> for the default context. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>the <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> to dispatch the I/O
+watch in, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for the default context. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -1309,8 +1312,8 @@ watch in, or <code class="literal">NULL</code> for the default context. <span cl
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a <span class="type">GSource</span>, which can be removed from <em class="parameter"><code>async_context</code></em>
-with <code class="function">g_source_destroy()</code>.</td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSource"><span class="type">GSource</span></a>, which can be removed from <em class="parameter"><code>async_context</code></em>
+with <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#g-source-destroy"><code class="function">g_source_destroy()</code></a>.</td>
 </tr>
 </tbody>
 </table></div>
@@ -1318,13 +1321,13 @@ with <code class="function">g_source_destroy()</code>.</td>
 <hr>
 <div class="refsect2">
 <a name="soup-add-io-watch"></a><h3>soup_add_io_watch ()</h3>
-<pre class="programlisting"><span class="returnvalue">GSource</span> *           soup_add_io_watch                   (<em class="parameter"><code><span class="type">GMainContext</span> *async_context</code></em>,
-                                                         <em class="parameter"><code><span class="type">GIOChannel</span> *chan</code></em>,
-                                                         <em class="parameter"><code><span class="type">GIOCondition</span> condition</code></em>,
-                                                         <em class="parameter"><code><span class="type">GIOFunc</span> function</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> data</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSource"><span class="returnvalue">GSource</span></a> *           soup_add_io_watch                   (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> *async_context</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-IO-Channels.html#GIOChannel"><span class="type">GIOChannel</span></a> *chan</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-IO-Channels.html#GIOCondition"><span class="type">GIOCondition</span></a> condition</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-IO-Channels.html#GIOFunc"><span class="type">GIOFunc</span></a> function</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);</pre>
 <p>
-Adds an I/O watch as with <code class="function">g_io_add_watch()</code>, but using the given
+Adds an I/O watch as with <a href="http://library.gnome.org/devel/glib/unstable/glib-IO-Channels.html#g-io-add-watch"><code class="function">g_io_add_watch()</code></a>, but using the given
 <em class="parameter"><code>async_context</code></em>.
 </p>
 <div class="variablelist"><table border="0">
@@ -1332,13 +1335,13 @@ Adds an I/O watch as with <code class="function">g_io_add_watch()</code>, but us
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>async_context</code></em> :</span></p></td>
-<td>the <span class="type">GMainContext</span> to dispatch the I/O
-watch in, or <code class="literal">NULL</code> for the default context. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>the <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> to dispatch the I/O
+watch in, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for the default context. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>chan</code></em> :</span></p></td>
-<td>the <span class="type">GIOChannel</span> to watch</td>
+<td>the <a href="http://library.gnome.org/devel/glib/unstable/glib-IO-Channels.html#GIOChannel"><span class="type">GIOChannel</span></a> to watch</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>condition</code></em> :</span></p></td>
@@ -1355,8 +1358,8 @@ watch in, or <code class="literal">NULL</code> for the default context. <span cl
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a <span class="type">GSource</span>, which can be removed from <em class="parameter"><code>async_context</code></em>
-with <code class="function">g_source_destroy()</code>.</td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSource"><span class="type">GSource</span></a>, which can be removed from <em class="parameter"><code>async_context</code></em>
+with <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#g-source-destroy"><code class="function">g_source_destroy()</code></a>.</td>
 </tr>
 </tbody>
 </table></div>
@@ -1364,12 +1367,12 @@ with <code class="function">g_source_destroy()</code>.</td>
 <hr>
 <div class="refsect2">
 <a name="soup-add-timeout"></a><h3>soup_add_timeout ()</h3>
-<pre class="programlisting"><span class="returnvalue">GSource</span> *           soup_add_timeout                    (<em class="parameter"><code><span class="type">GMainContext</span> *async_context</code></em>,
-                                                         <em class="parameter"><code><span class="type">guint</span> interval</code></em>,
-                                                         <em class="parameter"><code><span class="type">GSourceFunc</span> function</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> data</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSource"><span class="returnvalue">GSource</span></a> *           soup_add_timeout                    (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> *async_context</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> interval</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSourceFunc"><span class="type">GSourceFunc</span></a> function</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);</pre>
 <p>
-Adds a timeout as with <code class="function">g_timeout_add()</code>, but using the given
+Adds a timeout as with <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#g-timeout-add"><code class="function">g_timeout_add()</code></a>, but using the given
 <em class="parameter"><code>async_context</code></em>.
 </p>
 <div class="variablelist"><table border="0">
@@ -1377,8 +1380,8 @@ Adds a timeout as with <code class="function">g_timeout_add()</code>, but using 
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>async_context</code></em> :</span></p></td>
-<td>the <span class="type">GMainContext</span> to dispatch the I/O
-watch in, or <code class="literal">NULL</code> for the default context. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>the <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> to dispatch the I/O
+watch in, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for the default context. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -1396,8 +1399,8 @@ watch in, or <code class="literal">NULL</code> for the default context. <span cl
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a <span class="type">GSource</span>, which can be removed from <em class="parameter"><code>async_context</code></em>
-with <code class="function">g_source_destroy()</code>.</td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GSource"><span class="type">GSource</span></a>, which can be removed from <em class="parameter"><code>async_context</code></em>
+with <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#g-source-destroy"><code class="function">g_source_destroy()</code></a>.</td>
 </tr>
 </tbody>
 </table></div>

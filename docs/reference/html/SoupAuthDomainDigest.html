@@ -51,12 +51,12 @@
 <span class="returnvalue">char</span> *              (<a class="link" href="SoupAuthDomainDigest.html#SoupAuthDomainDigestAuthCallback" title="SoupAuthDomainDigestAuthCallback ()">*SoupAuthDomainDigestAuthCallback</a>) (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *username</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupAuthDomainDigest.html#soup-auth-domain-digest-set-auth-callback" title="soup_auth_domain_digest_set_auth_callback ()">soup_auth_domain_digest_set_auth_callback</a>
                                                         (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupAuthDomainDigest.html#SoupAuthDomainDigestAuthCallback" title="SoupAuthDomainDigestAuthCallback ()"><span class="type">SoupAuthDomainDigestAuthCallback</span></a> callback</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> dnotify</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> dnotify</code></em>);
 <span class="returnvalue">char</span> *              <a class="link" href="SoupAuthDomainDigest.html#soup-auth-domain-digest-encode-password" title="soup_auth_domain_digest_encode_password ()">soup_auth_domain_digest_encode_password</a>
                                                         (<em class="parameter"><code>const <span class="type">char</span> *username</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *realm</code></em>,
@@ -69,7 +69,7 @@
 <div class="refsect1">
 <a name="SoupAuthDomainDigest.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="synopsis">
-  GObject
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
    +----<a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain">SoupAuthDomain</a>
          +----SoupAuthDomainDigest
 </pre>
@@ -77,8 +77,8 @@
 <div class="refsect1">
 <a name="SoupAuthDomainDigest.properties"></a><h2>Properties</h2>
 <pre class="synopsis">
-  "<a class="link" href="SoupAuthDomainDigest.html#SoupAuthDomainDigest--auth-callback" title='The "auth-callback" property'>auth-callback</a>"            <span class="type">gpointer</span>              : Read / Write
-  "<a class="link" href="SoupAuthDomainDigest.html#SoupAuthDomainDigest--auth-data" title='The "auth-data" property'>auth-data</a>"                <span class="type">gpointer</span>              : Read / Write
+  "<a class="link" href="SoupAuthDomainDigest.html#SoupAuthDomainDigest--auth-callback" title='The "auth-callback" property'>auth-callback</a>"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write
+  "<a class="link" href="SoupAuthDomainDigest.html#SoupAuthDomainDigest--auth-data" title='The "auth-data" property'>auth-data</a>"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write
 </pre>
 </div>
 <div class="refsect1">
@@ -112,7 +112,7 @@ parameters are optional.
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>optname1</code></em> :</span></p></td>
-<td>name of first option, or <code class="literal">NULL</code>
+<td>name of first option, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
 </td>
 </tr>
 <tr>
@@ -133,7 +133,7 @@ parameters are optional.
 <pre class="programlisting"><span class="returnvalue">char</span> *              (*SoupAuthDomainDigestAuthCallback) (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *username</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>
 Callback used by <a class="link" href="SoupAuthDomainDigest.html" title="SoupAuthDomainDigest"><span class="type">SoupAuthDomainDigest</span></a> for authentication purposes.
 The application should look up <em class="parameter"><code>username</code></em> in its password database,
@@ -162,7 +162,7 @@ and return the corresponding encoded password (see
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>the encoded password, or <code class="literal">NULL</code> if <em class="parameter"><code>username</code></em> is not a
+<td>the encoded password, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>username</code></em> is not a
 valid user. <em class="parameter"><code>domain</code></em> will free the password when it is done with it.</td>
 </tr>
 </tbody>
@@ -174,8 +174,8 @@ valid user. <em class="parameter"><code>domain</code></em> will free the passwor
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_auth_domain_digest_set_auth_callback
                                                         (<em class="parameter"><code><a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> *domain</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupAuthDomainDigest.html#SoupAuthDomainDigestAuthCallback" title="SoupAuthDomainDigestAuthCallback ()"><span class="type">SoupAuthDomainDigestAuthCallback</span></a> callback</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> dnotify</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> dnotify</code></em>);</pre>
 <p>
 Sets the callback that <em class="parameter"><code>domain</code></em> will use to authenticate incoming
 requests. For each request containing authorization, <em class="parameter"><code>domain</code></em> will
@@ -283,13 +283,13 @@ Alias for the <a class="link" href="SoupAuthDomainDigest.html#SoupAuthDomainDige
 <a name="SoupAuthDomainDigest.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="SoupAuthDomainDigest--auth-callback"></a><h3>The <code class="literal">"auth-callback"</code> property</h3>
-<pre class="programlisting">  "auth-callback"            <span class="type">gpointer</span>              : Read / Write</pre>
+<pre class="programlisting">  "auth-callback"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write</pre>
 <p>Password-finding callback.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupAuthDomainDigest--auth-data"></a><h3>The <code class="literal">"auth-data"</code> property</h3>
-<pre class="programlisting">  "auth-data"                <span class="type">gpointer</span>              : Read / Write</pre>
+<pre class="programlisting">  "auth-data"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write</pre>
 <p>Data to pass to authentication callback.</p>
 </div>
 </div>

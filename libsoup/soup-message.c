@@ -10,11 +10,13 @@
 
 #include "soup-address.h"
 #include "soup-auth.h"
+#include "soup-connection.h"
 #include "soup-enum-types.h"
 #include "soup-marshal.h"
 #include "soup-message.h"
 #include "soup-message-private.h"
 #include "soup-misc.h"
+#include "soup-socket.h"
 #include "soup-uri.h"
 
 /**
@@ -104,6 +106,8 @@ enum {
 
 	RESTARTED,
 	FINISHED,
+
+	NETWORK_EVENT,
 
 	LAST_SIGNAL
 };
@@ -223,7 +227,7 @@ soup_message_class_init (SoupMessageClass *message_class)
 			      G_SIGNAL_RUN_FIRST,
 			      G_STRUCT_OFFSET (SoupMessageClass, wrote_informational),
 			      NULL, NULL,
-			      soup_marshal_NONE__NONE,
+			      _soup_marshal_NONE__NONE,
 			      G_TYPE_NONE, 0);
 
 	/**
@@ -241,7 +245,7 @@ soup_message_class_init (SoupMessageClass *message_class)
 			      G_SIGNAL_RUN_FIRST,
 			      G_STRUCT_OFFSET (SoupMessageClass, wrote_headers),
 			      NULL, NULL,
-			      soup_marshal_NONE__NONE,
+			      _soup_marshal_NONE__NONE,
 			      G_TYPE_NONE, 0);
 
 	/**
@@ -263,7 +267,7 @@ soup_message_class_init (SoupMessageClass *message_class)
 			      G_SIGNAL_RUN_FIRST,
 			      G_STRUCT_OFFSET (SoupMessageClass, wrote_chunk),
 			      NULL, NULL,
-			      soup_marshal_NONE__NONE,
+			      _soup_marshal_NONE__NONE,
 			      G_TYPE_NONE, 0);
 
 	/**
@@ -286,7 +290,7 @@ soup_message_class_init (SoupMessageClass *message_class)
 			      G_SIGNAL_RUN_FIRST,
 			      0, /* FIXME after next ABI break */
 			      NULL, NULL,
-			      soup_marshal_NONE__BOXED,
+			      _soup_marshal_NONE__BOXED,
 			      G_TYPE_NONE, 1,
 			      SOUP_TYPE_BUFFER);
 
@@ -307,7 +311,7 @@ soup_message_class_init (SoupMessageClass *message_class)
 			      G_SIGNAL_RUN_FIRST,
 			      G_STRUCT_OFFSET (SoupMessageClass, wrote_body),
 			      NULL, NULL,
-			      soup_marshal_NONE__NONE,
+			      _soup_marshal_NONE__NONE,
 			      G_TYPE_NONE, 0);
 
 	/**
@@ -330,7 +334,7 @@ soup_message_class_init (SoupMessageClass *message_class)
 			      G_SIGNAL_RUN_FIRST,
 			      G_STRUCT_OFFSET (SoupMessageClass, got_informational),
 			      NULL, NULL,
-			      soup_marshal_NONE__NONE,
+			      _soup_marshal_NONE__NONE,
 			      G_TYPE_NONE, 0);
 
 	/**
@@ -362,7 +366,7 @@ soup_message_class_init (SoupMessageClass *message_class)
 			      G_SIGNAL_RUN_FIRST,
 			      G_STRUCT_OFFSET (SoupMessageClass, got_headers),
 			      NULL, NULL,
-			      soup_marshal_NONE__NONE,
+			      _soup_marshal_NONE__NONE,
 			      G_TYPE_NONE, 0);
 
 	/**
@@ -385,7 +389,7 @@ soup_message_class_init (SoupMessageClass *message_class)
 			      G_SIGNAL_RUN_FIRST,
 			      G_STRUCT_OFFSET (SoupMessageClass, got_chunk),
 			      NULL, NULL,
-			      soup_marshal_NONE__BOXED,
+			      _soup_marshal_NONE__BOXED,
 			      G_TYPE_NONE, 1,
 			      /* Use %G_SIGNAL_TYPE_STATIC_SCOPE so that
 			       * the %SOUP_MEMORY_TEMPORARY buffers used
@@ -414,7 +418,7 @@ soup_message_class_init (SoupMessageClass *message_class)
 			      G_SIGNAL_RUN_FIRST,
 			      G_STRUCT_OFFSET (SoupMessageClass, got_body),
 			      NULL, NULL,
-			      soup_marshal_NONE__NONE,
+			      _soup_marshal_NONE__NONE,
 			      G_TYPE_NONE, 0);
 
 	/**
@@ -451,7 +455,7 @@ soup_message_class_init (SoupMessageClass *message_class)
 			      G_SIGNAL_RUN_FIRST,
 			      0,
 			      NULL, NULL,
-			      soup_marshal_NONE__STRING_BOXED,
+			      _soup_marshal_NONE__STRING_BOXED,
 			      G_TYPE_NONE, 2,
 			      G_TYPE_STRING,
 			      G_TYPE_HASH_TABLE);
@@ -471,7 +475,7 @@ soup_message_class_init (SoupMessageClass *message_class)
 			      G_SIGNAL_RUN_FIRST,
 			      G_STRUCT_OFFSET (SoupMessageClass, restarted),
 			      NULL, NULL,
-			      soup_marshal_NONE__NONE,
+			      _soup_marshal_NONE__NONE,
 			      G_TYPE_NONE, 0);
 
 	/**
@@ -488,8 +492,40 @@ soup_message_class_init (SoupMessageClass *message_class)
 			      G_SIGNAL_RUN_FIRST,
 			      G_STRUCT_OFFSET (SoupMessageClass, finished),
 			      NULL, NULL,
-			      soup_marshal_NONE__NONE,
+			      _soup_marshal_NONE__NONE,
 			      G_TYPE_NONE, 0);
+
+	/**
+	 * SoupMessage::network-event:
+	 * @msg: the message
+	 * @event: the network event
+	 * @connection: the current state of the network connection
+
+	 * Emitted to indicate that some network-related event
+	 * related to @msg has occurred. This essentially proxies the
+	 * #GSocketClient::event signal, but only for events that
+	 * occur while @msg "owns" the connection; if @msg is sent on
+	 * an existing persistent connection, then this signal will
+	 * not be emitted. (If you want to force the message to be
+	 * sent on a new connection, set the
+	 * %SOUP_MESSAGE_NEW_CONNECTION flag on it.)
+	 *
+	 * See #GSocketClient::event for more information on what
+	 * the different values of @event correspond to, and what
+	 * @connection will be in each case.
+	 *
+	 * Since: 2.38
+	 **/
+	signals[NETWORK_EVENT] =
+		g_signal_new ("network_event",
+			      G_OBJECT_CLASS_TYPE (object_class),
+			      G_SIGNAL_RUN_FIRST,
+			      0,
+			      NULL, NULL,
+			      NULL,
+			      G_TYPE_NONE, 2,
+			      G_TYPE_SOCKET_CLIENT_EVENT,
+			      G_TYPE_IO_STREAM);
 
 	/* properties */
 	/**
@@ -748,7 +784,9 @@ set_property (GObject *object, guint prop_id,
 		if (priv->tls_certificate)
 			g_object_unref (priv->tls_certificate);
 		priv->tls_certificate = g_value_dup_object (value);
-		if (priv->tls_certificate && !priv->tls_errors)
+		if (priv->tls_errors)
+			priv->msg_flags &= ~SOUP_MESSAGE_CERTIFICATE_TRUSTED;
+		else if (priv->tls_certificate)
 			priv->msg_flags |= SOUP_MESSAGE_CERTIFICATE_TRUSTED;
 		break;
 	case PROP_TLS_ERRORS:
@@ -1121,6 +1159,15 @@ soup_message_finished (SoupMessage *msg)
 	g_signal_emit (msg, signals[FINISHED], 0);
 }
 
+void
+soup_message_network_event (SoupMessage         *msg,
+			    GSocketClientEvent   event,
+			    GIOStream           *connection)
+{
+	g_signal_emit (msg, signals[NETWORK_EVENT], 0,
+		       event, connection);
+}
+
 static void
 header_handler_free (gpointer header_name, GClosure *closure)
 {
@@ -1392,7 +1439,6 @@ soup_message_cleanup_response (SoupMessage *req)
 		priv->decoders = g_slist_delete_link (priv->decoders, priv->decoders);
 	}
 	priv->msg_flags &= ~SOUP_MESSAGE_CONTENT_DECODED;
-	priv->msg_flags &= ~SOUP_MESSAGE_CERTIFICATE_TRUSTED;
 
 	req->status_code = SOUP_STATUS_NONE;
 	if (req->reason_phrase) {
@@ -1400,12 +1446,6 @@ soup_message_cleanup_response (SoupMessage *req)
 		req->reason_phrase = NULL;
 	}
 	priv->http_version = priv->orig_http_version;
-
-	if (priv->tls_certificate) {
-		g_object_unref (priv->tls_certificate);
-		priv->tls_certificate = NULL;
-	}
-	priv->tls_errors = 0;
 
 	g_object_notify (G_OBJECT (req), SOUP_MESSAGE_STATUS_CODE);
 	g_object_notify (G_OBJECT (req), SOUP_MESSAGE_REASON_PHRASE);
@@ -1433,6 +1473,10 @@ soup_message_cleanup_response (SoupMessage *req)
  * @SOUP_MESSAGE_CERTIFICATE_TRUSTED: if set after an https response
  *   has been received, indicates that the server's SSL certificate is
  *   trusted according to the session's CA.
+ * @SOUP_MESSAGE_NEW_CONNECTION: The message should be sent on a
+ *   newly-created connection, not reusing an existing persistent
+ *   connection. Note that messages with non-idempotent
+ *   #SoupMessage:method<!-- -->s behave this way by default.
  *
  * Various flags that can be set on a #SoupMessage to alter its
  * behavior.
@@ -1879,6 +1923,34 @@ soup_message_set_first_party (SoupMessage *msg,
 	g_object_notify (G_OBJECT (msg), SOUP_MESSAGE_FIRST_PARTY);
 }
 
+void
+soup_message_set_https_status (SoupMessage *msg, SoupConnection *conn)
+{
+	SoupSocket *sock;
+
+	sock = conn ? soup_connection_get_socket (conn) : NULL;
+	if (sock && soup_socket_is_ssl (sock)) {
+		GTlsCertificate *certificate;
+		GTlsCertificateFlags errors;
+
+		g_object_get (sock,
+			      SOUP_SOCKET_TLS_CERTIFICATE, &certificate,
+			      SOUP_SOCKET_TLS_ERRORS, &errors,
+			      NULL);
+		g_object_set (msg,
+			      SOUP_MESSAGE_TLS_CERTIFICATE, certificate,
+			      SOUP_MESSAGE_TLS_ERRORS, errors,
+			      NULL);
+		if (certificate)
+			g_object_unref (certificate);
+	} else {
+		g_object_set (msg,
+			      SOUP_MESSAGE_TLS_CERTIFICATE, NULL,
+			      SOUP_MESSAGE_TLS_ERRORS, 0,
+			      NULL);
+	}
+}
+
 /**
  * soup_message_get_https_status:
  * @msg: a #SoupMessage
@@ -1909,4 +1981,39 @@ soup_message_get_https_status (SoupMessage           *msg,
 	if (errors)
 		*errors = priv->tls_errors;
 	return priv->tls_certificate != NULL;
+}
+
+/**
+ * soup_message_set_redirect:
+ * @msg: a #SoupMessage
+ * @status_code: a 3xx status code
+ * @redirect_uri: the URI to redirect @msg to
+ *
+ * Sets @msg's status_code to @status_code and adds a Location header
+ * pointing to @redirect_uri. Use this from a #SoupServer when you
+ * want to redirect the client to another URI.
+ *
+ * @redirect_uri can be a relative URI, in which case it is
+ * interpreted relative to @msg's current URI. In particular, if
+ * @redirect_uri is just a path, it will replace the path
+ * <emphasis>and query</emphasis> of @msg's URI.
+ *
+ * Since: 2.38
+ */
+void
+soup_message_set_redirect (SoupMessage *msg, guint status_code,
+			   const char *redirect_uri)
+{
+	SoupURI *location;
+	char *location_str;
+
+	location = soup_uri_new_with_base (soup_message_get_uri (msg), redirect_uri);
+	g_return_if_fail (location != NULL);
+
+	soup_message_set_status (msg, status_code);
+	location_str = soup_uri_to_string (location, FALSE);
+	soup_message_headers_replace (msg->response_headers, "Location",
+				      location_str);
+	g_free (location_str);
+	soup_uri_free (location);
 }

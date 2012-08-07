@@ -47,15 +47,15 @@
                                                          <em class="parameter"><code>const <span class="type">char</span> *uri_string</code></em>);
 <a class="link" href="SoupURI.html" title="SoupURI"><span class="returnvalue">SoupURI</span></a> *           <a class="link" href="SoupURI.html#soup-uri-new" title="soup_uri_new ()">soup_uri_new</a>                        (<em class="parameter"><code>const <span class="type">char</span> *uri_string</code></em>);
 <span class="returnvalue">char</span> *              <a class="link" href="SoupURI.html#soup-uri-to-string" title="soup_uri_to_string ()">soup_uri_to_string</a>                  (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>,
-                                                         <em class="parameter"><code><span class="type">gboolean</span> just_path_and_query</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> just_path_and_query</code></em>);
 
 <a class="link" href="SoupURI.html" title="SoupURI"><span class="returnvalue">SoupURI</span></a> *           <a class="link" href="SoupURI.html#soup-uri-copy" title="soup_uri_copy ()">soup_uri_copy</a>                       (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>);
 <a class="link" href="SoupURI.html" title="SoupURI"><span class="returnvalue">SoupURI</span></a> *           <a class="link" href="SoupURI.html#soup-uri-copy-host" title="soup_uri_copy_host ()">soup_uri_copy_host</a>                  (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>);
-<span class="returnvalue">gboolean</span>            <a class="link" href="SoupURI.html#soup-uri-equal" title="soup_uri_equal ()">soup_uri_equal</a>                      (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri1</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="SoupURI.html#soup-uri-equal" title="soup_uri_equal ()">soup_uri_equal</a>                      (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri1</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri2</code></em>);
-<span class="returnvalue">gboolean</span>            <a class="link" href="SoupURI.html#soup-uri-host-equal" title="soup_uri_host_equal ()">soup_uri_host_equal</a>                 (<em class="parameter"><code><span class="type">gconstpointer</span> v1</code></em>,
-                                                         <em class="parameter"><code><span class="type">gconstpointer</span> v2</code></em>);
-<span class="returnvalue">guint</span>               <a class="link" href="SoupURI.html#soup-uri-host-hash" title="soup_uri_host_hash ()">soup_uri_host_hash</a>                  (<em class="parameter"><code><span class="type">gconstpointer</span> key</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="SoupURI.html#soup-uri-host-equal" title="soup_uri_host_equal ()">soup_uri_host_equal</a>                 (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v1</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v2</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="SoupURI.html#soup-uri-host-hash" title="soup_uri_host_hash ()">soup_uri_host_hash</a>                  (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> key</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupURI.html#soup-uri-free" title="soup_uri_free ()">soup_uri_free</a>                       (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>);
 
 <span class="returnvalue">char</span> *              <a class="link" href="SoupURI.html#soup-uri-encode" title="soup_uri_encode ()">soup_uri_encode</a>                     (<em class="parameter"><code>const <span class="type">char</span> *part</code></em>,
@@ -69,7 +69,8 @@
 #define             <a class="link" href="SoupURI.html#SOUP-URI-SCHEME-DATA:CAPS" title="SOUP_URI_SCHEME_DATA">SOUP_URI_SCHEME_DATA</a>
 #define             <a class="link" href="SoupURI.html#SOUP-URI-SCHEME-FILE:CAPS" title="SOUP_URI_SCHEME_FILE">SOUP_URI_SCHEME_FILE</a>
 #define             <a class="link" href="SoupURI.html#SOUP-URI-SCHEME-FTP:CAPS" title="SOUP_URI_SCHEME_FTP">SOUP_URI_SCHEME_FTP</a>
-<span class="returnvalue">gboolean</span>            <a class="link" href="SoupURI.html#soup-uri-uses-default-port" title="soup_uri_uses_default_port ()">soup_uri_uses_default_port</a>          (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="SoupURI.html#soup-uri-uses-default-port" title="soup_uri_uses_default_port ()">soup_uri_uses_default_port</a>          (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>);
+#define             <a class="link" href="SoupURI.html#SOUP-URI-IS-VALID:CAPS" title="SOUP_URI_IS_VALID()">SOUP_URI_IS_VALID</a>                   (uri)
 #define             <a class="link" href="SoupURI.html#SOUP-URI-VALID-FOR-HTTP:CAPS" title="SOUP_URI_VALID_FOR_HTTP()">SOUP_URI_VALID_FOR_HTTP</a>             (uri)
 
 <span class="returnvalue">void</span>                <a class="link" href="SoupURI.html#soup-uri-set-scheme" title="soup_uri_set_scheme ()">soup_uri_set_scheme</a>                 (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>,
@@ -85,15 +86,15 @@ const <span class="returnvalue">char</span> *        <a class="link" href="SoupU
                                                          <em class="parameter"><code>const <span class="type">char</span> *host</code></em>);
 const <span class="returnvalue">char</span> *        <a class="link" href="SoupURI.html#soup-uri-get-host" title="soup_uri_get_host ()">soup_uri_get_host</a>                   (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupURI.html#soup-uri-set-port" title="soup_uri_set_port ()">soup_uri_set_port</a>                   (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>,
-                                                         <em class="parameter"><code><span class="type">guint</span> port</code></em>);
-<span class="returnvalue">guint</span>               <a class="link" href="SoupURI.html#soup-uri-get-port" title="soup_uri_get_port ()">soup_uri_get_port</a>                   (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> port</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="SoupURI.html#soup-uri-get-port" title="soup_uri_get_port ()">soup_uri_get_port</a>                   (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupURI.html#soup-uri-set-path" title="soup_uri_set_path ()">soup_uri_set_path</a>                   (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *path</code></em>);
 const <span class="returnvalue">char</span> *        <a class="link" href="SoupURI.html#soup-uri-get-path" title="soup_uri_get_path ()">soup_uri_get_path</a>                   (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupURI.html#soup-uri-set-query" title="soup_uri_set_query ()">soup_uri_set_query</a>                  (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *query</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupURI.html#soup-uri-set-query-from-form" title="soup_uri_set_query_from_form ()">soup_uri_set_query_from_form</a>        (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>,
-                                                         <em class="parameter"><code><span class="type">GHashTable</span> *form</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> *form</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupURI.html#soup-uri-set-query-from-fields" title="soup_uri_set_query_from_fields ()">soup_uri_set_query_from_fields</a>      (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *first_field</code></em>,
                                                          <em class="parameter"><code>...</code></em>);
@@ -165,15 +166,15 @@ fields; authentication is handled via <a class="link" href="SoupSession.html" ti
 </p>
 <p>
 <em class="parameter"><code>host</code></em> contains the hostname, and <em class="parameter"><code>port</code></em> the port specified in the
-URI. If the URI doesn't contain a hostname, <em class="parameter"><code>host</code></em> will be <code class="literal">NULL</code>,
+URI. If the URI doesn't contain a hostname, <em class="parameter"><code>host</code></em> will be <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>,
 and if it doesn't specify a port, <em class="parameter"><code>port</code></em> may be 0. However, for
-"http" and "https" URIs, <em class="parameter"><code>host</code></em> is guaranteed to be non-<code class="literal">NULL</code>
-(trying to parse an http URI with no <em class="parameter"><code>host</code></em> will return <code class="literal">NULL</code>), and
+"http" and "https" URIs, <em class="parameter"><code>host</code></em> is guaranteed to be non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+(trying to parse an http URI with no <em class="parameter"><code>host</code></em> will return <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>), and
 <em class="parameter"><code>port</code></em> will always be non-0 (because libsoup knows the default value
 to use when it is not specified in the URI).
 </p>
 <p>
-<em class="parameter"><code>path</code></em> is always non-<code class="literal">NULL</code>. For http/https URIs, <em class="parameter"><code>path</code></em> will never be
+<em class="parameter"><code>path</code></em> is always non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. For http/https URIs, <em class="parameter"><code>path</code></em> will never be
 an empty string either; if the input URI has no path, the parsed
 <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> will have a <em class="parameter"><code>path</code></em> of "/".
 </p>
@@ -199,12 +200,12 @@ as well, but this would be more annoying than useful.)
 </tr>
 <tr>
 <td><p><span class="term"><span class="type">char</span> *<em class="structfield"><code><a name="SoupURI-struct.user"></a>user</code></em>;</span></p></td>
-<td>a username, or <code class="literal">NULL</code>
+<td>a username, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="type">char</span> *<em class="structfield"><code><a name="SoupURI-struct.password"></a>password</code></em>;</span></p></td>
-<td>a password, or <code class="literal">NULL</code>
+<td>a password, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
 </td>
 </tr>
 <tr>
@@ -212,7 +213,7 @@ as well, but this would be more annoying than useful.)
 <td>the hostname or IP address</td>
 </tr>
 <tr>
-<td><p><span class="term"><span class="type">guint</span> <em class="structfield"><code><a name="SoupURI-struct.port"></a>port</code></em>;</span></p></td>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> <em class="structfield"><code><a name="SoupURI-struct.port"></a>port</code></em>;</span></p></td>
 <td>the port number on <em class="parameter"><code>host</code></em>
 </td>
 </tr>
@@ -223,12 +224,12 @@ as well, but this would be more annoying than useful.)
 </tr>
 <tr>
 <td><p><span class="term"><span class="type">char</span> *<em class="structfield"><code><a name="SoupURI-struct.query"></a>query</code></em>;</span></p></td>
-<td>a query for <em class="parameter"><code>path</code></em>, or <code class="literal">NULL</code>
+<td>a query for <em class="parameter"><code>path</code></em>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="type">char</span> *<em class="structfield"><code><a name="SoupURI-struct.fragment"></a>fragment</code></em>;</span></p></td>
-<td>a fragment identifier within <em class="parameter"><code>path</code></em>, or <code class="literal">NULL</code>
+<td>a fragment identifier within <em class="parameter"><code>path</code></em>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
 </td>
 </tr>
 </tbody>
@@ -268,7 +269,7 @@ Parses <em class="parameter"><code>uri_string</code></em> relative to <em class=
 Parses an absolute URI.
 </p>
 <p>
-You can also pass <code class="literal">NULL</code> for <em class="parameter"><code>uri_string</code></em> if you want to get back an
+You can also pass <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for <em class="parameter"><code>uri_string</code></em> if you want to get back an
 "empty" <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> that you can fill in by hand. (You will need to
 call at least <a class="link" href="SoupURI.html#soup-uri-set-scheme" title="soup_uri_set_scheme ()"><code class="function">soup_uri_set_scheme()</code></a> and <a class="link" href="SoupURI.html#soup-uri-set-path" title="soup_uri_set_path ()"><code class="function">soup_uri_set_path()</code></a>, since
 those fields are required.)
@@ -278,11 +279,13 @@ those fields are required.)
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>uri_string</code></em> :</span></p></td>
-<td>a URI</td>
+<td>a URI. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a>, or <code class="literal">NULL</code>.</td>
+<td>a <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the given string was found to be
+invalid.</td>
 </tr>
 </tbody>
 </table></div>
@@ -291,12 +294,12 @@ those fields are required.)
 <div class="refsect2">
 <a name="soup-uri-to-string"></a><h3>soup_uri_to_string ()</h3>
 <pre class="programlisting"><span class="returnvalue">char</span> *              soup_uri_to_string                  (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>,
-                                                         <em class="parameter"><code><span class="type">gboolean</span> just_path_and_query</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> just_path_and_query</code></em>);</pre>
 <p>
 Returns a string representing <em class="parameter"><code>uri</code></em>.
 </p>
 <p>
-If <em class="parameter"><code>just_path_and_query</code></em> is <code class="literal">TRUE</code>, this concatenates the path and query
+If <em class="parameter"><code>just_path_and_query</code></em> is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, this concatenates the path and query
 together. That is, it constructs the string that would be needed in
 the Request-Line of an HTTP request for <em class="parameter"><code>uri</code></em>.
 </p>
@@ -310,7 +313,7 @@ the Request-Line of an HTTP request for <em class="parameter"><code>uri</code></
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>just_path_and_query</code></em> :</span></p></td>
-<td>if <code class="literal">TRUE</code>, output just the path and query portions</td>
+<td>if <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, output just the path and query portions</td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
@@ -369,7 +372,7 @@ Makes a copy of <em class="parameter"><code>uri</code></em>, considering only th
 <hr>
 <div class="refsect2">
 <a name="soup-uri-equal"></a><h3>soup_uri_equal ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_uri_equal                      (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri1</code></em>,
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_uri_equal                      (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri1</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri2</code></em>);</pre>
 <p>
 Tests whether or not <em class="parameter"><code>uri1</code></em> and <em class="parameter"><code>uri2</code></em> are equal in all parts
@@ -390,7 +393,7 @@ Tests whether or not <em class="parameter"><code>uri1</code></em> and <em class=
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> or <code class="literal">FALSE</code>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>
 </td>
 </tr>
 </tbody>
@@ -399,8 +402,8 @@ Tests whether or not <em class="parameter"><code>uri1</code></em> and <em class=
 <hr>
 <div class="refsect2">
 <a name="soup-uri-host-equal"></a><h3>soup_uri_host_equal ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_uri_host_equal                 (<em class="parameter"><code><span class="type">gconstpointer</span> v1</code></em>,
-                                                         <em class="parameter"><code><span class="type">gconstpointer</span> v2</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_uri_host_equal                 (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v1</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v2</code></em>);</pre>
 <p>
 Compares <em class="parameter"><code>v1</code></em> and <em class="parameter"><code>v2</code></em>, considering only the scheme, host, and port.
 </p>
@@ -409,12 +412,12 @@ Compares <em class="parameter"><code>v1</code></em> and <em class="parameter"><c
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>v1</code></em> :</span></p></td>
-<td>a <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a>. <span class="annotation">[<acronym title="Override the parsed C type with given type"><span class="acronym">type</span></acronym> Soup.URI]</span>
+<td>a <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> with a non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> <em class="parameter"><code>host</code></em> member. <span class="annotation">[<acronym title="Override the parsed C type with given type"><span class="acronym">type</span></acronym> Soup.URI]</span>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>v2</code></em> :</span></p></td>
-<td>a <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a>. <span class="annotation">[<acronym title="Override the parsed C type with given type"><span class="acronym">type</span></acronym> Soup.URI]</span>
+<td>a <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> with a non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> <em class="parameter"><code>host</code></em> member. <span class="annotation">[<acronym title="Override the parsed C type with given type"><span class="acronym">type</span></acronym> Soup.URI]</span>
 </td>
 </tr>
 <tr>
@@ -429,7 +432,7 @@ and port.</td>
 <hr>
 <div class="refsect2">
 <a name="soup-uri-host-hash"></a><h3>soup_uri_host_hash ()</h3>
-<pre class="programlisting"><span class="returnvalue">guint</span>               soup_uri_host_hash                  (<em class="parameter"><code><span class="type">gconstpointer</span> key</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               soup_uri_host_hash                  (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> key</code></em>);</pre>
 <p>
 Hashes <em class="parameter"><code>key</code></em>, considering only the scheme, host, and port.
 </p>
@@ -438,7 +441,7 @@ Hashes <em class="parameter"><code>key</code></em>, considering only the scheme,
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>key</code></em> :</span></p></td>
-<td>a <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a>. <span class="annotation">[<acronym title="Override the parsed C type with given type"><span class="acronym">type</span></acronym> Soup.URI]</span>
+<td>a <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> with a non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> <em class="parameter"><code>host</code></em> member. <span class="annotation">[<acronym title="Override the parsed C type with given type"><span class="acronym">type</span></acronym> Soup.URI]</span>
 </td>
 </tr>
 <tr>
@@ -485,7 +488,7 @@ done.
 <tr>
 <td><p><span class="term"><em class="parameter"><code>escape_extra</code></em> :</span></p></td>
 <td>additional reserved characters to
-escape (or <code class="literal">NULL</code>). <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+escape (or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>). <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -503,7 +506,7 @@ escape (or <code class="literal">NULL</code>). <span class="annotation">[<acrony
 Fully %-decodes <em class="parameter"><code>part</code></em>.
 </p>
 <p>
-In the past, this would return <code class="literal">NULL</code> if <em class="parameter"><code>part</code></em> contained invalid
+In the past, this would return <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>part</code></em> contained invalid
 percent-encoding, but now it just ignores the problem (as
 <a class="link" href="SoupURI.html#soup-uri-new" title="soup_uri_new ()"><code class="function">soup_uri_new()</code></a> already did).
 </p>
@@ -542,7 +545,7 @@ be changed, because it might mean something different to the
 server.
 </p>
 <p>
-In the past, this would return <code class="literal">NULL</code> if <em class="parameter"><code>part</code></em> contained invalid
+In the past, this would return <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>part</code></em> contained invalid
 percent-encoding, but now it just ignores the problem (as
 <a class="link" href="SoupURI.html#soup-uri-new" title="soup_uri_new ()"><code class="function">soup_uri_new()</code></a> already did).
 </p>
@@ -555,7 +558,7 @@ percent-encoding, but now it just ignores the problem (as
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>unescape_extra</code></em> :</span></p></td>
-<td>reserved characters to unescape (or <code class="literal">NULL</code>)</td>
+<td>reserved characters to unescape (or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>)</td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
@@ -611,10 +614,10 @@ against the value of a <a class="link" href="SoupURI.html" title="SoupURI"><span
 <hr>
 <div class="refsect2">
 <a name="soup-uri-uses-default-port"></a><h3>soup_uri_uses_default_port ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            soup_uri_uses_default_port          (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            soup_uri_uses_default_port          (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>);</pre>
 <p>
 Tests if <em class="parameter"><code>uri</code></em> uses the default port for its scheme. (Eg, 80 for
-http.) (This only works for http and https; libsoup does not know
+http.) (This only works for http, https and ftp; libsoup does not know
 the default ports of other protocols.)
 </p>
 <div class="variablelist"><table border="0">
@@ -628,11 +631,41 @@ the default ports of other protocols.)
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> or <code class="literal">FALSE</code>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>
 </td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="SOUP-URI-IS-VALID:CAPS"></a><h3>SOUP_URI_IS_VALID()</h3>
+<pre class="programlisting">#define   SOUP_URI_IS_VALID(uri)       ((uri) &amp;&amp; (uri)-&gt;scheme &amp;&amp; (uri)-&gt;path)
+</pre>
+<p>
+Tests whether <em class="parameter"><code>uri</code></em> is a valid <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a>; that is, that it is non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+and its <em class="parameter"><code>scheme</code></em> and <em class="parameter"><code>path</code></em> members are also non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.
+</p>
+<p>
+This macro does not check whether http and https URIs have a non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+<em class="parameter"><code>host</code></em> member.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td>a <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>uri</code></em> is valid for use.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.38</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -654,7 +687,7 @@ it can be used to construct a <a class="link" href="SoupMessage.html" title="Sou
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<code class="literal">TRUE</code> if <em class="parameter"><code>uri</code></em> is a valid "http" or "https" URI.</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>uri</code></em> is a valid "http" or "https" URI.</td>
 </tr>
 </tbody>
 </table></div>
@@ -726,7 +759,7 @@ Sets <em class="parameter"><code>uri</code></em>'s user to <em class="parameter"
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>user</code></em> :</span></p></td>
-<td>the username, or <code class="literal">NULL</code>
+<td>the username, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 </tbody>
@@ -774,7 +807,7 @@ Sets <em class="parameter"><code>uri</code></em>'s password to <em class="parame
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>password</code></em> :</span></p></td>
-<td>the password, or <code class="literal">NULL</code>
+<td>the password, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 </tbody>
@@ -817,6 +850,9 @@ If <em class="parameter"><code>host</code></em> is an IPv6 IP address, it should
 required by the URI syntax; they will be added automatically when
 converting <em class="parameter"><code>uri</code></em> to a string.
 </p>
+<p>
+http and https URIs should not have a <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> <em class="parameter"><code>host</code></em>.
+</p>
 <div class="variablelist"><table border="0">
 <col align="left" valign="top">
 <tbody>
@@ -827,7 +863,7 @@ converting <em class="parameter"><code>uri</code></em> to a string.
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>host</code></em> :</span></p></td>
-<td>the hostname or IP address, or <code class="literal">NULL</code>
+<td>the hostname or IP address, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 </tbody>
@@ -861,7 +897,7 @@ Gets <em class="parameter"><code>uri</code></em>'s host.
 <div class="refsect2">
 <a name="soup-uri-set-port"></a><h3>soup_uri_set_port ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_uri_set_port                   (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>,
-                                                         <em class="parameter"><code><span class="type">guint</span> port</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> port</code></em>);</pre>
 <p>
 Sets <em class="parameter"><code>uri</code></em>'s port to <em class="parameter"><code>port</code></em>. If <em class="parameter"><code>port</code></em> is 0, <em class="parameter"><code>uri</code></em> will not have an
 explicitly-specified port.
@@ -884,7 +920,7 @@ explicitly-specified port.
 <hr>
 <div class="refsect2">
 <a name="soup-uri-get-port"></a><h3>soup_uri_get_port ()</h3>
-<pre class="programlisting"><span class="returnvalue">guint</span>               soup_uri_get_port                   (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>);</pre>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               soup_uri_get_port                   (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>);</pre>
 <p>
 Gets <em class="parameter"><code>uri</code></em>'s port.
 </p>
@@ -923,7 +959,7 @@ Sets <em class="parameter"><code>uri</code></em>'s path to <em class="parameter"
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>path</code></em> :</span></p></td>
-<td>the path</td>
+<td>the non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> path</td>
 </tr>
 </tbody>
 </table></div>
@@ -970,7 +1006,8 @@ Sets <em class="parameter"><code>uri</code></em>'s query to <em class="parameter
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>query</code></em> :</span></p></td>
-<td>the query</td>
+<td>the query. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
 </tr>
 </tbody>
 </table></div>
@@ -979,7 +1016,7 @@ Sets <em class="parameter"><code>uri</code></em>'s query to <em class="parameter
 <div class="refsect2">
 <a name="soup-uri-set-query-from-form"></a><h3>soup_uri_set_query_from_form ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_uri_set_query_from_form        (<em class="parameter"><code><a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a> *uri</code></em>,
-                                                         <em class="parameter"><code><span class="type">GHashTable</span> *form</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> *form</code></em>);</pre>
 <p>
 Sets <em class="parameter"><code>uri</code></em>'s query to the result of encoding <em class="parameter"><code>form</code></em> according to the
 HTML form rules. See <a class="link" href="libsoup-2.4-HTML-Form-Support.html#soup-form-encode-hash" title="soup_form_encode_hash ()"><code class="function">soup_form_encode_hash()</code></a> for more information.
@@ -994,7 +1031,7 @@ HTML form rules. See <a class="link" href="libsoup-2.4-HTML-Form-Support.html#so
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>form</code></em> :</span></p></td>
-<td>a <span class="type">GHashTable</span> containing HTML form
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> containing HTML form
 information. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8 utf8]</span>
 </td>
 </tr>
@@ -1027,7 +1064,7 @@ and values according to the * HTML form rules. See
 <tr>
 <td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
 <td>value of <em class="parameter"><code>first_field</code></em>, followed by additional field names
-and values, terminated by <code class="literal">NULL</code>.</td>
+and values, terminated by <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
 </tr>
 </tbody>
 </table></div>
@@ -1074,7 +1111,8 @@ Sets <em class="parameter"><code>uri</code></em>'s fragment to <em class="parame
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>fragment</code></em> :</span></p></td>
-<td>the fragment</td>
+<td>the fragment. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
 </tr>
 </tbody>
 </table></div>

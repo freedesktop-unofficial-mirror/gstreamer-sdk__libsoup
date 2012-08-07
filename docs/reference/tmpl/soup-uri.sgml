@@ -9,10 +9,12 @@ SoupURI
 
 </para>
 
+
 <!-- ##### SECTION See_Also ##### -->
 <para>
 
 </para>
+
 
 <!-- ##### SECTION Stability_Level ##### -->
 
@@ -181,6 +183,14 @@ SoupURI
 
 @uri: 
 @Returns: 
+
+
+<!-- ##### MACRO SOUP_URI_IS_VALID ##### -->
+<para>
+
+</para>
+
+@uri: 
 
 
 <!-- ##### MACRO SOUP_URI_VALID_FOR_HTTP ##### -->

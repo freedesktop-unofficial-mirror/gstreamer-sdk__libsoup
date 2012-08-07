@@ -55,31 +55,31 @@ enum                <a class="link" href="SoupLogger.html#SoupLoggerLogLevel" ti
 
 <a class="link" href="SoupLogger.html#SoupLoggerLogLevel" title="enum SoupLoggerLogLevel"><span class="returnvalue">SoupLoggerLogLevel</span></a>  (<a class="link" href="SoupLogger.html#SoupLoggerFilter" title="SoupLoggerFilter ()">*SoupLoggerFilter</a>)                 (<em class="parameter"><code><a class="link" href="SoupLogger.html" title="SoupLogger"><span class="type">SoupLogger</span></a> *logger</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupLogger.html#soup-logger-set-request-filter" title="soup_logger_set_request_filter ()">soup_logger_set_request_filter</a>      (<em class="parameter"><code><a class="link" href="SoupLogger.html" title="SoupLogger"><span class="type">SoupLogger</span></a> *logger</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupLogger.html#SoupLoggerFilter" title="SoupLoggerFilter ()"><span class="type">SoupLoggerFilter</span></a> request_filter</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> filter_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> destroy</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> filter_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupLogger.html#soup-logger-set-response-filter" title="soup_logger_set_response_filter ()">soup_logger_set_response_filter</a>     (<em class="parameter"><code><a class="link" href="SoupLogger.html" title="SoupLogger"><span class="type">SoupLogger</span></a> *logger</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupLogger.html#SoupLoggerFilter" title="SoupLoggerFilter ()"><span class="type">SoupLoggerFilter</span></a> response_filter</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> filter_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> destroy</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> filter_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy</code></em>);
 
 <span class="returnvalue">void</span>                (<a class="link" href="SoupLogger.html#SoupLoggerPrinter" title="SoupLoggerPrinter ()">*SoupLoggerPrinter</a>)                (<em class="parameter"><code><a class="link" href="SoupLogger.html" title="SoupLogger"><span class="type">SoupLogger</span></a> *logger</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupLogger.html#SoupLoggerLogLevel" title="enum SoupLoggerLogLevel"><span class="type">SoupLoggerLogLevel</span></a> level</code></em>,
                                                          <em class="parameter"><code><span class="type">char</span> direction</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *data</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="SoupLogger.html#soup-logger-set-printer" title="soup_logger_set_printer ()">soup_logger_set_printer</a>             (<em class="parameter"><code><a class="link" href="SoupLogger.html" title="SoupLogger"><span class="type">SoupLogger</span></a> *logger</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupLogger.html#SoupLoggerPrinter" title="SoupLoggerPrinter ()"><span class="type">SoupLoggerPrinter</span></a> printer</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> printer_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> destroy</code></em>);
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> printer_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy</code></em>);
 </pre>
 </div>
 <div class="refsect1">
 <a name="SoupLogger.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="synopsis">
-  GObject
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
    +----SoupLogger
 </pre>
 </div>
@@ -307,7 +307,7 @@ Stops <em class="parameter"><code>logger</code></em> from watching <em class="pa
 <a name="SoupLoggerFilter"></a><h3>SoupLoggerFilter ()</h3>
 <pre class="programlisting"><a class="link" href="SoupLogger.html#SoupLoggerLogLevel" title="enum SoupLoggerLogLevel"><span class="returnvalue">SoupLoggerLogLevel</span></a>  (*SoupLoggerFilter)                 (<em class="parameter"><code><a class="link" href="SoupLogger.html" title="SoupLogger"><span class="type">SoupLogger</span></a> *logger</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>
 The prototype for a logging filter. The filter callback will be
 invoked for each request or response, and should analyze it and
@@ -346,8 +346,8 @@ the message to log</td>
 <a name="soup-logger-set-request-filter"></a><h3>soup_logger_set_request_filter ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_logger_set_request_filter      (<em class="parameter"><code><a class="link" href="SoupLogger.html" title="SoupLogger"><span class="type">SoupLogger</span></a> *logger</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupLogger.html#SoupLoggerFilter" title="SoupLoggerFilter ()"><span class="type">SoupLoggerFilter</span></a> request_filter</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> filter_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> destroy</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> filter_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy</code></em>);</pre>
 <p>
 Sets up a filter to determine the log level for a given request.
 For each HTTP request <em class="parameter"><code>logger</code></em> will invoke <em class="parameter"><code>request_filter</code></em> to
@@ -373,7 +373,7 @@ level passed to <a class="link" href="SoupLogger.html#soup-logger-new" title="so
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>destroy</code></em> :</span></p></td>
-<td>a <span class="type">GDestroyNotify</span> to free <em class="parameter"><code>filter_data</code></em>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> to free <em class="parameter"><code>filter_data</code></em>
 </td>
 </tr>
 </tbody>
@@ -384,8 +384,8 @@ level passed to <a class="link" href="SoupLogger.html#soup-logger-new" title="so
 <a name="soup-logger-set-response-filter"></a><h3>soup_logger_set_response_filter ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_logger_set_response_filter     (<em class="parameter"><code><a class="link" href="SoupLogger.html" title="SoupLogger"><span class="type">SoupLogger</span></a> *logger</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupLogger.html#SoupLoggerFilter" title="SoupLoggerFilter ()"><span class="type">SoupLoggerFilter</span></a> response_filter</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> filter_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> destroy</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> filter_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy</code></em>);</pre>
 <p>
 Sets up a filter to determine the log level for a given response.
 For each HTTP response <em class="parameter"><code>logger</code></em> will invoke <em class="parameter"><code>response_filter</code></em> to
@@ -411,7 +411,7 @@ the level passed to <a class="link" href="SoupLogger.html#soup-logger-new" title
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>destroy</code></em> :</span></p></td>
-<td>a <span class="type">GDestroyNotify</span> to free <em class="parameter"><code>filter_data</code></em>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> to free <em class="parameter"><code>filter_data</code></em>
 </td>
 </tr>
 </tbody>
@@ -424,7 +424,7 @@ the level passed to <a class="link" href="SoupLogger.html#soup-logger-new" title
                                                          <em class="parameter"><code><a class="link" href="SoupLogger.html#SoupLoggerLogLevel" title="enum SoupLoggerLogLevel"><span class="type">SoupLoggerLogLevel</span></a> level</code></em>,
                                                          <em class="parameter"><code><span class="type">char</span> direction</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *data</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>
 The prototype for a custom printing callback.
 </p>
@@ -488,8 +488,8 @@ To get the effect of the default printer, you would do:
 <a name="soup-logger-set-printer"></a><h3>soup_logger_set_printer ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                soup_logger_set_printer             (<em class="parameter"><code><a class="link" href="SoupLogger.html" title="SoupLogger"><span class="type">SoupLogger</span></a> *logger</code></em>,
                                                          <em class="parameter"><code><a class="link" href="SoupLogger.html#SoupLoggerPrinter" title="SoupLoggerPrinter ()"><span class="type">SoupLoggerPrinter</span></a> printer</code></em>,
-                                                         <em class="parameter"><code><span class="type">gpointer</span> printer_data</code></em>,
-                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> destroy</code></em>);</pre>
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> printer_data</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy</code></em>);</pre>
 <p>
 Sets up an alternate log printing routine, if you don't want
 the log to go to <code class="literal">stdout</code>.
@@ -512,7 +512,7 @@ the log to go to <code class="literal">stdout</code>.
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>destroy</code></em> :</span></p></td>
-<td>a <span class="type">GDestroyNotify</span> to free <em class="parameter"><code>printer_data</code></em>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> to free <em class="parameter"><code>printer_data</code></em>
 </td>
 </tr>
 </tbody>

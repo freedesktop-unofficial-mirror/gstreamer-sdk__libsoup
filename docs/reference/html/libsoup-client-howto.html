@@ -29,7 +29,7 @@
 <td valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect2">
-<a name="id618795"></a><h3>Creating a <span class="type">SoupSession</span>
+<a name="id634672"></a><h3>Creating a <span class="type">SoupSession</span>
 </h3>
 <p>
 The first step in using the client API is to create a <a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a>. The session object
@@ -109,7 +109,7 @@ you can specify various additional options:
 <tr>
 <td><p><span class="term"><a class="link" href="SoupSession.html#SOUP-SESSION-ASYNC-CONTEXT:CAPS" title="SOUP_SESSION_ASYNC_CONTEXT"><code class="literal">SOUP_SESSION_ASYNC_CONTEXT</code></a></span></p></td>
 <td><p>
-	    A <span class="type">GMainContext</span>
+	    A <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a>
 	    which the session will use for asynchronous operations.
 	    This can be set if you want to use a
 	    <span class="type">SoupSessionAsync</span> in a thread other than the
@@ -214,13 +214,13 @@ application might do something like the following:
 <span class="preproc">#ifdef</span><span class="normal"> HAVE_LIBSOUP_GNOME</span>
 <span class="normal">    <a href="SoupSession.html#SOUP-SESSION-ADD-FEATURE-BY-TYPE:CAPS">SOUP_SESSION_ADD_FEATURE_BY_TYPE</a></span><span class="symbol">,</span><span class="normal"> <a href="libsoup-2.4-soup-gnome-features.html#SOUP-TYPE-PROXY-RESOLVER-GNOME:CAPS">SOUP_TYPE_PROXY_RESOLVER_GNOME</a></span><span class="symbol">,</span>
 <span class="preproc">#endif</span>
-<span class="normal">    NULL</span><span class="symbol">);</span>
+<span class="normal">    <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
 <span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">debug_level</span><span class="symbol">)</span><span class="normal"> </span><span class="cbracket">{</span>
 <span class="normal">    </span><span class="usertype">SoupLogger</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">logger</span><span class="symbol">;</span>
 
 <span class="normal">    logger </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="SoupLogger.html#soup-logger-new">soup_logger_new</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">debug_level</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">-</span><span class="number">1</span><span class="symbol">);</span>
 <span class="normal">    </span><span class="function"><a href="SoupSession.html#soup-session-add-feature">soup_session_add_feature</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">session</span><span class="symbol">,</span><span class="normal"> </span><span class="function">SOUP_SESSION_FEATURE</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">logger</span><span class="symbol">));</span>
-<span class="normal">    </span><span class="function">g_object_unref</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">logger</span><span class="symbol">);</span>
+<span class="normal">    </span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">g_object_unref</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">logger</span><span class="symbol">);</span>
 <span class="cbracket">}</span></pre></td>
       </tr>
     </tbody>
@@ -230,7 +230,7 @@ application might do something like the following:
 </div>
 <hr>
 <div class="refsect2">
-<a name="id592611"></a><h3>Creating and Sending SoupMessages</h3>
+<a name="id602926"></a><h3>Creating and Sending SoupMessages</h3>
 <p>
 Once you have a session, you do HTTP traffic using <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a>. In the simplest
 case, you only need to create the message and it's ready to send:
@@ -290,7 +290,7 @@ yourself, you can set the <a class="link" href="SoupMessage.html#SOUP-MESSAGE-NO
 flag.
 </p>
 <div class="refsect3">
-<a name="id592715"></a><h4>Sending a Message Synchronously</h4>
+<a name="id603030"></a><h4>Sending a Message Synchronously</h4>
 <p>
 To send a message and wait for the response, use <a class="link" href="SoupSession.html#soup-session-send-message" title="soup_session_send_message ()"><code class="function">soup_session_send_message</code></a>:
 </p>
@@ -324,7 +324,7 @@ response to the message. (The status is also available as
 </p>
 </div>
 <div class="refsect3">
-<a name="id592784"></a><h4>Sending a Message Asynchronously</h4>
+<a name="id603099"></a><h4>Sending a Message Asynchronously</h4>
 <p>
 To send a message asynchronously, use <a class="link" href="SoupSession.html#soup-session-queue-message" title="soup_session_queue_message ()"><code class="function">soup_session_queue_message</code></a>:
 </p>
@@ -385,7 +385,7 @@ being invoked in the session's <a class="link" href="SoupSession.html#SOUP-SESSI
 </div>
 <hr>
 <div class="refsect2">
-<a name="id592888"></a><h3>Processing the Response</h3>
+<a name="id603203"></a><h3>Processing the Response</h3>
 <p>
 Once you have received the response from the server, synchronously or
 asynchronously, you can look at the response fields in the
@@ -414,7 +414,7 @@ headers much better than functions like
 </div>
 <hr>
 <div class="refsect2">
-<a name="id592997"></a><h3>Intermediate/Automatic Processing</h3>
+<a name="id603312"></a><h3>Intermediate/Automatic Processing</h3>
 <p>
 You can also connect to various <span class="type">SoupMessage</span> signals to do
 processing at intermediate stages of HTTP I/O. Eg, the <a class="link" href="SoupMessage.html#SoupMessage-got-chunk" title='The "got-chunk" signal'><code class="literal">got-chunk</code></a>
@@ -440,7 +440,7 @@ signal, and add handlers to each message from there.
 </div>
 <hr>
 <div class="refsect2">
-<a name="id593079"></a><h3>Handling Authentication</h3>
+<a name="id603393"></a><h3>Handling Authentication</h3>
 <p>
 <span class="type">SoupSession</span> handles most of the details of HTTP
 authentication for you. If it receives a 401 ("Unauthorized") or 407
@@ -482,7 +482,7 @@ to resume the paused message.
 </div>
 <hr>
 <div class="refsect2">
-<a name="id593214"></a><h3>Multi-threaded usage</h3>
+<a name="id603529"></a><h3>Multi-threaded usage</h3>
 <p>
 The only explicitly thread-safe operations in
 <span class="application">libsoup</span> are <a class="link" href="SoupSessionSync.html" title="SoupSessionSync"><span class="type">SoupSessionSync</span></a>'s
@@ -499,14 +499,14 @@ except from a message or session callback or signal handler.)
 All other objects (including <a class="link" href="SoupSessionAsync.html" title="SoupSessionAsync"><span class="type">SoupSessionAsync</span></a>)
 should only be used from a single thread, with objects that are also
 only be used from that thread. (And in particular, if you set a
-non-default <span class="type">GMainContext</span> on a session,
+non-default <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> on a session,
 socket, etc, then you can only use that object from the thread in
 which that <span class="type">GMainContext</span> is running.)
 </p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="id593304"></a><h3>Sample Programs</h3>
+<a name="id603619"></a><h3>Sample Programs</h3>
 <p>
 A few sample programs are available in the
 <span class="application">libsoup</span> sources:

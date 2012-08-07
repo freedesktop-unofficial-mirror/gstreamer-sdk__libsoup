@@ -168,6 +168,7 @@
 <ANCHOR id="soup-message-get-address" href="libsoup-2.4/SoupMessage.html#soup-message-get-address">
 <ANCHOR id="soup-message-set-status" href="libsoup-2.4/SoupMessage.html#soup-message-set-status">
 <ANCHOR id="soup-message-set-status-full" href="libsoup-2.4/SoupMessage.html#soup-message-set-status-full">
+<ANCHOR id="soup-message-set-redirect" href="libsoup-2.4/SoupMessage.html#soup-message-set-redirect">
 <ANCHOR id="soup-message-is-keepalive" href="libsoup-2.4/SoupMessage.html#soup-message-is-keepalive">
 <ANCHOR id="soup-message-get-https-status" href="libsoup-2.4/SoupMessage.html#soup-message-get-https-status">
 <ANCHOR id="soup-message-set-first-party" href="libsoup-2.4/SoupMessage.html#soup-message-set-first-party">
@@ -180,6 +181,7 @@
 <ANCHOR id="SOUP-MESSAGE-OVERWRITE-CHUNKS:CAPS" href="libsoup-2.4/SoupMessage.html#SOUP-MESSAGE-OVERWRITE-CHUNKS:CAPS">
 <ANCHOR id="SOUP-MESSAGE-CONTENT-DECODED:CAPS" href="libsoup-2.4/SoupMessage.html#SOUP-MESSAGE-CONTENT-DECODED:CAPS">
 <ANCHOR id="SOUP-MESSAGE-CERTIFICATE-TRUSTED:CAPS" href="libsoup-2.4/SoupMessage.html#SOUP-MESSAGE-CERTIFICATE-TRUSTED:CAPS">
+<ANCHOR id="SOUP-MESSAGE-NEW-CONNECTION:CAPS" href="libsoup-2.4/SoupMessage.html#SOUP-MESSAGE-NEW-CONNECTION:CAPS">
 <ANCHOR id="soup-message-set-flags" href="libsoup-2.4/SoupMessage.html#soup-message-set-flags">
 <ANCHOR id="soup-message-get-flags" href="libsoup-2.4/SoupMessage.html#soup-message-get-flags">
 <ANCHOR id="SoupChunkAllocator" href="libsoup-2.4/SoupMessage.html#SoupChunkAllocator">
@@ -221,6 +223,7 @@
 <ANCHOR id="SoupMessage-got-chunk" href="libsoup-2.4/SoupMessage.html#SoupMessage-got-chunk">
 <ANCHOR id="SoupMessage-got-headers" href="libsoup-2.4/SoupMessage.html#SoupMessage-got-headers">
 <ANCHOR id="SoupMessage-got-informational" href="libsoup-2.4/SoupMessage.html#SoupMessage-got-informational">
+<ANCHOR id="SoupMessage-network-event" href="libsoup-2.4/SoupMessage.html#SoupMessage-network-event">
 <ANCHOR id="SoupMessage-restarted" href="libsoup-2.4/SoupMessage.html#SoupMessage-restarted">
 <ANCHOR id="SoupMessage-wrote-body" href="libsoup-2.4/SoupMessage.html#SoupMessage-wrote-body">
 <ANCHOR id="SoupMessage-wrote-body-data" href="libsoup-2.4/SoupMessage.html#SoupMessage-wrote-body-data">
@@ -386,6 +389,7 @@
 <ANCHOR id="SOUP-SERVER-INTERFACE:CAPS" href="libsoup-2.4/SoupServer.html#SOUP-SERVER-INTERFACE:CAPS">
 <ANCHOR id="SOUP-SERVER-SSL-CERT-FILE:CAPS" href="libsoup-2.4/SoupServer.html#SOUP-SERVER-SSL-CERT-FILE:CAPS">
 <ANCHOR id="SOUP-SERVER-SSL-KEY-FILE:CAPS" href="libsoup-2.4/SoupServer.html#SOUP-SERVER-SSL-KEY-FILE:CAPS">
+<ANCHOR id="SOUP-SERVER-TLS-CERTIFICATE:CAPS" href="libsoup-2.4/SoupServer.html#SOUP-SERVER-TLS-CERTIFICATE:CAPS">
 <ANCHOR id="SOUP-SERVER-ASYNC-CONTEXT:CAPS" href="libsoup-2.4/SoupServer.html#SOUP-SERVER-ASYNC-CONTEXT:CAPS">
 <ANCHOR id="SOUP-SERVER-RAW-PATHS:CAPS" href="libsoup-2.4/SoupServer.html#SOUP-SERVER-RAW-PATHS:CAPS">
 <ANCHOR id="SOUP-SERVER-SERVER-HEADER:CAPS" href="libsoup-2.4/SoupServer.html#SOUP-SERVER-SERVER-HEADER:CAPS">
@@ -397,6 +401,7 @@
 <ANCHOR id="SoupServer--server-header" href="libsoup-2.4/SoupServer.html#SoupServer--server-header">
 <ANCHOR id="SoupServer--ssl-cert-file" href="libsoup-2.4/SoupServer.html#SoupServer--ssl-cert-file">
 <ANCHOR id="SoupServer--ssl-key-file" href="libsoup-2.4/SoupServer.html#SoupServer--ssl-key-file">
+<ANCHOR id="SoupServer--tls-certificate" href="libsoup-2.4/SoupServer.html#SoupServer--tls-certificate">
 <ANCHOR id="SoupServer.signal-details" href="libsoup-2.4/SoupServer.html#SoupServer.signal-details">
 <ANCHOR id="SoupServer-request-aborted" href="libsoup-2.4/SoupServer.html#SoupServer-request-aborted">
 <ANCHOR id="SoupServer-request-finished" href="libsoup-2.4/SoupServer.html#SoupServer-request-finished">
@@ -416,8 +421,11 @@
 <ANCHOR id="soup-session-requeue-message" href="libsoup-2.4/SoupSession.html#soup-session-requeue-message">
 <ANCHOR id="soup-session-send-message" href="libsoup-2.4/SoupSession.html#soup-session-send-message">
 <ANCHOR id="soup-session-cancel-message" href="libsoup-2.4/SoupSession.html#soup-session-cancel-message">
+<ANCHOR id="soup-session-prefetch-dns" href="libsoup-2.4/SoupSession.html#soup-session-prefetch-dns">
 <ANCHOR id="soup-session-prepare-for-uri" href="libsoup-2.4/SoupSession.html#soup-session-prepare-for-uri">
 <ANCHOR id="soup-session-abort" href="libsoup-2.4/SoupSession.html#soup-session-abort">
+<ANCHOR id="soup-session-would-redirect" href="libsoup-2.4/SoupSession.html#soup-session-would-redirect">
+<ANCHOR id="soup-session-redirect-message" href="libsoup-2.4/SoupSession.html#soup-session-redirect-message">
 <ANCHOR id="soup-session-pause-message" href="libsoup-2.4/SoupSession.html#soup-session-pause-message">
 <ANCHOR id="soup-session-unpause-message" href="libsoup-2.4/SoupSession.html#soup-session-unpause-message">
 <ANCHOR id="soup-session-get-async-context" href="libsoup-2.4/SoupSession.html#soup-session-get-async-context">
@@ -433,6 +441,8 @@
 <ANCHOR id="SOUP-SESSION-MAX-CONNS-PER-HOST:CAPS" href="libsoup-2.4/SoupSession.html#SOUP-SESSION-MAX-CONNS-PER-HOST:CAPS">
 <ANCHOR id="SOUP-SESSION-USE-NTLM:CAPS" href="libsoup-2.4/SoupSession.html#SOUP-SESSION-USE-NTLM:CAPS">
 <ANCHOR id="SOUP-SESSION-SSL-CA-FILE:CAPS" href="libsoup-2.4/SoupSession.html#SOUP-SESSION-SSL-CA-FILE:CAPS">
+<ANCHOR id="SOUP-SESSION-SSL-USE-SYSTEM-CA-FILE:CAPS" href="libsoup-2.4/SoupSession.html#SOUP-SESSION-SSL-USE-SYSTEM-CA-FILE:CAPS">
+<ANCHOR id="SOUP-SESSION-TLS-DATABASE:CAPS" href="libsoup-2.4/SoupSession.html#SOUP-SESSION-TLS-DATABASE:CAPS">
 <ANCHOR id="SOUP-SESSION-ASYNC-CONTEXT:CAPS" href="libsoup-2.4/SoupSession.html#SOUP-SESSION-ASYNC-CONTEXT:CAPS">
 <ANCHOR id="SOUP-SESSION-TIMEOUT:CAPS" href="libsoup-2.4/SoupSession.html#SOUP-SESSION-TIMEOUT:CAPS">
 <ANCHOR id="SOUP-SESSION-IDLE-TIMEOUT:CAPS" href="libsoup-2.4/SoupSession.html#SOUP-SESSION-IDLE-TIMEOUT:CAPS">
@@ -443,12 +453,17 @@
 <ANCHOR id="SOUP-SESSION-ACCEPT-LANGUAGE:CAPS" href="libsoup-2.4/SoupSession.html#SOUP-SESSION-ACCEPT-LANGUAGE:CAPS">
 <ANCHOR id="SOUP-SESSION-ACCEPT-LANGUAGE-AUTO:CAPS" href="libsoup-2.4/SoupSession.html#SOUP-SESSION-ACCEPT-LANGUAGE-AUTO:CAPS">
 <ANCHOR id="SOUP-SESSION-SSL-STRICT:CAPS" href="libsoup-2.4/SoupSession.html#SOUP-SESSION-SSL-STRICT:CAPS">
+<ANCHOR id="SOUP-SESSION-HTTP-ALIASES:CAPS" href="libsoup-2.4/SoupSession.html#SOUP-SESSION-HTTP-ALIASES:CAPS">
+<ANCHOR id="SOUP-SESSION-HTTPS-ALIASES:CAPS" href="libsoup-2.4/SoupSession.html#SOUP-SESSION-HTTPS-ALIASES:CAPS">
+<ANCHOR id="SOUP-SESSION-USE-THREAD-CONTEXT:CAPS" href="libsoup-2.4/SoupSession.html#SOUP-SESSION-USE-THREAD-CONTEXT:CAPS">
 <ANCHOR id="SoupSession.property-details" href="libsoup-2.4/SoupSession.html#SoupSession.property-details">
 <ANCHOR id="SoupSession--accept-language" href="libsoup-2.4/SoupSession.html#SoupSession--accept-language">
 <ANCHOR id="SoupSession--accept-language-auto" href="libsoup-2.4/SoupSession.html#SoupSession--accept-language-auto">
 <ANCHOR id="SoupSession--add-feature" href="libsoup-2.4/SoupSession.html#SoupSession--add-feature">
 <ANCHOR id="SoupSession--add-feature-by-type" href="libsoup-2.4/SoupSession.html#SoupSession--add-feature-by-type">
 <ANCHOR id="SoupSession--async-context" href="libsoup-2.4/SoupSession.html#SoupSession--async-context">
+<ANCHOR id="SoupSession--http-aliases" href="libsoup-2.4/SoupSession.html#SoupSession--http-aliases">
+<ANCHOR id="SoupSession--https-aliases" href="libsoup-2.4/SoupSession.html#SoupSession--https-aliases">
 <ANCHOR id="SoupSession--idle-timeout" href="libsoup-2.4/SoupSession.html#SoupSession--idle-timeout">
 <ANCHOR id="SoupSession--max-conns" href="libsoup-2.4/SoupSession.html#SoupSession--max-conns">
 <ANCHOR id="SoupSession--max-conns-per-host" href="libsoup-2.4/SoupSession.html#SoupSession--max-conns-per-host">
@@ -456,8 +471,11 @@
 <ANCHOR id="SoupSession--remove-feature-by-type" href="libsoup-2.4/SoupSession.html#SoupSession--remove-feature-by-type">
 <ANCHOR id="SoupSession--ssl-ca-file" href="libsoup-2.4/SoupSession.html#SoupSession--ssl-ca-file">
 <ANCHOR id="SoupSession--ssl-strict" href="libsoup-2.4/SoupSession.html#SoupSession--ssl-strict">
+<ANCHOR id="SoupSession--ssl-use-system-ca-file" href="libsoup-2.4/SoupSession.html#SoupSession--ssl-use-system-ca-file">
 <ANCHOR id="SoupSession--timeout" href="libsoup-2.4/SoupSession.html#SoupSession--timeout">
+<ANCHOR id="SoupSession--tls-database" href="libsoup-2.4/SoupSession.html#SoupSession--tls-database">
 <ANCHOR id="SoupSession--use-ntlm" href="libsoup-2.4/SoupSession.html#SoupSession--use-ntlm">
+<ANCHOR id="SoupSession--use-thread-context" href="libsoup-2.4/SoupSession.html#SoupSession--use-thread-context">
 <ANCHOR id="SoupSession--user-agent" href="libsoup-2.4/SoupSession.html#SoupSession--user-agent">
 <ANCHOR id="SoupSession.signal-details" href="libsoup-2.4/SoupSession.html#SoupSession.signal-details">
 <ANCHOR id="SoupSession-authenticate" href="libsoup-2.4/SoupSession.html#SoupSession-authenticate">
@@ -583,6 +601,7 @@
 <ANCHOR id="SOUP-URI-SCHEME-FILE:CAPS" href="libsoup-2.4/SoupURI.html#SOUP-URI-SCHEME-FILE:CAPS">
 <ANCHOR id="SOUP-URI-SCHEME-FTP:CAPS" href="libsoup-2.4/SoupURI.html#SOUP-URI-SCHEME-FTP:CAPS">
 <ANCHOR id="soup-uri-uses-default-port" href="libsoup-2.4/SoupURI.html#soup-uri-uses-default-port">
+<ANCHOR id="SOUP-URI-IS-VALID:CAPS" href="libsoup-2.4/SoupURI.html#SOUP-URI-IS-VALID:CAPS">
 <ANCHOR id="SOUP-URI-VALID-FOR-HTTP:CAPS" href="libsoup-2.4/SoupURI.html#SOUP-URI-VALID-FOR-HTTP:CAPS">
 <ANCHOR id="soup-uri-set-scheme" href="libsoup-2.4/SoupURI.html#soup-uri-set-scheme">
 <ANCHOR id="soup-uri-get-scheme" href="libsoup-2.4/SoupURI.html#soup-uri-get-scheme">
@@ -777,6 +796,7 @@
 <ANCHOR id="soup-form-request-new-from-datalist" href="libsoup-2.4/libsoup-2.4-HTML-Form-Support.html#soup-form-request-new-from-datalist">
 <ANCHOR id="soup-form-request-new-from-hash" href="libsoup-2.4/libsoup-2.4-HTML-Form-Support.html#soup-form-request-new-from-hash">
 <ANCHOR id="soup-form-request-new-from-multipart" href="libsoup-2.4/libsoup-2.4-HTML-Form-Support.html#soup-form-request-new-from-multipart">
+<ANCHOR id="libsoup-2.4-HTML-Form-Support.see-also" href="libsoup-2.4/libsoup-2.4-HTML-Form-Support.html#libsoup-2.4-HTML-Form-Support.see-also">
 <ANCHOR id="libsoup-2.4-XMLRPC-Support" href="libsoup-2.4/libsoup-2.4-XMLRPC-Support.html">
 <ANCHOR id="libsoup-2.4-XMLRPC-Support.synopsis" href="libsoup-2.4/libsoup-2.4-XMLRPC-Support.html#libsoup-2.4-XMLRPC-Support.synopsis">
 <ANCHOR id="libsoup-2.4-XMLRPC-Support.description" href="libsoup-2.4/libsoup-2.4-XMLRPC-Support.html#libsoup-2.4-XMLRPC-Support.description">
@@ -911,12 +931,6 @@
 <ANCHOR id="soup-socket-read" href="libsoup-2.4/SoupSocket.html#soup-socket-read">
 <ANCHOR id="soup-socket-read-until" href="libsoup-2.4/SoupSocket.html#soup-socket-read-until">
 <ANCHOR id="soup-socket-write" href="libsoup-2.4/SoupSocket.html#soup-socket-write">
-<ANCHOR id="SOUP-SSL-ERROR:CAPS" href="libsoup-2.4/SoupSocket.html#SOUP-SSL-ERROR:CAPS">
-<ANCHOR id="SoupSSLError" href="libsoup-2.4/SoupSocket.html#SoupSSLError">
-<ANCHOR id="SOUP-SSL-ERROR-HANDSHAKE-NEEDS-READ:CAPS" href="libsoup-2.4/SoupSocket.html#SOUP-SSL-ERROR-HANDSHAKE-NEEDS-READ:CAPS">
-<ANCHOR id="SOUP-SSL-ERROR-HANDSHAKE-NEEDS-WRITE:CAPS" href="libsoup-2.4/SoupSocket.html#SOUP-SSL-ERROR-HANDSHAKE-NEEDS-WRITE:CAPS">
-<ANCHOR id="SOUP-SSL-ERROR-CERTIFICATE:CAPS" href="libsoup-2.4/SoupSocket.html#SOUP-SSL-ERROR-CERTIFICATE:CAPS">
-<ANCHOR id="SOUP-SSL-ERROR-HANDSHAKE-FAILED:CAPS" href="libsoup-2.4/SoupSocket.html#SOUP-SSL-ERROR-HANDSHAKE-FAILED:CAPS">
 <ANCHOR id="SOUP-SOCKET-LOCAL-ADDRESS:CAPS" href="libsoup-2.4/SoupSocket.html#SOUP-SOCKET-LOCAL-ADDRESS:CAPS">
 <ANCHOR id="SOUP-SOCKET-REMOTE-ADDRESS:CAPS" href="libsoup-2.4/SoupSocket.html#SOUP-SOCKET-REMOTE-ADDRESS:CAPS">
 <ANCHOR id="SOUP-SOCKET-FLAG-NONBLOCKING:CAPS" href="libsoup-2.4/SoupSocket.html#SOUP-SOCKET-FLAG-NONBLOCKING:CAPS">
@@ -929,6 +943,7 @@
 <ANCHOR id="SOUP-SOCKET-TLS-CERTIFICATE:CAPS" href="libsoup-2.4/SoupSocket.html#SOUP-SOCKET-TLS-CERTIFICATE:CAPS">
 <ANCHOR id="SOUP-SOCKET-TLS-ERRORS:CAPS" href="libsoup-2.4/SoupSocket.html#SOUP-SOCKET-TLS-ERRORS:CAPS">
 <ANCHOR id="SOUP-SOCKET-TRUSTED-CERTIFICATE:CAPS" href="libsoup-2.4/SoupSocket.html#SOUP-SOCKET-TRUSTED-CERTIFICATE:CAPS">
+<ANCHOR id="SOUP-SOCKET-USE-THREAD-CONTEXT:CAPS" href="libsoup-2.4/SoupSocket.html#SOUP-SOCKET-USE-THREAD-CONTEXT:CAPS">
 <ANCHOR id="SoupSocket.property-details" href="libsoup-2.4/SoupSocket.html#SoupSocket.property-details">
 <ANCHOR id="SoupSocket--async-context" href="libsoup-2.4/SoupSocket.html#SoupSocket--async-context">
 <ANCHOR id="SoupSocket--clean-dispose" href="libsoup-2.4/SoupSocket.html#SoupSocket--clean-dispose">
@@ -943,8 +958,10 @@
 <ANCHOR id="SoupSocket--tls-certificate" href="libsoup-2.4/SoupSocket.html#SoupSocket--tls-certificate">
 <ANCHOR id="SoupSocket--tls-errors" href="libsoup-2.4/SoupSocket.html#SoupSocket--tls-errors">
 <ANCHOR id="SoupSocket--trusted-certificate" href="libsoup-2.4/SoupSocket.html#SoupSocket--trusted-certificate">
+<ANCHOR id="SoupSocket--use-thread-context" href="libsoup-2.4/SoupSocket.html#SoupSocket--use-thread-context">
 <ANCHOR id="SoupSocket.signal-details" href="libsoup-2.4/SoupSocket.html#SoupSocket.signal-details">
 <ANCHOR id="SoupSocket-disconnected" href="libsoup-2.4/SoupSocket.html#SoupSocket-disconnected">
+<ANCHOR id="SoupSocket-event" href="libsoup-2.4/SoupSocket.html#SoupSocket-event">
 <ANCHOR id="SoupSocket-new-connection" href="libsoup-2.4/SoupSocket.html#SoupSocket-new-connection">
 <ANCHOR id="SoupSocket-readable" href="libsoup-2.4/SoupSocket.html#SoupSocket-readable">
 <ANCHOR id="SoupSocket-writable" href="libsoup-2.4/SoupSocket.html#SoupSocket-writable">

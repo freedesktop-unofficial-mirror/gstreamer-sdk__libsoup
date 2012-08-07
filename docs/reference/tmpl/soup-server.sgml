@@ -9,10 +9,12 @@ SoupServer
 
 </para>
 
+
 <!-- ##### SECTION See_Also ##### -->
 <para>
 
 </para>
+
 
 <!-- ##### SECTION Stability_Level ##### -->
 
@@ -93,6 +95,11 @@ SoupServer
 </para>
 
 <!-- ##### ARG SoupServer:ssl-key-file ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG SoupServer:tls-certificate ##### -->
 <para>
 
 </para>
@@ -318,6 +325,13 @@ SoupServer
 
 
 <!-- ##### MACRO SOUP_SERVER_SSL_KEY_FILE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO SOUP_SERVER_TLS_CERTIFICATE ##### -->
 <para>
 
 </para>

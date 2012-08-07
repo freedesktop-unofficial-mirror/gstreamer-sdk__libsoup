@@ -9,10 +9,12 @@ SoupSocket
 
 </para>
 
+
 <!-- ##### SECTION See_Also ##### -->
 <para>
 
 </para>
+
 
 <!-- ##### SECTION Stability_Level ##### -->
 
@@ -32,6 +34,15 @@ SoupSocket
 </para>
 
 @soupsocket: the object which received the signal.
+
+<!-- ##### SIGNAL SoupSocket::event ##### -->
+<para>
+
+</para>
+
+@soupsocket: the object which received the signal.
+@arg1: 
+@arg2: 
 
 <!-- ##### SIGNAL SoupSocket::new-connection ##### -->
 <para>
@@ -116,6 +127,11 @@ SoupSocket
 </para>
 
 <!-- ##### ARG SoupSocket:trusted-certificate ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG SoupSocket:use-thread-context ##### -->
 <para>
 
 </para>
@@ -290,23 +306,6 @@ SoupSocket
 @Returns: 
 
 
-<!-- ##### MACRO SOUP_SSL_ERROR ##### -->
-<para>
-
-</para>
-
-
-
-<!-- ##### ENUM SoupSSLError ##### -->
-<para>
-
-</para>
-
-@SOUP_SSL_ERROR_HANDSHAKE_NEEDS_READ: 
-@SOUP_SSL_ERROR_HANDSHAKE_NEEDS_WRITE: 
-@SOUP_SSL_ERROR_CERTIFICATE: 
-@SOUP_SSL_ERROR_HANDSHAKE_FAILED: 
-
 <!-- ##### MACRO SOUP_SOCKET_LOCAL_ADDRESS ##### -->
 <para>
 
@@ -385,6 +384,13 @@ SoupSocket
 
 
 <!-- ##### MACRO SOUP_SOCKET_TRUSTED_CERTIFICATE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO SOUP_SOCKET_USE_THREAD_CONTEXT ##### -->
 <para>
 
 </para>
