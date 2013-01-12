@@ -312,6 +312,9 @@ authenticate (SoupAuth *auth, const char *username, const char *password)
 	SoupAuthDigestPrivate *priv = SOUP_AUTH_DIGEST_GET_PRIVATE (auth);
 	char *bgen;
 
+	g_clear_pointer (&priv->cnonce, g_free);
+	g_clear_pointer (&priv->user, g_free);
+
 	/* Create client nonce */
 	bgen = g_strdup_printf ("%p:%lu:%lu",
 				auth,
